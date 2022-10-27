@@ -20,6 +20,7 @@ class CHPS:
     def __init__(self, args):
         self.args = args
 
+        self.gitHubDir         = 'H:\\hps_categorise\\'
         self.baseDir           = 'H:\\HPS_Images\\'
         self.plantsDir         = self.baseDir + 'Plants\\'
         self.pendingPlantsDir  = self.baseDir + 'Pending\\Plants\\'
@@ -435,7 +436,7 @@ class CHPS:
 
     def createImagelibDB(self):
         # imagelib.csv can be found in docsftp@hardy-plant.org.uk:/plants
-        fileName = "H:\prepareImages\\imagelib.csv"
+        fileName = self.gitHubDir+"imagelib.csv"
         print(f"  - {fileName} (needs to be downloaded manually): ", end="")
         if not os.path.isfile(fileName):
             print("doesn't exist!")
@@ -448,7 +449,7 @@ class CHPS:
 
     def createGeneraDB(self):
         # genera.csv can be found in docsftp@hardy-plant.org.uk:/plants
-        fileName = "H:\prepareImages\\genera.csv"
+        fileName = self.gitHubDir+"genera.csv"
         print(f"  - {fileName} (needs to be downloaded manually): ", end="")
         if not os.path.isfile(fileName):
             print("doesn't exist!")
@@ -462,7 +463,7 @@ class CHPS:
     def createHpsPlantsDB(self):
         # Get the latest version of the plants database. This needs to be done
         # better by checking if files are same or not using requests
-        fileName = "H:\prepareImages\\HPS Images - Plants.xlsx"
+        fileName = self.gitHubDir+"HPS Images - Plants.xlsx"
         if self.args.download:
             print(f"  - {fileName}: downloading", end="\r")
             url = 'https://www.dropbox.com/scl/fi/g9x3a92tzociye8r0ors4/HPS%20Images%20-%20plants.xlsx?dl=1'
@@ -485,7 +486,7 @@ class CHPS:
     def createHpsGardensDB(self):
         # Get the latest version of the gardens database. This needs to be done
         # better by checking if files are same or not using requests
-        fileName = "H:\prepareImages\\HPS Images - Gardens.xlsx"
+        fileName = self.gitHubDir+"HPS Images - Gardens.xlsx"
         if self.args.download:
             print(f"  - {fileName}: downloading", end="\r")
             url = 'https://www.dropbox.com/scl/fi/c3sfnvn582oh24juluag3/HPS%20Images%20-%20gardens.xlsx?dl=1'
@@ -537,7 +538,7 @@ class CHPS:
     def createRhsReferenceDB(self):
         # Get the latest version of the RHS database. This needs to be done better
         # by checking if files are same or not using requests
-        fileName = "H:\prepareImages\\RHS_Dataset.xlsx"
+        fileName = self.gitHubDir+"RHS_Dataset.xlsx"
         if self.args.download:
             print(f"  - {fileName}: downloading", end="\r")
             url = 'https://www.dropbox.com/s/9n9cjd1ru27jjma/HPS-NAMES%20May%2019.xlsx?dl=1'
@@ -917,7 +918,7 @@ class CHPS:
                             if self.constainsName(name, rhsName):
                                 found = True
                                 matchingNumbers.append(self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1))
-                                print(f"        -> found in RHS dataset as number '{self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)}', name   '{rhsName}'")
+                                print(f"        -> found in RHS dataset as number '{self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)}', name '{rhsName}'")
                     # We managed to extract an RHS number from the file name. Check
                     # if correct
                     if rhsNumber != 0:
@@ -931,7 +932,7 @@ class CHPS:
                                     foundMatch = True
                                 found = True
                                 val = self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 3)
-                                print(f"        -> found this number in the RHS dataset as RHS name '{val}'")
+                                print(f"        -> found number in the RHS dataset as RHS name  '{val}'")
                                 break
                         if not found:
                             rhsNumber = 0
@@ -1057,7 +1058,7 @@ class CHPS:
 
             # Add any metadata
             if metaData:
-                print(f"  - Got meta data added as {metaData}")
+                print(f"  - Got meta data added as '{metaData}'")
                 imageInfo.metaData = metaData
 
         if newPlants>0:
