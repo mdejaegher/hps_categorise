@@ -918,7 +918,7 @@ class CHPS:
                             if self.constainsName(name, rhsName):
                                 found = True
                                 matchingNumbers.append(self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1))
-                                print(f"        -> found in RHS dataset as number '{self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)}', name '{rhsName}'")
+                                print(f"        -> found name in RHS dataset as number '{self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)}', name '{rhsName}'")
                     # We managed to extract an RHS number from the file name. Check
                     # if correct
                     if rhsNumber != 0:
