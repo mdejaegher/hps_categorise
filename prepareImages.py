@@ -62,8 +62,8 @@ class CHPS:
                 if rhsGenus:
                     rhsGenera.add(rhsGenus)
             print( "  * Overall in RHS library, there are:")
-            print(f"    - {len(rhsGenera)} genera")
-            print(f"    - {len(rhsNumbers)} taxa")
+            print(f"    - {len(rhsGenera)} genus")
+            print(f"    - {len(rhsNumbers)} species")
             print()
 
         # get the HPS database
@@ -123,8 +123,8 @@ class CHPS:
 
         print()
         print( "  * Overall in HPS library, there are:")
-        print(f"    - {len(hpsGenus)} different genera")
-        print(f"    - {len(rhsNumbers)} different taxa")
+        print(f"    - {len(hpsGenus)} different genus")
+        print(f"    - {len(rhsNumbers)} different species")
         print(f"    - {totalNumImages} valid images")
         print()
         print(f"  * Since {startCount}:")
@@ -133,7 +133,7 @@ class CHPS:
         if len(addedGenus):
             print(f"    - {len(addedGenus)}/{len(addedGenus)/(len(hpsGenus)-len(addedGenus))*100.0:.1f}% new genera have been added not previously in library: {addedGenus}")
         else:
-            print("    - 0 new genera have been added not previously in library")
+            print("    - 0 new genus have been added not previously in library")
         print(f"    - {numNewImages}/{numNewImages/(totalNumImages-numNewImages)*100.0:.1f}% images have been added")
         return 0
 
@@ -153,32 +153,32 @@ class CHPS:
         if self.hpsPlantsDB.validate('Plants', expectedHeaders):
             return 1
 
-        # Check if plant name is filled in
-        print("    - Check plant names filled in", end="\r")
+        # Check if plant name is filled in for each row
+        print("    - Check each row for missing plant name")
         missingNameRows = []
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
             name = self.hpsPlantsDB.getValue('Plants', currentRow, 1) # Plant name
             if not name:
                 missingNameRows.append(currentRow)
         if len(missingNameRows):
-            print(f"    ! Warning! HPS plants has {len(missingNameRows)} rows with missing plant names: {missingNameRows}")
+            print(f"        ! Warning ! '{self.hpsPlantsDB.filename}' has {len(missingNameRows)} rows with missing plant names: {missingNameRows}")
         else:
-            print("    - Check plant names filled in: OK")
+            print("        No rows have missing plant names")
 
         # Check if image number is filled in
-        print("    - Check for missing image numbers", end="\r")
+        print(f"    - Check each row for missing image numbers")
         missingImageNumberRows = []
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
             imageNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 2) # Number
             if not imageNumber:
                 missingImageNumberRows.append(currentRow)
         if len(missingImageNumberRows):
-            print(f"    ! Warning! HPS plants has {len(missingImageNumberRows)} rows with missing image numbers: {missingImageNumbersRows}")
+            print(f"        ! Warning! '{self.hpsPlantsDB.filename}' has {len(missingImageNumberRows)} rows with missing image numbers: {missingImageNumbersRows}")
         else:
-            print("    - Check for missing image numbers: OK")
+            print("        No rows have missing image numbers")
 
         # Check if image number is valid
-        print("    - Check image numbers valid", end="\r")
+        print("    - Check each row for valid HPS image numbers")
         invalidImageNumberRows = []
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
             imageNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 2) # Number
@@ -186,13 +186,13 @@ class CHPS:
             elif not re.search(r'^(P|X)\d{5}$', imageNumber):
                 invalidImageNumberRows.append(currentRow)
         if len(invalidImageNumberRows):
-            print(f"    ! Warning! HPS plants has {len(invalidImageNumberRows)} rows with invalid image numbers: {invalidImageNumberRows}")
+            print(f"        ! Warning ! '{self.hpsPlantsDB.filename}' has {len(invalidImageNumberRows)} rows with invalid image numbers: {invalidImageNumberRows}")
         else:
-            print("    - Check image numbers valid: OK")
+            print("        All rows have valid image numbers")
 
         # Check if RHS number is filled in and if not that there's at least
         # information as to why not
-        print("    - Check RHS numbers valid", end="\r")
+        print("    - Check each row with missing RHS numbers for given reason")
         missingRHSNumberRows = []
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
             RHSNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 3) # RHS no
@@ -201,26 +201,28 @@ class CHPS:
                 if not extraInformation:
                     missingRHSNumberRows.append(currentRow)
         if len(missingRHSNumberRows):
-            print(f"    ! Warning! HPS plants has {len(missingRHSNumberRows)} rows with missing RHS numbers: {missingRHSNumberRows}")
+            print(f"        ! Warning ! {len(missingRHSNumberRows)} rows have missing RHS numbers without reason given: {missingRHSNumberRows}")
         else:
-            print("    - Check RHS numbers valid: OK")
+            print("        All rows with missing RHS numbers have a reason")
 
         # Check if rhs number is set to withdrawn and has a withdrawn date
-        print("    - Check withdrawn notifications", end="\r")
+        print("    - Check if withdrawn notifications are valid")
         mismatchWithdrawnRows = []
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
+            if currentRow in missingRHSNumberRows: continue
             RHSNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 3) # RHS no
-            if not RHSNumber: continue
             dateWithdrawn = self.hpsPlantsDB.getValue('Plants', currentRow, 12) # Date withdrawn
             if RHSNumber != 'WITHDRAWN' and dateWithdrawn:
                 mismatchWithdrawnRows.append(currentRow)
             if RHSNumber == 'WITHDRAWN' and not dateWithdrawn:
                 mismatchWithdrawnRows.append(currentRow)
         if len(mismatchWithdrawnRows):
-            print(f"    ! Warning ! HPS plants has {len(mismatchWithdrawnRows)} rows with mismatching withdrawn notifications: {mismatchWithdrawnRows}")
+            print(f"        ! Warning ! HPS plants has {len(mismatchWithdrawnRows)} rows with mismatching withdrawn notifications: {mismatchWithdrawnRows}")
+        else:
+            print("        All withdrawn notifications are valid")
 
         # Check withdrawn files don't exists
-        print("    - Check withdrawn image files don't exist", end="\r")
+        print("    - Make sure withdrawn image files have been removed")
         firstMissing = True
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
             RHSNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 3) # RHS no
@@ -235,13 +237,12 @@ class CHPS:
                 if os.path.isfile(fileName):
                     if firstMissing:
                         firstMissing=False
-                        print()
-                    print(f"      - withdrawn file shouldn't exist: {fileName}")
+                    print(f"        Found withdrawn file '{fileName}'")
         if firstMissing:
-            print("    - Check withdrawn image files don't exist: OK")
+            print("        All withdrawn image files have been removed")
 
         # Check if file exists
-        print("    - Check image files exist", end="\r")
+        print("    - Check if all valid image files exist")
         missingFileRows = []
         firstMissing = True
         for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
@@ -257,97 +258,126 @@ class CHPS:
             fileName = self.plantsDir + name[0] + "\\" + name.replace('/','_') + " " + imageNumber + ".jpg"
             if not os.path.isfile(fileName):
                 if firstMissing:
-                    print()
                     firstMissing = False
-                print(f"      - missing {fileName}")
+                print(f"        Can't find '{fileName}'")
                 missingFileRows.append(currentRow)
         if len(missingFileRows) == 0:
-            print("    - Check image files exist: OK")
+            print("        All valid image files exist")
         print()
 
         # Validate RHS dataset
-        if self.createRhsReferenceDB() == 0:
-            # Simple validation
-            expectedHeaders = ["NAME_NUM", "ACCEPT_FULL", "NAME",
-                               "AWARD", "ALT_NAME_FULL", "FAMILY",
-                               "GENUS", "GEN_HYBR", "SPECIES",
-                               "SPEC_AUTH", "SPEC_HYBR", "INFRA_RANK_FULL",
-                               "INFRA_EPI", "INFRA_AUTH", "CULTIVAR",
-                               "CULTIVAR_AUTH", "CV_FLAG", "CV_GROUP",
-                               "SOLD_AS", "DESCRIPTOR", "IDENT_QUAL_FULL",
-                               "AGG_FLAG_FULL", "GENUS_2", "SPECIES_2",
-                               "SPEC_AUTH_2", "INFRA_RANK_2_FULL", "INFRA_EPI_2",
-                               "INFRA_AUTH_2", "CULTIVAR_2", "CULTIVAR_AUTH_2",
-                               "CV_FLAG_2", "CV_GROUP_2", "SOLD_AS_2",
-                               "DESCRIPTOR_2", "IDENT_QUAL_FULL_2", "AGG_FLAG_FULL_2",
-                               "NAME_FREE", "GROUP_NAME", "GROUP_NAME_FULL",
-                               "PARENTAGE", "ALT_NAME", "NAME_HTML",
-                               "USER3"]
-            self.rhsReferenceDB.validate('HPS-NAMES May 19', expectedHeaders)
-            print()
+        if self.createRhsReferenceDB():
+            return 1
 
-            # Cross reference RHS numbers in HPS Plants with the name in RHS Reference
-            # and plant name in HPS plants
-            print("  - Cross reference RHS numbers with names")
-            wrongNumbers = []
-            wrongNames   = []
-            numbers    = self.hpsPlantsDB.getColumn('Plants', 3) # RHS no
-            hpsNames   = self.hpsPlantsDB.getColumn('Plants', 1) # Plant name
-            rhsNumbers = self.rhsReferenceDB.getColumn('HPS-NAMES May 19', 1) # NAME_NUM
-            rhsNames   = self.rhsReferenceDB.getColumn('HPS-NAMES May 19', 3) # NAME
-            for hpsIndex in range(1, len(numbers)):
-                imageNumbers = numbers[hpsIndex]
-                if not imageNumbers:
-                    continue
-                if "&&" in str(imageNumbers):
-                    numberList = re.findall(r'\d{1,6}', imageNumbers)
-                else:
-                    numberList = [ imageNumbers ]
-                for imageNumber in numberList:
-                    if imageNumber and imageNumber!='WITHDRAWN' and imageNumber!=' ':
-                        if imageNumber not in rhsNumbers:
-                            #print(f"  RHS number '{imageNumber}' doesn't exist in RHS list")
-                            wrongNumbers.append(hpsIndex+1)
-                        else:
-                            rhsIndex = rhsNumbers.index(imageNumber)
-                            rhsName = rhsNames[rhsIndex]
-                            rhsName = re.sub('\s*AGM', '', rhsName)
-                            rhsName = re.sub('\s*\(PBR\)', '', rhsName)
-                            if rhsName not in hpsNames[hpsIndex]:
-                                wrongNames.append(hpsIndex+1)
-                                #print('{}: "{}", "{}"'.format(hpsIndex, rhsName, hpsNames[hpsIndex]))
-            if len(wrongNumbers):
-                print("    !  Warning! {} rows with bad RHS numbers in HPS_Plants: {}".format(len(wrongNumbers), wrongNumbers))
-            if len(wrongNames):
-                print("    !  Warning! {} rows with bad names in HPS_Plants: {}".format(len(wrongNames), wrongNames))
-            print()
+        # Simple validation
+        expectedHeaders = ["NAME_NUM", "ACCEPT_FULL", "NAME",
+                           "AWARD", "ALT_NAME_FULL", "FAMILY",
+                           "GENUS", "GEN_HYBR", "SPECIES",
+                           "SPEC_AUTH", "SPEC_HYBR", "INFRA_RANK_FULL",
+                           "INFRA_EPI", "INFRA_AUTH", "CULTIVAR",
+                           "CULTIVAR_AUTH", "CV_FLAG", "CV_GROUP",
+                           "SOLD_AS", "DESCRIPTOR", "IDENT_QUAL_FULL",
+                           "AGG_FLAG_FULL", "GENUS_2", "SPECIES_2",
+                           "SPEC_AUTH_2", "INFRA_RANK_2_FULL", "INFRA_EPI_2",
+                           "INFRA_AUTH_2", "CULTIVAR_2", "CULTIVAR_AUTH_2",
+                           "CV_FLAG_2", "CV_GROUP_2", "SOLD_AS_2",
+                           "DESCRIPTOR_2", "IDENT_QUAL_FULL_2", "AGG_FLAG_FULL_2",
+                           "NAME_FREE", "GROUP_NAME", "GROUP_NAME_FULL",
+                           "PARENTAGE", "ALT_NAME", "NAME_HTML",
+                           "USER3"]
+        if self.rhsReferenceDB.validate('HPS-NAMES May 19', expectedHeaders):
+            return 1
+        print()
+
+        # Cross reference RHS numbers in HPS Plants with the name in RHS Reference
+        # and plant name in HPS plants
+        print(f"  - Cross reference RHS numbers in '{self.hpsPlantsDB.filename}' with RHS names in '{self.rhsReferenceDB.filename}'")
+        wrongNumbers = []
+        wrongNames   = []
+        numbers    = self.hpsPlantsDB.getColumn('Plants', 3) # RHS no
+        hpsNames   = self.hpsPlantsDB.getColumn('Plants', 1) # Plant name
+        rhsNumbers = self.rhsReferenceDB.getColumn('HPS-NAMES May 19', 1) # NAME_NUM
+        rhsNames   = self.rhsReferenceDB.getColumn('HPS-NAMES May 19', 3) # NAME
+        for hpsIndex in range(1, len(numbers)):
+            imageNumbers = numbers[hpsIndex]
+            if not imageNumbers:
+                continue
+            if "&&" in str(imageNumbers):
+                numberList = re.findall(r'\d{1,6}', imageNumbers)
+            else:
+                numberList = [ imageNumbers ]
+            for imageNumber in numberList:
+                if imageNumber and imageNumber!='WITHDRAWN' and imageNumber!=' ':
+                    if imageNumber not in rhsNumbers:
+                        #print(f"  RHS number '{imageNumber}' doesn't exist in RHS list")
+                        wrongNumbers.append(hpsIndex+1)
+                    else:
+                        rhsIndex = rhsNumbers.index(imageNumber)
+                        rhsName = rhsNames[rhsIndex]
+                        rhsName = re.sub('\s*AGM', '', rhsName)
+                        rhsName = re.sub('\s*\(PBR\)', '', rhsName)
+                        if rhsName not in hpsNames[hpsIndex]:
+                            wrongNames.append(hpsIndex+1)
+                            #print('{}: "{}", "{}"'.format(hpsIndex, rhsName, hpsNames[hpsIndex]))
+        if len(wrongNumbers):
+            print(f"      ! Warning ! {len(wrongNumbers)} rows with invalid RHS numbers in '{self.hpsPlantsDB.filename}': {wrongNumbers}")
+        if len(wrongNames):
+            print(f"      !  Warning ! {len(wrongNames)} rows with invalid names in '{self.hpsPlantsDB.filename}': {wrongNames}")
+        print()
 
         # Validate Imagelib
-        if self.createImagelibDB() == 0:
-            expectedHeaders = ["Caption",
-                               "Image ID"]
-            self.imagelibDB.validate('active', expectedHeaders)
-            imagelibIDs = self.imagelibDB.getColumn('active', 2) # Image ID
+        if self.createImagelibDB():
+            return 1
+        expectedHeaders = ["Caption",
+                           "Image ID"]
+        if self.imagelibDB.validate('active', expectedHeaders):
+            return 1
+        print()
 
-            print("    - Check if withdrawn images aren't in imagelib", end="\r")
-            extraNumbers = []
-            for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
-                imageNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 2) # Number
-                if not imageNumber: continue
-                # Make sure no withdrawn numbers are in imagelib
-                RHSNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 3) # RHS no
-                if RHSNumber == 'WITHDRAWN' and imageNumber in imagelibIDs:
-                    extraNumbers.append(currentRow)
-                    continue
-                dateWithdrawn = self.hpsPlantsDB.getValue('Plants', currentRow, 12) # Date withdrawn
-                if dateWithdrawn and imageNumber in imagelibIDs:
-                    extraNumbers.append(currentRow)
-                    continue
-            if len(extraNumbers):
-                print(f"    ! Warning! imagelib has {len(extraNumbers)} entries which should be withdrawn: {extraNumbers}")
-            else:
-                print("    - Check if withdrawn images aren't in imagelib: OK")
-            print()
+        print(f"  - Cross reference if withdrawn images in '{self.hpsPlantsDB.filename}' aren't in '{self.imagelibDB.filename}'")
+        imagelibIDs = self.imagelibDB.getColumn('active', 2) # Image ID
+        extraNumbers = []
+        for currentRow in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
+            imageNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 2) # Number
+            if not imageNumber: continue
+            # Make sure no withdrawn numbers are in imagelib
+            RHSNumber = self.hpsPlantsDB.getValue('Plants', currentRow, 3) # RHS no
+            if RHSNumber == 'WITHDRAWN' and imageNumber in imagelibIDs:
+                extraNumbers.append(currentRow)
+                continue
+            dateWithdrawn = self.hpsPlantsDB.getValue('Plants', currentRow, 12) # Date withdrawn
+            if dateWithdrawn and imageNumber in imagelibIDs:
+                extraNumbers.append(currentRow)
+                continue
+        if len(extraNumbers):
+            print(f"      ! Warning ! '{self.imagelibDB.filename}' has {len(extraNumbers)} entries which were withdrawn: {extraNumbers}")
+        else:
+            print(f"      No withdrawn images were found in '{self.imagelibDB.filename}'")
+        print()
+
+        print(f"  - Cross reference if HTML plant names in '{self.imagelibDB.filename}' match up with plant names in '{self.rhsReferenceDB.filename}'")
+        for currentRow in range(2, self.imagelibDB.workbook['active'].max_row):
+            imagelibName = self.imagelibDB.getValue('active', currentRow, 1) # Caption
+            imagelibNumber = self.imagelibDB.getValue('active', currentRow, 2) # Image ID
+            foundName = False
+            # Find image number in HPS images
+            for plantindex in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
+                hpsPlantsNumber = self.hpsPlantsDB.getValue('Plants', plantindex, 2) # HPS Number
+                if hpsPlantsNumber == imagelibNumber:
+                    # Find RHS number in HPS images
+                    hpsPlantsRHSNumber = self.hpsPlantsDB.getValue('Plants', plantindex, 3) # RHS Number
+                    # Find RHS name in RHS database
+                    for rhsindex in range(2, self.rhsReferenceDB.workbook['HPS-NAMES May 19'].max_row):
+                        rhsNumber = self.rhsReferenceDB.getValue('HPS-NAMES May 19', rhsindex, 1)
+                        if rhsNumber == hpsPlantsRHSNumber:
+                            foundName = True
+                            rhsHTMLName = "<span RHS>" + self.rhsReferenceDB.getValue('HPS-NAMES May 19', rhsindex, 42) + "</span>"
+                            if rhsHTMLName != imagelibName:
+                                print(f"      Names don't correspond for HPS image ID {imagelibNumber}, RHS number {rhsNumber}:")
+                                print(f"          RHS name: {rhsHTMLName}")
+                                print(f"          HPS name: {imagelibName}")
+                        if foundName: break
+                if foundName: break
 
     def validateDirectories(self):
         print("* Validate directories")
