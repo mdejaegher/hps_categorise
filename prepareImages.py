@@ -255,7 +255,12 @@ class CHPS:
             dateWithdrawn = self.hpsPlantsDB.getValue('Plants', currentRow, 12) # Date withdrawn
             if RHSNumber == 'WITHDRAWN' or dateWithdrawn:
                 continue
-            fileName = self.plantsDir + name[0] + "\\" + name.replace('/','_') + " " + imageNumber + ".jpg"
+            fileName = self.plantsDir
+            if name.startswith("x "):
+                fileName += name[2]
+            else:
+                fileName += name[0]
+            fileName += "\\" + name.replace('/','_') + " " + imageNumber + ".jpg"
             if not os.path.isfile(fileName):
                 if firstMissing:
                     firstMissing = False
@@ -305,14 +310,14 @@ class CHPS:
             if "&&" in str(imageNumbers):
                 numberList = re.findall(r'\d{1,6}', imageNumbers)
             else:
-                numberList = [ imageNumbers ]
+                numberList = [ str(imageNumbers) ]
             for imageNumber in numberList:
-                if imageNumber and imageNumber!='WITHDRAWN' and imageNumber!=' ':
-                    if imageNumber not in rhsNumbers:
+                if imageNumber and imageNumber.isnumeric():
+                    if int(imageNumber) not in rhsNumbers:
                         #print(f"  RHS number '{imageNumber}' doesn't exist in RHS list")
                         wrongNumbers.append(hpsIndex+1)
                     else:
-                        rhsIndex = rhsNumbers.index(imageNumber)
+                        rhsIndex = rhsNumbers.index(int(imageNumber))
                         rhsName = rhsNames[rhsIndex]
                         rhsName = re.sub('\s*AGM', '', rhsName)
                         rhsName = re.sub('\s*\(PBR\)', '', rhsName)
