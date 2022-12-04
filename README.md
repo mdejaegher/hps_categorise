@@ -6,12 +6,14 @@ The script relies on a couple of programs that have to be installed to work prop
 2. ImageMagick: this is used to create the thumbnails by reducing the size and adding a watermark. Can be downloaded from https://imagemagick.org/script/download.php
 3. exiftool: this is used for security by removing all the data hidden inside photos, e.g. lat/long. Can be downloaded from https://exiftool.org/
 
+If you are maintaining a backup of all the images then I would recommend using WinMerge (https://winmerge.org/?lang=en). It's an easy tool to compare two directories (or directory structures) and it will tell you which images are different or missing between the two.
+
 It also needs a number of spreadsheets to allow cross referencing with the RHS database and to add to our database:
 * genera.csv: this is the database used by the website to list all the genus. I've never had to update this spreadsheet.
 * HPS Images - Gardens.xlsx: list of all HPS images of gardens with lots of details
 * HPS Images - Plants.xlsx: list of all HPS images of plants with lots of details
-* imagelib.csv: this is the database used by the website to list all the images and their plant names. It contains the properly formatted name of the plant and the thumbnail number.
-* RHS_dataset.xlsx: this is the RHS database of known plants. This database is not to be shared with anyone else!
+* imagelib.csv: this is the database used by the website to list all the images and their plant names. It contains the properly formatted name of the plant and the thumbnail number. There are a lot of special characters in this file so be careful which editor you use if you want to make some changes as not all editors deal well with the characters.
+* RHS_dataset.xlsx: this is the RHS database of known plants. This database is under license and therefore not to be shared with anyone else!
 
 In order to uploaded the thumbnails and spreadsheets to our web page, I recommend you use WinSCP. Can be downloaded from https://winscp.net/eng/download.php
 
