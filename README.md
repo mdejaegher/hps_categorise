@@ -18,11 +18,11 @@ It also needs a number of spreadsheets to allow cross referencing with the RHS d
 In order to uploaded the thumbnails and spreadsheets to our web page, I recommend you use WinSCP. Can be downloaded from https://winscp.net/eng/download.php
 
 ## How to use the script
-The main script is `prepareImages.py` and relies on two additional scripts `CImageInfo.py` and `CSpreadSheet.py`.
+The main script is called `prepareImages.py` and relies on two additional scripts `CImageInfo.py` and `CSpreadSheet.py` to function properly.
 
-To run the script, start the command prompt and call
-
-    python prepareImages.py
+### First time running the script
+There are a few things the script needs to know before it can start:
+* Where do the images live? All the images (both classified and pending) live in the same base directory.
 
 The base directory where all images can be found from is defined in self.baseDir
 
@@ -30,15 +30,7 @@ It can then find the directories containing all the plant images, garden images,
 pending plant images, pending garden images and the upload directory from that
 base directory.
 
-The script will go through a number of steps to classify images:
-* The first step is checking if the tools the script needs have been downloaded
-  ('magick' and 'exiftool'). If it can't find it then it will tell where to 
-  download it from.
-* The second step is validating the input: are all the directories it expects
-  there, are all the spreadsheets it expects there and are they in the format it
-  needs.
-* It will import all the existing and pending images in the next step
-
+### Preparing the images
 Image file names are in the form of
 
     <plant name> <RHS number> <donor> <year> <misc>.jpg
@@ -53,3 +45,19 @@ If 'year' not specified or 0 then the current date will be used instead.
 
 If you have two different pictures of the same plant of the same donor then I
 would suggest adding an extra space before/after the RHS number
+
+### Running the script
+To run the script, start the command prompt and run
+
+    python prepareImages.py
+
+The script will go through a number of steps to classify images:
+* The first step is checking if the tools the script needs have been downloaded
+  ('magick' and 'exiftool'). If it can't find it then it will tell where to 
+  download it from.
+* The second step is validating the input: are all the directories it expects
+  there, are all the spreadsheets it expects there and are they in the format it
+  needs.
+* It will import all the existing and pending images in the next step
+
+### Archiving the results

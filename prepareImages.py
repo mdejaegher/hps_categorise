@@ -138,6 +138,24 @@ class CHPS:
         return 0
 
     def fullAnalysis(self):
+        print("Analyse directories")
+        print("-------------------")
+        print("- Check file in correct directory")
+        allCorrect = True
+        for plantsLetterDir in os.listdir(self.plantsDir):
+            for filename in os.listdir(self.plantsDir+plantsLetterDir):
+                if filename.startswith("x "):
+                    if filename[2] != plantsLetterDir:
+                        allCorrect = False
+                        print(f"  ! File '{filename}' is in directory '{plantsLetterDir}' but should be in '{filename[2]}'")
+                else:
+                    if not filename.startswith(plantsLetterDir):
+                        allCorrect = False
+                        print(f"  ! File '{filename}' is in directory '{plantsLetterDir}' but should be in '{filename[0]}'")
+        if allCorrect:
+            print("    All plants are in correct directory")
+        print()
+
         print("Analyse databases")
         print("-----------------")
 
@@ -925,8 +943,8 @@ class CHPS:
                 rhsNumber = 0
                 imageData = re.search(r'(\D+(\(\S+\))?)\s(\d+)\s*(\D*)\s*(\d*)\s*(\D*)', splitName.strip())
                 if imageData:
-                    # Extract plant name
-                    name = imageData.group(1)
+                    # Extract plant name, remove trailing spaces
+                    name = imageData.group(1).strip()
                     # Extract RHS number
                     if len(imageData.groups())>2:
                         rhsNumber = int(imageData.group(3))
