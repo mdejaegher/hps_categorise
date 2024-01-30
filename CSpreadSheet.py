@@ -117,7 +117,8 @@ class CSpreadSheet:
                 return 1
         elif self.extension == ".csv":
             with open(newPath, 'w', newline='') as f:
-                writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='', quotechar='')
+                #writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='', quotechar='')
+                writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE)
                 for row in self.workbook['active'].rows:
                     writer.writerow([cell.value for cell in row])
             #    for row in self.sheet.rows:

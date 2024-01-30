@@ -17,6 +17,22 @@ import functools
 print = functools.partial(print, flush=True)
 
 class CHPS:
+
+    RHS_OLDSPECIESCODE = 1
+    RHS_CALCTOPRANKEDENTITYNAME = 2
+    RHS_CACLFULLNAME = 3
+    RHS_FAMILYNAME = 4
+    RHS_GENUSNAME = 5
+    RHS_SPECIESNAME = 6
+    RHS_SUBSPECIES = 7
+    RHS_VARIETY = 8
+    RHS_SUBVARIETY = 9
+    RHS_FORMA = 10
+    RHS_TRADESERIES = 11
+    RHS_TRADEDESIGNATION = 12
+    RHS_CULTIVAR = 13
+    RHS_DESCRIPTOR = 14
+
     def __init__(self, args):
         self.args = args
 
@@ -27,7 +43,7 @@ class CHPS:
         self.gardensDir        = self.baseDir + 'Gardens\\'
         self.pendingGardensDir = self.baseDir + 'Pending\\Gardens\\'
         self.thumbsDir         = self.baseDir + 'Thumbnails\\'
-        self.uploadDir         = self.baseDir + 'Upload\\'
+        self.uploadDir         = self.baseDir + 'Upload_'+datetime.datetime.now().strftime("%d%m%y")+'\\'
 
         # Current data
         self.hpsPlantsImageInfo  = []
@@ -38,13 +54,10 @@ class CHPS:
         self.pendingGardenImages     = True
         self.pendingGardensImageInfo = []
         # Upload directories
-        now = datetime.datetime.now()
-        self.uploadDropBoxDir        = self.uploadDir+'To_DropBox_'+now.strftime("%d%m%y")+'\\'
-        self.uploadDropBoxPlantsDir  = self.uploadDropBoxDir+'Plants\\'
-        self.uploadDropBoxGardensDir = self.uploadDropBoxDir+'Gardens\\'
-        self.uploadFtpDir            = self.uploadDir+'To_FTP_'+now.strftime("%d%m%y")+'\\'
-        self.uploadFtpThumbsDir      = self.uploadFtpDir+'thumbs\\'
-        self.uploadUnknownProvenancePlantsDir = self.uploadDir+'unknownProvenance_'+now.strftime("%d%m%y")+'\\'
+        self.uploadPlantsDir  = self.uploadDir+'Plants\\'
+        self.uploadGardensDir = self.uploadDir+'Gardens\\'
+        self.uploadThumbsDir  = self.uploadDir+'thumbs\\'
+        self.uploadUnknownProvenancePlantsDir = self.uploadDir+'unknownProvenance\\'
 
 
     def validateDirectories(self):
@@ -135,7 +148,7 @@ class CHPS:
     def createImagelibDB(self):
         # imagelib.csv can be found in docsftp@hardy-plant.org.uk:/plants
         fileName = self.gitHubDir+"imagelib.csv"
-        print(f"  - {fileName} (needs to be downloaded manually): ", end="")
+        print(f"  - {fileName}: importing", end="")
         if not os.path.isfile(fileName):
             print("doesn't exist!")
             return 1
@@ -148,7 +161,7 @@ class CHPS:
     def createGeneraDB(self):
         # genera.csv can be found in docsftp@hardy-plant.org.uk:/plants
         fileName = self.gitHubDir+"genera.csv"
-        print(f"  - {fileName} (needs to be downloaded manually): ", end="")
+        print(f"  - {fileName}: importing", end="")
         if not os.path.isfile(fileName):
             print("doesn't exist!")
             return 1
@@ -162,19 +175,6 @@ class CHPS:
         # Get the latest version of the plants database. This needs to be done
         # better by checking if files are same or not using requests
         fileName = self.gitHubDir+"HPS Images - Plants.xlsx"
-        if self.args.download:
-            print(f"  - {fileName}: downloading", end="\r")
-            url = 'https://www.dropbox.com/scl/fi/g9x3a92tzociye8r0ors4/HPS%20Images%20-%20plants.xlsx?dl=1'
-            #url = 'https://www.dropbox.com/sh/xu2j3xd9kyhlsbt/AADvj2H4gihukQfAXt6ymvtya/Digital%20Filing%20List%20MASTER.xlsx?dl=1'
-            with urllib.request.urlopen(url) as f:
-                data = f.read()
-            try:
-                with open(fileName, "wb") as f:
-                    f.write(data)
-            except PermissionError:
-                print(f"  - {fileName}: don't have write permission. File already open?")
-                return 1
-
         print(f"  - {fileName}: importing  ", end="\r")
         self.hpsPlantsDB = CSpreadSheet(fileName)
         print(f"  - {fileName}: OK         ")
@@ -185,20 +185,6 @@ class CHPS:
         # Get the latest version of the gardens database. This needs to be done
         # better by checking if files are same or not using requests
         fileName = self.gitHubDir+"HPS Images - Gardens.xlsx"
-        if self.args.download:
-            print(f"  - {fileName}: downloading", end="\r")
-            url = 'https://www.dropbox.com/scl/fi/c3sfnvn582oh24juluag3/HPS%20Images%20-%20gardens.xlsx?dl=1'
-            #url = 'https://www.dropbox.com/sh/pe5a97q1m0p525q/AABjfLfHbxCtYiN_wlGw2qcda/Digital%20filing%20list%20MASTER%20-%20scenes.xlsx?dl=1'
-            f = urllib.request.urlopen(url)
-            data = f.read()
-            f.close()
-            try:
-                with open(fileName, "wb") as f:
-                    f.write(data)
-            except PermissionError:
-                print(f"  - {fileName}: don't have write permission. File already open?")
-                return 1
-
         print(f"  - {fileName}: importing  ", end="\r")
         self.hpsGardensDB = CSpreadSheet(fileName)
         print(f"  - {fileName}: OK         ")
@@ -236,20 +222,7 @@ class CHPS:
     def createRhsReferenceDB(self):
         # Get the latest version of the RHS database. This needs to be done better
         # by checking if files are same or not using requests
-        fileName = self.gitHubDir+"RHS_Dataset.xlsx"
-        if self.args.download:
-            print(f"  - {fileName}: downloading", end="\r")
-            url = 'https://www.dropbox.com/s/9n9cjd1ru27jjma/HPS-NAMES%20May%2019.xlsx?dl=1'
-            f = urllib.request.urlopen(url)
-            data = f.read()
-            f.close()
-            try:
-                with open(fileName, "wb") as f:
-                    f.write(data)
-            except PermissionError:
-                print(f"  - {fileName}: don't have write permission. File already open?")
-                return 1
-
+        fileName = self.gitHubDir+"RHS_0923_Reduced_Unlocked.xlsx"
         print(f"  - {fileName}: importing  ", end="\r")
         self.rhsReferenceDB = CSpreadSheet(fileName)
         print(f"  - {fileName}: OK         ")
@@ -313,22 +286,10 @@ class CHPS:
         if self.pendingPlantImages:
             if self.createRhsReferenceDB():
                 return 1
-            expectedHeaders = ["NAME_NUM", "ACCEPT_FULL", "NAME",
-                               "AWARD", "ALT_NAME_FULL", "FAMILY",
-                               "GENUS", "GEN_HYBR", "SPECIES",
-                               "SPEC_AUTH", "SPEC_HYBR", "INFRA_RANK_FULL",
-                               "INFRA_EPI", "INFRA_AUTH", "CULTIVAR",
-                               "CULTIVAR_AUTH", "CV_FLAG", "CV_GROUP",
-                               "SOLD_AS", "DESCRIPTOR", "IDENT_QUAL_FULL",
-                               "AGG_FLAG_FULL", "GENUS_2", "SPECIES_2",
-                               "SPEC_AUTH_2", "INFRA_RANK_2_FULL", "INFRA_EPI_2",
-                               "INFRA_AUTH_2", "CULTIVAR_2", "CULTIVAR_AUTH_2",
-                               "CV_FLAG_2", "CV_GROUP_2", "SOLD_AS_2",
-                               "DESCRIPTOR_2", "IDENT_QUAL_FULL_2", "AGG_FLAG_FULL_2",
-                               "NAME_FREE", "GROUP_NAME", "GROUP_NAME_FULL",
-                               "PARENTAGE", "ALT_NAME", "NAME_HTML",
-                               "USER3"]
-            if self.rhsReferenceDB.validate('HPS-NAMES May 19', expectedHeaders):
+            expectedHeaders = ["OldSpeciesCode", "CalcTopRankedEntityName", "CalcFullName",
+                               "FamilyName", "GenusName", "SpeciesName", "Subspecies", "Variety", "Subvariety",
+                               "Forma", "TradeSeries", "TradeDesignation", "Cultivar", "Descriptor"]
+            if self.rhsReferenceDB.validate('Table1', expectedHeaders):
                 return 1
 
         return 0
@@ -437,30 +398,6 @@ class CHPS:
         if self.getImageInfo():
             return 1
 
-        # Find unique pending plant pictures.
-        # This has currently been switched off as too slow. Can't compare sizes
-        # as stored images may have some exif data removed and therefore have
-        # different size even if the image itself is the same
-        print("* Check if pending plants are unique")
-        print("  ! Switched off for now")
-        #uniqueFiles = 0
-        #for pendingImage in self.pendingPlantsImageInfo:
-        #    print(f"  - '{pendingImage.filename}'{' ': <108}", end="\r")
-        #    isUnique = True
-        #    for currentImage in self.hpsPlantsImageInfo:
-        #        if pendingImage.getSize() == currentImage.getSize():
-        #            # Check if hash is same. If it is, go to next pending file
-        #            if pendingImage.getFileHash() == currentImage.getFileHash():
-        #                print(f"  ! Found same image: '{currentImage.filename+currentImage.extension}'{' ': <108}")
-        #                pendingImage.valid = False
-        #                isUnique = False
-        #                break
-        #    if isUnique:
-        #        uniqueFiles += 1
-        #if uniqueFiles==0:
-        #    print("! Did't find any valid pending unique files")
-        #    return 1
-
         print()
         return 0
 
@@ -514,6 +451,18 @@ class CHPS:
         html = html.replace(u'[', '<span class="trade-name">')
         html = html.replace(u']', '</span>')
         html = "<i>" + html + "</i>"
+        return html
+
+    def createHtmlName(self, index):
+        html = ""
+
+        genusname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_GENUSNAME)
+        speciesname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SPECIESNAME)
+        html = "<i>" + genusname + " " + speciesname + "</i>"
+
+        cultivar = self.rhsReferenceDB.getValue('Table1', index, self.RHS_CULTIVAR)
+        html = html + "'" + cultivar + "'"
+
         return html
 
     def updateImageInfo(self):
@@ -571,7 +520,7 @@ class CHPS:
         newPlants = 0
         for imageNum, imageInfo in enumerate(self.pendingPlantsImageInfo):
             if imageInfo.valid == False:
-                continue;
+                continue
 
             rhsNames   = []
             rhsNumbers = []
@@ -610,13 +559,13 @@ class CHPS:
                     foundMatch = False
                     matchingNumbers = []
                     # See if we can find the name in the RHS database to give a best guess
-                    for index in range(2, self.rhsReferenceDB.workbook['HPS-NAMES May 19'].max_row):
-                        rhsName = self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 3)
+                    for index in range(2, self.rhsReferenceDB.workbook['Table1'].max_row):
+                        rhsName = self.rhsReferenceDB.getValue('Table1', index, self.RHS_CACLFULLNAME)
                         if rhsName:
                             if self.constainsName(name, rhsName):
                                 found = True
-                                matchingNumbers.append(self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1))
-                                print(f"        -> found name in RHS dataset as number '{self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)}', name '{rhsName}'")
+                                matchingNumbers.append(self.rhsReferenceDB.getValue('Table1', index, self.RHS_OLDSPECIESCODE))
+                                print(f"        -> found name in RHS dataset as number '{self.rhsReferenceDB.getValue('Table1', index, 1)}', name '{rhsName}'")
                     # We managed to extract an RHS number from the file name. Check
                     # if correct
                     if rhsNumber != 0:
@@ -624,12 +573,13 @@ class CHPS:
                         # See if we can find the number in the RHS database to give
                         # the expected name which we can compare with the name
                         # extracted from the file name
-                        for index in range(2, self.rhsReferenceDB.workbook['HPS-NAMES May 19'].max_row):
-                            if int(self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)) == rhsNumber:
+                        for index in range(2, self.rhsReferenceDB.workbook['Table1'].max_row):
+                            oldspeciescode = self.rhsReferenceDB.getValue('Table1', index, self.RHS_OLDSPECIESCODE)
+                            if oldspeciescode and int(oldspeciescode) == rhsNumber:
                                 if rhsNumber in matchingNumbers:
                                     foundMatch = True
                                 found = True
-                                val = self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 3)
+                                val = self.rhsReferenceDB.getValue('Table1', index, self.RHS_CACLFULLNAME)
                                 print(f"        -> found number in the RHS dataset as RHS name  '{val}'")
                                 break
                         if not found:
@@ -640,7 +590,7 @@ class CHPS:
                                 rhsNames.append("")
                             else:
                                 val = input(f"    Accept RHS number '{rhsNumber}'? (Y/n) ")
-                                if not val or val == 'Y':
+                                if not val or val.lower() == 'y':
                                     rhsNumbers.append(rhsNumber)
                                     rhsNames.append("")
                                 else:
@@ -684,15 +634,15 @@ class CHPS:
                     rhsNumbersFound += 1 # technically not correct but makes it easier further down the line to pretend we did
                     continue
                 # Find the data in the RHS data set for given RHS number
-                for index in range(2, self.rhsReferenceDB.workbook['HPS-NAMES May 19'].max_row):
-                    if int(self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 1)) == num:
-                        imageInfo.rhsFamily.append(  self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 6))  # FAMILY
-                        imageInfo.rhsGenus.append(   self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 7))  # GENUS
-                        imageInfo.rhsSpecies.append( self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 9))  # SPECIES
-                        imageInfo.rhsCultivar.append(self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 15)) # CULTIVAR
-                        imageInfo.rhsStatus.append(  self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 2))  # ACCEPT_FULL
-                        imageInfo.rhsNames.append(   self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 3))  # NAME
-                        imageInfo.rhsHtml.append(    self.rhsReferenceDB.getValue('HPS-NAMES May 19', index, 42)) # NAME_HTML
+                for index in range(2, self.rhsReferenceDB.workbook['Table1'].max_row):
+                    oldspeciescode = self.rhsReferenceDB.getValue('Table1', index, self.RHS_OLDSPECIESCODE)
+                    if oldspeciescode and int(oldspeciescode) == num:
+                        imageInfo.rhsFamily.append(self.rhsReferenceDB.getValue('Table1', index, self.RHS_FAMILYNAME))
+                        imageInfo.rhsGenus.append(self.rhsReferenceDB.getValue('Table1', index, self.RHS_GENUSNAME))
+                        imageInfo.rhsSpecies.append(self.rhsReferenceDB.getValue('Table1', index, self.RHS_SPECIESNAME))
+                        imageInfo.rhsCultivar.append(self.rhsReferenceDB.getValue('Table1', index, self.RHS_CULTIVAR))
+                        imageInfo.rhsNames.append(self.rhsReferenceDB.getValue('Table1', index, self.RHS_CACLFULLNAME))  # NAME
+                        imageInfo.rhsHtml.append(self.createHtmlName(index))
                         rhsNumbersFound += 1
                         # Now that we have found the data, check if this is
                         # a new addition to the HPS library (interesting to
@@ -805,36 +755,14 @@ class CHPS:
                 self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 1, self.convertSpecialChar(imageInfo.getRHSName()))                # plantName
                 self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 2, "P{:05d}".format(imageInfo.accession)) # HPSNo
                 self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 3, imageInfo.getRHSNumber())              # RHSNo
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 4, imageInfo.getRHSStatus())              # RHSStatus
                 self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 8, imageInfo.donor)                       # donor
                 self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 9, imageInfo.dateAdded)                   # dateAdded
                 self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow,11, imageInfo.metaData)                    # extra information
-                # Write data extracted from exif
-                #imageInfo.extractExif()
-                #print(imageInfo.exif)
-                #if imageInfo.dateTimeOriginal:
-                #    date = re.search(r'(\d{4}):(\d{2}):(\d{2})', imageInfo.dateTimeOriginal)
-                #    if not date:
-                #        date = re.search(r'(\d{4})-(\d{2})-(\d{2})', imageInfo.dateTimeOriginal)
-                #    if date:
-                #        if int(date.group(3)) != 0:
-                #            self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'dateOriginal', date.group(3)+"/"+ date.group(2)+"/"+ date.group(1))
-                #self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'fileSize', int(imageInfo.size)/1024)
-                #self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'width', imageInfo.width)
-                #self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'height', imageInfo.height)
-                #if imageInfo.validateSize(False):
-                #    self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'tooSmall', "X")
-                #if imageInfo.make:
-                #    self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'make', imageInfo.make)
-                #if imageInfo.model:
-                #    self.hpsPlantsDB.setValue(imageInfo.xlsxRow, 'model', imageInfo.model)
-                # Update number of valid images
-                #imageInfo.printPretty()
                 validFiles += 1
             if validFiles == 0:
                 print("  ! No data to write")
             else:
-                newPath = self.uploadDir+'To_DropBox_'+now.strftime("%d%m%y")+'\\'+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension
+                newPath = self.uploadDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension
                 print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
@@ -868,7 +796,7 @@ class CHPS:
             if validFiles == 0:
                 print("! No data to write")
             else:
-                newPath = self.uploadDir+'To_FTP_'+now.strftime("%d%m%y")+'\\'+self.imagelibDB.filename+self.imagelibDB.extension
+                newPath = self.uploadDir+self.imagelibDB.filename+self.imagelibDB.extension
                 print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
@@ -885,7 +813,7 @@ class CHPS:
                     continue
                 # Add the genus to the spreadsheet if it's not already there
                 if len(imageInfo.rhsGenus) == 0:
-                    continue;
+                    continue
                 for index in range(len(imageInfo.rhsGenus)):
                     genus = imageInfo.rhsGenus[index].capitalize()
                     if genus in existingGenus:
@@ -905,7 +833,7 @@ class CHPS:
                             existingGenus = self.generaDB.getColumn('active', 1)
                             break
             if genusAdded:
-                newPath = self.uploadDir+'To_FTP_'+now.strftime("%d%m%y")+'\\'+self.generaDB.filename+self.generaDB.extension
+                newPath = self.uploadDir+self.generaDB.filename+self.generaDB.extension
                 print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
@@ -931,7 +859,7 @@ class CHPS:
             if validFiles == 0:
                 print("  ! No data to write")
             else:
-                newPath = self.uploadDir+'To_DropBox_'+now.strftime("%d%m%y")+'\\'+self.hpsGardensDB.filename+self.hpsGardensDB.extension
+                newPath = self.uploadDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension
                 print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
@@ -953,7 +881,7 @@ class CHPS:
             if validFiles == 0:
                 print("! No data to write")
             else:
-                newPath = self.uploadDir+'To_FTP_'+now.strftime("%d%m%y")+'\\'+self.imagelibDB.filename+self.imagelibDB.extension
+                newPath = self.uploadDir+self.imagelibDB.filename+self.imagelibDB.extension
                 print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
@@ -969,16 +897,16 @@ class CHPS:
         print("-----------")
 
         if self.pendingPlantImages:
-            # Copy plant images into upload directory for dropbox and remove GPS data
-            print(f"* Copy plant  images to upload directory for dropbox  '{self.uploadDropBoxPlantsDir}' and remove GPS data")
+            # Copy plant images into upload directory and remove GPS data
+            print(f"* Copy plant images to '{self.uploadPlantsDir}'")
             for imageInfo in self.pendingPlantsImageInfo:
                 if imageInfo.valid==False or imageInfo.unknownProvenance==True:
                     continue
                 startletter = imageInfo.getRHSName()[0]
                 # Copy from pending to dropbox upload directory
                 if not self.args.dryrun:
-                    os.makedirs(self.uploadDropBoxPlantsDir+startletter, exist_ok=True)
-                newFilename = self.uploadDropBoxPlantsDir+startletter+"\\"+self.convertSpecialChar(imageInfo.getRHSName())+" P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
+                    os.makedirs(self.uploadPlantsDir+startletter, exist_ok=True)
+                newFilename = self.uploadPlantsDir+startletter+"\\"+self.convertSpecialChar(imageInfo.getRHSName())+" P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 if not self.args.dryrun:
                     #print(f"  - copyfile({imageInfo.path}, {newFilename})")
                     try:
@@ -996,15 +924,15 @@ class CHPS:
                                      stdout=subprocess.PIPE).communicate()
 
         if self.pendingGardenImages:
-            # Copy garden images into upload directory for dropbox and remove GPS data
-            print(f"* Copy garden images to upload directory for dropbox  '{self.uploadDropBoxGardensDir}' and remove GPS data")
+            # Copy garden images into upload directory and remove GPS data
+            print(f"* Copy garden images to upload directory '{self.uploadGardensDir}'")
             for imageInfo in self.pendingGardensImageInfo:
                 if imageInfo.valid==False:
                     continue
                 # Copy from pending to dropbox upload directory
                 if not self.args.dryrun:
-                    os.makedirs(self.uploadDropBoxGardensDir, exist_ok=True)
-                newFilename = self.uploadDropBoxGardensDir+"\\"+imageInfo.gardenName+" X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
+                    os.makedirs(self.uploadGardensDir, exist_ok=True)
+                newFilename = self.uploadGardensDir+"\\"+imageInfo.gardenName+" X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 if not self.args.dryrun:
                     #print(f"  - copyfile({imageInfo.path}, {newFilename})")
                     try:
@@ -1021,20 +949,21 @@ class CHPS:
                                       newFilename],
                                       stdout=subprocess.PIPE).communicate()
 
-        print(f"* Create thumbnails in {self.uploadFtpThumbsDir} (resize, auto orientate, remove exif, add watermark)")
+        # Create thumbnails: resize, auto orientate, remove exif, add watermark
+        print(f"* Create thumbnails in {self.uploadThumbsDir}")
         # The watermark will appear in the middle bottom, white, offset by 12 pixels.
         watermarkText = "gravity south fill white text 0,12 'Hardy Plant Society\\nwww.hardy-plant.org.uk'"
 
         if not self.args.dryrun:
-            os.makedirs(self.uploadFtpThumbsDir, exist_ok=True)
+            os.makedirs(self.uploadThumbsDir, exist_ok=True)
         if self.pendingPlantImages:
             for imageInfo in self.pendingPlantsImageInfo:
                 if imageInfo.valid==False or imageInfo.unknownProvenance==True:
                     continue
                 startletter = imageInfo.getRHSName()[0]
-                oldFilename = self.uploadDropBoxPlantsDir+startletter+"\\"+self.convertSpecialChar(imageInfo.getRHSName())+" P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
+                oldFilename = self.uploadPlantsDir+startletter+"\\"+self.convertSpecialChar(imageInfo.getRHSName())+" P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 oldFilename = oldFilename.replace(u'/', u'_')
-                newFilename = self.uploadFtpThumbsDir+"P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
+                newFilename = self.uploadThumbsDir+"P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
 
                 # Convert image
                 #print("  - Convert '{}'".format(oldFilename))
@@ -1057,28 +986,34 @@ class CHPS:
                         continue;
 
             # Copy plant of unknown provenance into separate directory
-            print(f"* Copy to upload directory for unknown provenance '{self.uploadUnknownProvenancePlantsDir}'")
+            foundUnknownProvenance = False
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.unknownProvenance==False:
-                    continue
-                # Copy from pending to unknown provenance upload directory
-                if not self.args.dryrun:
-                    os.makedirs(self.uploadUnknownProvenancePlantsDir, exist_ok=True)
-                newFilename = self.uploadUnknownProvenancePlantsDir+self.convertSpecialChar(imageInfo.filename)+imageInfo.extension
-                if not self.args.dryrun:
-                    try:
-                        shutil.copyfile(imageInfo.path, newFilename)
-                    except OSError as e:
-                        print(f"! Can't copy file. Error: {e}")
+                if imageInfo.unknownProvenance:
+                    foundUnknownProvenance = True
+                    break
+            if foundUnknownProvenance:
+                print(f"* Copy to upload directory for unknown provenance '{self.uploadUnknownProvenancePlantsDir}'")
+                for imageInfo in self.pendingPlantsImageInfo:
+                    if imageInfo.unknownProvenance==False:
                         continue
+                    # Copy from pending to unknown provenance upload directory
+                    if not self.args.dryrun:
+                        os.makedirs(self.uploadUnknownProvenancePlantsDir, exist_ok=True)
+                    newFilename = self.uploadUnknownProvenancePlantsDir+self.convertSpecialChar(imageInfo.filename)+imageInfo.extension
+                    if not self.args.dryrun:
+                        try:
+                            shutil.copyfile(imageInfo.path, newFilename)
+                        except OSError as e:
+                            print(f"! Can't copy file. Error: {e}")
+                            continue
 
         if self.pendingGardenImages:
             for imageInfo in self.pendingGardensImageInfo:
                 if imageInfo.valid==False:
                     continue
-                oldFilename = self.uploadDropBoxGardensDir+imageInfo.gardenName+" X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
+                oldFilename = self.uploadGardensDir+imageInfo.gardenName+" X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 oldFilename = oldFilename.replace(u'/', u'_')
-                newFilename = self.uploadFtpThumbsDir+"X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
+                newFilename = self.uploadThumbsDir+"X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
 
                 # Convert image
                 #print("  - Convert '{}'".format(oldFilename))
@@ -1167,11 +1102,6 @@ If you have two different pictures of the same plant of the same donor then I
 would suggest adding an extra space before/after the RHS number
 ''')
     parser.add_argument(
-        '--download',
-        action='store_true',
-        help="Download spreadsheets (Default: don't download)"
-    )
-    parser.add_argument(
         '--dryrun',
         action='store_true',
         help='Run without saving/creating any files'
@@ -1211,48 +1141,6 @@ would suggest adding an extra space before/after the RHS number
         return 1
 
     hps.printFinalResults()
-
-    print("And finally")
-    print("-----------")
-    print("Copy to local disc:")
-    print(f"  * Copy thumbnails from {hps.uploadFtpThumbsDir}")
-    print(f"                    to   {hps.thumbsDir}")
-    if hps.pendingPlantImages:
-        print(f"  * Copy genera.csv from {hps.uploadFtpDir}")
-        print(f"                    to   {hps.generaDB.path}")
-    print(f"  * Copy imagelib.csv from {hps.uploadFtpDir}")
-    print(f"                      to   {hps.imagelibDB.path}")
-    if hps.pendingPlantImages:
-        print(f"  * Copy new plant images from {hps.uploadDropBoxPlantsDir}")
-        print(f"                          to   {hps.plantsDir}")
-        print(f"  * Copy 'HPS Images - Plants.xlsx' from {hps.uploadDropBoxPlantsDir}")
-        print(f"                                    to   {hps.hpsPlantsDB.path}")
-    if hps.pendingGardenImages:
-        print(f"  * Copy new garden images from {hps.uploadDropBoxGardensDir}")
-        print(f"                           to   {hps.gardensDir}")
-        print(f"  * Copy 'HPS Images - Gardens.xlsx' from {hps.uploadDropBoxPlantsDir}")
-        print(f"                                    to   {hps.hpsPlantsDB.path}")
-    print()
-    print("Copy to ftp:")
-    print(f"  * Copy thumbnails from {hps.uploadFtpThumbsDir}")
-    print(f"                    to   ftp://images@hardy-plant.org.uk:/catalog/library/thumbs")
-    if hps.pendingPlantImages:
-        print(f"  * Copy genera.csv from {hps.uploadFtpDir}")
-        print(f"                    to   ftp://docsftp@hardy-plants.org.uk:/plants if available")
-    print(f"  * Copy imagelib.csv from {hps.uploadFtpDir}")
-    print(f"                      to   ftp://docsftp@hardy-plants.org.uk:/plants")
-    print()
-    print("Copy to dropbox:")
-    if hps.pendingPlantImages:
-        print(f"  * Copy new plant images from {hps.uploadDropBoxPlantsDir}")
-        print("                          to   https://www.dropbox.com/home/Family%20Room/Image%20Library/Images%20-%20plants")
-        print(f"  * Copy 'HPS Images - Plants.xlsx' from {hps.uploadDropBoxPlantsDir}")
-        print("                                    to   https://www.dropbox.com/home/Family%20Room/Image%20Library")
-    if hps.pendingGardenImages:
-        print(f"  * Copy new garden images from {hps.uploadDropBoxGardensDir}")
-        print("                           to   https://www.dropbox.com/home/Family%20Room/Image%20Library/Images%20-%20Gardens")
-        print(f"  * Copy 'HPS Images - Gardens.xlsx' from {hps.uploadDropBoxPlantsDir}")
-        print("                                     to   https://www.dropbox.com/home/Family%20Room/Image%20Library")
 
     return 0
 

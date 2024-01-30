@@ -148,7 +148,6 @@ class CPendingImageInfo(CImageInfo):
         self.rhsGenus    = []
         self.rhsSpecies  = []
         self.rhsCultivar = []
-        self.rhsStatus   = []
         self.rhsNames    = []
         self.rhsHtml     = []
         self.valid       = True
@@ -167,7 +166,6 @@ class CPendingImageInfo(CImageInfo):
         print(f"      RHS genus:    '{self.rhsGenus}'")
         print(f"      RHS species:  '{self.rhsSpecies}'")
         print(f"      RHS cultivar: '{self.rhsCultivar}'")
-        print(f"      RHS status:   '{self.rhsStatus}'")
         print(f"      RHS name:     '{self.rhsNames}'")
         print(f"      RHS html:     '{self.rhsHtml}'")
 
@@ -193,14 +191,3 @@ class CPendingImageInfo(CImageInfo):
                     if self.rhsNumbers[x] != 0:
                         rhsNumberString += " && " + str(self.rhsNumbers[x])
         return rhsNumberString
-
-    def getRHSStatus(self):
-        rhsStatusString = ""
-        numRHSStatus = len(self.rhsStatus)
-        if numRHSStatus > 0:
-            rhsStatusString = self.rhsStatus[0]
-            if numRHSStatus>1:
-                for x in range(1, len(self.rhsStatus)):
-                    if self.rhsStatus[x] != 0:
-                        rhsStatusString += " && " + self.rhsStatus[x]
-        return rhsStatusString
