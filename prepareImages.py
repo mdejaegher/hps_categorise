@@ -450,14 +450,62 @@ class CHPS:
         return html
 
     def createHtmlName(self, index):
-        html = ""
-
+        # This method wasn't needed in the previous database as that was included in the
+        # NAME_HTML column. This column doesn't exist any longer in the new database so
+        # we're having to make it up. This could potentially be a source of errors and
+        # confusion.
+        #
+        # E.g. you now have
+        # Chrysanthemum [Hekla] ('Yohek') (30)
+        # and
+        # Chrysanthemum [Hekla]
+        # in the CalcTopRankedEntityName and CalcFullName columns. In the previous database,
+        # the name was 'Chrysanthemum [Hekla] = 'Yohek' (30)' and the html was
+        # <i>Chrysanthemum</i> [Hekla] = 'Yohek' (30)
+        # In the new database, the name 'Yohek' is not available in any column which means
+        # the decision was made to use the CalcFullName as the real name from now on.
+        #
+        # There's more... E.g. take
+        # Jasminum × stephanense 'Variegatum'
+        # The 'x' is not available in the SpeciesName column so I can't add it in the html name.
         genusname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_GENUSNAME)
         speciesname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SPECIESNAME)
-        html = "<i>" + genusname + " " + speciesname + "</i>"
-
+        subspecies = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SUBSPECIES)
+        variety = self.rhsReferenceDB.getValue('Table1', index, self.RHS_VARIETY)
+        subvariety = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SUBVARIETY)
+        forma = self.rhsReferenceDB.getValue('Table1', index, self.RHS_FORMA)
+        tradeseries = self.rhsReferenceDB.getValue('Table1', index, self.RHS_TRADESERIES)
+        tradedesignation = self.rhsReferenceDB.getValue('Table1', index, self.RHS_TRADEDESIGNATION)
         cultivar = self.rhsReferenceDB.getValue('Table1', index, self.RHS_CULTIVAR)
-        html = html + "'" + cultivar + "'"
+        descriptor = self.rhsReferenceDB.getValue('Table1', index, self.RHS_DESCRIPTOR)
+
+        html = "<i>" + genusname
+        if speciesname:
+            html += " " + speciesname
+        html += "</i>"
+        if tradedesignation:
+            html += " [" + tradedesignation + "]"
+        if subspecies:
+            html += " subsp. <i>" + subspecies + "</i>"
+        if variety:
+            html += " var. <i>" + variety + "</i>"
+        if subvariety:
+            html += " subvar. <i>" + subvariety + "</i>"
+        if forma:
+            html += " f. <i>" + forma + "</i>"
+        if cultivar:
+            html + " '" + cultivar + "'"
+        if tradeseries:
+            html += " (" + tradeseries + " Series)"
+        if descriptor:
+            html += " " + descriptor
+
+        # We've got a bit of an issue at the end of the name. In the previous database, there
+        # was a GROUP_NAME column which was added at the end of the plant name between brackets,
+        # e.g. Ilex decidua 'Warren's Red' (f)
+        # This is no longer available as a separate column in the new RHS database so I can't
+        # easily add it here. The only place where it's still available is in the 
+        # CalcTopRankedEntityName column but we currently still use CalcFullName for the name
 
         return html
 
@@ -740,12 +788,13 @@ class CHPS:
         print("-------------------")
 
         if self.pendingPlantImages:
-            backupHpsPlantsDB = self.scriptDir+self.hpsPlantsDB.filename+'_'+datetime.datetime.now().strftime("%d%m%y")+self.hpsPlantsDB.extension
-            if not os.path.exists(backupHpsPlantsDB):
-                print(f"* Create backup of '{self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}'")
-                shutil.copyfile(self.hpsPlantsDB.filename+self.hpsPlantsDB.extension, backupHpsPlantsDB)
-            print(f"* '{self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}': master image database")
-            print("  - Update", end="\r")
+            backupHpsPlantsDB = self.hpsPlantsDB.filename+' - '+datetime.datetime.now().strftime("%d%m%y")+self.hpsPlantsDB.extension
+            print(f"* Create backup of '{self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}' to {backupHpsPlantsDB}")
+            if os.path.exists(self.scriptDir+backupHpsPlantsDB):
+                print("  - File already exists. Skipping")
+            else:
+                shutil.copyfile(self.scriptDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension, self.scriptDir+backupHpsPlantsDB)
+            print(f"* Update '{self.scriptDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}': master image database")
             validFiles = 0
             for imageInfo in self.pendingPlantsImageInfo:
                 if imageInfo.valid is False or imageInfo.unknownProvenance is True:
@@ -766,8 +815,13 @@ class CHPS:
                     except PermissionError:
                         print(f"! Permission error writing to {self.scriptDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}")
 
-            print(f"* '{self.imagelibDB.filename+self.imagelibDB.extension}': image database used by website")
-            print("  - Update", end="\r")
+            backupimagelibDB = self.imagelibDB.filename+' - '+datetime.datetime.now().strftime("%d%m%y")+self.imagelibDB.extension
+            print(f"* Create backup of '{self.imagelibDB.filename+self.imagelibDB.extension}' to {backupimagelibDB}")
+            if os.path.exists(self.scriptDir+backupimagelibDB):
+                print("  - File already exists. Skipping")
+            else:
+                shutil.copyfile(self.scriptDir+self.imagelibDB.filename+self.imagelibDB.extension, self.scriptDir+backupimagelibDB)
+            print(f"* Update '{self.scriptDir+self.imagelibDB.filename+self.imagelibDB.extension}': image database used by website")
             # Find where the P files (plants) change into X files (gardens)
             padd = 0
             for index in range(2, self.imagelibDB.workbook['active'].max_row):
@@ -791,16 +845,19 @@ class CHPS:
             if validFiles == 0:
                 print("! No data to write")
             else:
-                newPath = self.uploadDir+self.imagelibDB.filename+self.imagelibDB.extension
-                print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
-                        self.imagelibDB.save(newPath)
+                        self.imagelibDB.save(self.scriptDir+self.imagelibDB.filename+self.imagelibDB.extension)
                     except PermissionError:
                         print("  ! Permission error writing to {}".format(self.imagelibDB.fileName))
 
-            print(f"* '{self.generaDB.filename+self.generaDB.extension}': alphabetically sorted list of genera we have pictures of. Used by website.")
-            print("  - Update", end="\r")
+            backupGeneraDB = self.generaDB.filename+' - '+datetime.datetime.now().strftime("%d%m%y")+self.generaDB.extension
+            print(f"* Create backup of '{self.generaDB.filename+self.generaDB.extension}' to {backupGeneraDB}")
+            if os.path.exists(self.scriptDir+backupGeneraDB):
+                print("  - File already exists. Skipping")
+            else:
+                shutil.copyfile(self.scriptDir+self.generaDB.filename+self.generaDB.extension, self.scriptDir+backupGeneraDB)
+            print(f"* Update '{self.scriptDir+self.generaDB.filename+self.generaDB.extension}': alphabetically sorted list of genera we have pictures of. Used by website.")
             existingGenus = self.generaDB.getColumn('active', 1)
             genusAdded = False
             for imageInfo in self.pendingPlantsImageInfo:
@@ -828,19 +885,22 @@ class CHPS:
                             existingGenus = self.generaDB.getColumn('active', 1)
                             break
             if genusAdded:
-                newPath = self.uploadDir+self.generaDB.filename+self.generaDB.extension
-                print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
-                        self.generaDB.save(newPath)
+                        self.generaDB.save(self.scriptDir+self.generaDB.filename+self.generaDB.extension)
                     except PermissionError:
                         print("  ! Permission error writing to {}".format(self.generaDB.fileName))
             else:
                 print("  - No new genus added")
 
         if self.pendingGardenImages:
-            print(f"* '{self.hpsGardensDB.filename+self.hpsGardensDB.extension}': master image database")
-            print("  - Update", end="\r")
+            backupHpsGardensDB = self.hpsGardensDB.filename+' - '+datetime.datetime.now().strftime("%d%m%y")+self.hpsGardensDB.extension
+            print(f"* Create backup of '{self.hpsGardensDB.filename+self.hpsGardensDB.extension}' to {backupHpsGardensDB}")
+            if os.path.exists(self.scriptDir+backupHpsGardensDB):
+                print("  - File already exists. Skipping")
+            else:
+                shutil.copyfile(self.scriptDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension, self.scriptDir+backupHpsGardensDB)
+            print(f"* Update '{self.scriptDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension}': master garden image database")
             validFiles = 0
             for imageInfo in self.pendingGardensImageInfo:
                 if imageInfo.valid is False:
@@ -854,13 +914,11 @@ class CHPS:
             if validFiles == 0:
                 print("  ! No data to write")
             else:
-                newPath = self.uploadDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension
-                print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
-                        self.hpsGardensDB.save(newPath)
+                        self.hpsGardensDB.save(self.scriptDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension)
                     except PermissionError:
-                        print(f"! Permission error writing to {newPath}")
+                        print(f"! Permission error writing to {self.scriptDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension}")
 
             print(f"* '{self.imagelibDB.filename+self.imagelibDB.extension}': image database used by website")
             print("  - Update", end="\r")

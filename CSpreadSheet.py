@@ -40,7 +40,7 @@ class CSpreadSheet:
     def validate(self, sheetName, headers):
         # Check if workbook and sheet have been created
         if sheetName not in self.workbook:
-            print(f"! Couldn't find sheet with name '{sheetName}'.");
+            print(f"! Couldn't find sheet with name '{sheetName}'.")
             return 1
 
         sheet = self.workbook[sheetName]
@@ -108,8 +108,10 @@ class CSpreadSheet:
                 return 1
         elif self.extension == ".csv":
             with open(newPath, 'w', newline='') as f:
-                #writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='', quotechar='')
-                writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE)
+                # This has stopped working since csv version 3.11 which means that all double quotes will
+                # now be escaped by a backslash. csv is a builtin package so you can't change the version
+                # writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='', quotechar='')
+                writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='\\', quotechar='"')
                 for row in self.workbook['active'].rows:
                     writer.writerow([cell.value for cell in row])
             return 0
