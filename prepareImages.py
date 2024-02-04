@@ -1,6 +1,6 @@
 #!/usr/bin/python
-from CImageInfo   import CImageInfo
-from CImageInfo   import CPendingImageInfo
+from CImageInfo import CImageInfo
+from CImageInfo import CPendingImageInfo
 from CSpreadSheet import CSpreadSheet
 
 import argparse
@@ -10,14 +10,15 @@ import re
 import shutil
 import subprocess
 import sys
-import urllib.request
 
 # Force print to always flush
 import functools
 print = functools.partial(print, flush=True)
 
+
 class CHPS:
 
+    # Column names with numbers in RHS database
     RHS_OLDSPECIESCODE = 1
     RHS_CALCTOPRANKEDENTITYNAME = 2
     RHS_CACLFULLNAME = 3
@@ -36,29 +37,28 @@ class CHPS:
     def __init__(self, args):
         self.args = args
 
-        self.gitHubDir         = 'H:\\hps_categorise\\'
-        self.baseDir           = 'H:\\HPS_Images\\'
-        self.plantsDir         = self.baseDir + 'Plants\\'
-        self.pendingPlantsDir  = self.baseDir + 'Pending\\Plants\\'
-        self.gardensDir        = self.baseDir + 'Gardens\\'
+        self.scriptDir = 'H:\\hps_categorise\\'
+        self.baseDir = 'H:\\HPS_Images\\'
+        self.plantsDir = self.baseDir + 'Plants\\'
+        self.pendingPlantsDir = self.baseDir + 'Pending\\Plants\\'
+        self.gardensDir = self.baseDir + 'Gardens\\'
         self.pendingGardensDir = self.baseDir + 'Pending\\Gardens\\'
-        self.thumbsDir         = self.baseDir + 'Thumbnails\\'
-        self.uploadDir         = self.baseDir + 'Upload_'+datetime.datetime.now().strftime("%d%m%y")+'\\'
+        self.thumbsDir = self.baseDir + 'Thumbnails\\'
+        self.uploadDir = self.baseDir + 'Upload_'+datetime.datetime.now().strftime("%d%m%y")+'\\'
 
         # Current data
-        self.hpsPlantsImageInfo  = []
+        self.hpsPlantsImageInfo = []
         self.hpsGardensImageInfo = []
         # Pending data
-        self.pendingPlantImages      = True
-        self.pendingPlantsImageInfo  = []
-        self.pendingGardenImages     = True
+        self.pendingPlantImages = True
+        self.pendingPlantsImageInfo = []
+        self.pendingGardenImages = True
         self.pendingGardensImageInfo = []
         # Upload directories
-        self.uploadPlantsDir  = self.uploadDir+'Plants\\'
+        self.uploadPlantsDir = self.uploadDir+'Plants\\'
         self.uploadGardensDir = self.uploadDir+'Gardens\\'
-        self.uploadThumbsDir  = self.uploadDir+'thumbs\\'
+        self.uploadThumbsDir = self.uploadDir+'thumbs\\'
         self.uploadUnknownProvenancePlantsDir = self.uploadDir+'unknownProvenance\\'
-
 
     def validateDirectories(self):
         print("* Validate directories")
@@ -141,40 +141,36 @@ class CHPS:
                 return 1
         print("OK")
 
-        # TODO: Check if Unclassified directory exists
-
         return 0
 
     def createImagelibDB(self):
         # imagelib.csv can be found in docsftp@hardy-plant.org.uk:/plants
-        fileName = self.gitHubDir+"imagelib.csv"
-        print(f"  - {fileName}: importing", end="")
+        fileName = self.scriptDir+"imagelib.csv"
+        print(f"  - {fileName}: importing ", end="\r")
         if not os.path.isfile(fileName):
             print("doesn't exist!")
             return 1
-
         self.imagelibDB = CSpreadSheet(fileName)
-        print("OK")
+        print(f"  - {fileName}: OK         ")
 
         return 0
 
     def createGeneraDB(self):
         # genera.csv can be found in docsftp@hardy-plant.org.uk:/plants
-        fileName = self.gitHubDir+"genera.csv"
-        print(f"  - {fileName}: importing", end="")
+        fileName = self.scriptDir+"genera.csv"
+        print(f"  - {fileName}: importing ", end="\r")
         if not os.path.isfile(fileName):
             print("doesn't exist!")
             return 1
-
         self.generaDB = CSpreadSheet(fileName)
-        print("OK")
+        print(f"  - {fileName}: OK         ")
 
         return 0
 
     def createHpsPlantsDB(self):
         # Get the latest version of the plants database. This needs to be done
         # better by checking if files are same or not using requests
-        fileName = self.gitHubDir+"HPS Images - Plants.xlsx"
+        fileName = self.scriptDir+"HPS Images - Plants.xlsx"
         print(f"  - {fileName}: importing  ", end="\r")
         self.hpsPlantsDB = CSpreadSheet(fileName)
         print(f"  - {fileName}: OK         ")
@@ -184,7 +180,7 @@ class CHPS:
     def createHpsGardensDB(self):
         # Get the latest version of the gardens database. This needs to be done
         # better by checking if files are same or not using requests
-        fileName = self.gitHubDir+"HPS Images - Gardens.xlsx"
+        fileName = self.scriptDir+"HPS Images - Gardens.xlsx"
         print(f"  - {fileName}: importing  ", end="\r")
         self.hpsGardensDB = CSpreadSheet(fileName)
         print(f"  - {fileName}: OK         ")
@@ -195,23 +191,23 @@ class CHPS:
         # Find where the P files (plants) change into X files (gardens)
         imagelibAccession = ""
         for index in range(2, self.imagelibDB.workbook['active'].max_row):
-            imageID = self.imagelibDB.getValue('active', index, 2) # Image ID
+            imageID = self.imagelibDB.getValue('active', index, 2)  # Image ID
             if imageID.startswith("X"):
                 break
             imagelibAccession = imageID
 
         if self.pendingPlantImages:
             maxRow = self.hpsPlantsDB.workbook['Plants'].max_row
-            hpsPlantsAccession = self.hpsPlantsDB.getValue('Plants', maxRow, 2) # Number
+            hpsPlantsAccession = self.hpsPlantsDB.getValue('Plants', maxRow, 2)  # Number
 
             if imagelibAccession != hpsPlantsAccession:
                 print(f"* Libraries not consistent! {imagelibAccession} vs {hpsPlantsAccession}")
                 return 1
 
         if self.pendingGardenImages:
-            imagelibAccession = self.imagelibDB.getValue('active', self.imagelibDB.workbook['active'].max_row, 2) # Image ID
+            imagelibAccession = self.imagelibDB.getValue('active', self.imagelibDB.workbook['active'].max_row, 2)  # Image ID
             maxRow = self.hpsGardensDB.workbook['Gardens'].max_row
-            hpsGardensAccession = self.hpsGardensDB.getValue('Gardens', maxRow, 2) # Number
+            hpsGardensAccession = self.hpsGardensDB.getValue('Gardens', maxRow, 2)  # Number
 
             if imagelibAccession != hpsGardensAccession:
                 print(f"* Libraries not consistent! {imagelibAccession} vs {hpsGardensAccession}")
@@ -222,7 +218,7 @@ class CHPS:
     def createRhsReferenceDB(self):
         # Get the latest version of the RHS database. This needs to be done better
         # by checking if files are same or not using requests
-        fileName = self.gitHubDir+"RHS_0923_Reduced_Unlocked.xlsx"
+        fileName = self.scriptDir+"RHS_0923_Reduced_Unlocked.xlsx"
         print(f"  - {fileName}: importing  ", end="\r")
         self.rhsReferenceDB = CSpreadSheet(fileName)
         print(f"  - {fileName}: OK         ")
@@ -347,13 +343,13 @@ class CHPS:
                 for filename in os.listdir(self.plantsDir+plantsLetterDir):
                     fullpath = self.plantsDir + plantsLetterDir + '\\' + filename
                     self.hpsPlantsImageInfo.append(CImageInfo(fullpath, False))
-            print(f"  - imported current plant images{' ': <108}")
+            print(f"  - Imported current plant images{' ': <108}")
 
         if self.pendingGardenImages:
             for filename in os.listdir(self.gardensDir):
-                fullpath =self.gardensDir + '\\' + filename
+                fullpath = self.gardensDir + '\\' + filename
                 self.hpsGardensImageInfo.append(CImageInfo(fullpath, False))
-            print(f"  - imported current garden images{' ': <108}")
+            print(f"  - Imported current garden images{' ': <108}")
 
     def importPendingImages(self):
         if self.pendingPlantImages:
@@ -361,30 +357,30 @@ class CHPS:
                 fullpath = self.pendingPlantsDir + filename
                 print(f"  - {filename: <108}", end="\r")
                 self.pendingPlantsImageInfo.append(CPendingImageInfo(fullpath))
-            print(f"  - imported pending plant images{' ': <108}")
+            print(f"  - Imported pending plant images{' ': <108}")
         if self.pendingGardenImages:
             for filename in os.listdir(self.pendingGardensDir):
                 fullpath = self.pendingGardensDir + filename
                 print(f"  - {filename: <108}", end="\r")
                 self.pendingGardensImageInfo.append(CPendingImageInfo(fullpath))
-            print(f"  - imported pending garden images{' ': <108}")
+            print(f"  - Imported pending garden images{' ': <108}")
 
     def getImageInfo(self):
         print("* Import existing images")
         self.importCurrentImages()
-        if self.pendingPlantImages and len(self.hpsPlantsImageInfo)==0:
+        if self.pendingPlantImages and len(self.hpsPlantsImageInfo) == 0:
             print("! Couldn't find information for current plant images\n")
             return 1
-        if self.pendingGardenImages and len(self.hpsGardensImageInfo)==0:
+        if self.pendingGardenImages and len(self.hpsGardensImageInfo) == 0:
             print("! Couldn't find information for current garden images\n")
             return 1
 
         print("* Import pending images")
         self.importPendingImages()
-        if self.pendingPlantImages and len(self.pendingPlantsImageInfo)==0:
+        if self.pendingPlantImages and len(self.pendingPlantsImageInfo) == 0:
             print("! Couldn't find information for pending plant images\n")
             return 1
-        if self.pendingGardenImages and len(self.pendingGardensImageInfo)==0:
+        if self.pendingGardenImages and len(self.pendingGardensImageInfo) == 0:
             print("! Couldn't find information for pending garden images\n")
             return 1
 
@@ -408,7 +404,7 @@ class CHPS:
         name1 = name1.replace('[', '')
         name1 = name1.replace(']', '')
         name1 = name1.replace("'", "")
-        
+
         name2 = longName.lower()
         name2 = self.convertSpecialChar(name2)
         name2 = name2.replace(' ', '')
@@ -433,9 +429,9 @@ class CHPS:
         value = value.replace(u'\N{LATIN CAPITAL LETTER U WITH DIAERESIS}',  u'U')
         value = value.replace(u'\N{LATIN CAPITAL LETTER U WITH CIRCUMFLEX}', u'U')
 
-        value = value.replace(u'\N{LATIN SMALL LETTER A WITH DIAERESIS}',  u'a') # E4
-        value = value.replace(u'\N{LATIN SMALL LETTER E WITH GRAVE}',      u'e') # E8
-        value = value.replace(u'\N{LATIN SMALL LETTER E WITH ACUTE}',      u'e') # E9
+        value = value.replace(u'\N{LATIN SMALL LETTER A WITH DIAERESIS}',  u'a')  # E4
+        value = value.replace(u'\N{LATIN SMALL LETTER E WITH GRAVE}',      u'e')  # E8
+        value = value.replace(u'\N{LATIN SMALL LETTER E WITH ACUTE}',      u'e')  # E9
         value = value.replace(u'\N{LATIN SMALL LETTER N WITH TILDE}',      u'n')
         value = value.replace(u'\N{LATIN SMALL LETTER O WITH DIAERESIS}',  u'o')
         value = value.replace(u'\N{LATIN SMALL LETTER O WITH CIRCUMFLEX}', u'o')
@@ -476,11 +472,10 @@ class CHPS:
             return 0
         print("* Update garden images")
         for imageNum, imageInfo in enumerate(self.pendingGardensImageInfo):
-            if imageInfo.valid == False:
+            if imageInfo.valid is False:
                 continue
 
             print(f"  - {imageNum+1}/{len(self.pendingGardensImageInfo)}: '{imageInfo.filename}'")
-            name      = None
             imageData = re.search(r'(\D+)\s+\d+\s+(\D+)\s*(\d*)', imageInfo.filename.strip())
             if imageData:
                 # Extract garden name
@@ -488,10 +483,10 @@ class CHPS:
                 # Extract donor name
                 imageInfo.donor = imageData.group(2).rstrip()
                 # Extract date added
-                if len(imageData.groups())>2 and imageData.group(3)!='0':
+                if len(imageData.groups()) > 2 and imageData.group(3) != '0':
                     dateAdded = f"01/01/{imageData.group(3)}"
                 # Extract information
-                if len(imageData.groups())>3:
+                if len(imageData.groups()) > 3:
                     imageInfo.metaData = imageData.group(4)
             else:
                 print("      ! File name doesn't conform to '<garden> <number> <donor> <year>' format")
@@ -519,37 +514,37 @@ class CHPS:
         print("-------------------------------------------------")
         newPlants = 0
         for imageNum, imageInfo in enumerate(self.pendingPlantsImageInfo):
-            if imageInfo.valid == False:
+            if imageInfo.valid is False:
                 continue
 
-            rhsNames   = []
+            rhsNames = []
             rhsNumbers = []
-            donor      = None
-            dateAdded  = None
-            metaData   = None
+            donor = None
+            dateAdded = None
+            metaData = None
 
             # Analyse the image file name to extract plant name, rhs number,
             # donor, date added and metadata
             print(f"* {imageNum+1}/{len(self.pendingPlantsImageInfo)}: '{imageInfo.filename}'")
             splitNames = imageInfo.filename.split('&&')
             for splitName in splitNames:
-                name      = None
+                name = None
                 rhsNumber = 0
                 imageData = re.search(r'(\D+(\(\S+\))?)\s(\d+)\s*(\D*)\s*(\d*)\s*(\D*)', splitName.strip())
                 if imageData:
                     # Extract plant name, remove trailing spaces
                     name = imageData.group(1).strip()
                     # Extract RHS number
-                    if len(imageData.groups())>2:
+                    if len(imageData.groups()) > 2:
                         rhsNumber = int(imageData.group(3))
                     # Extract donor name
-                    if len(imageData.groups())>3:
+                    if len(imageData.groups()) > 3:
                         donor = imageData.group(4)
                     # Specify date added
-                    if len(imageData.groups())>4 and imageData.group(5)!='0':
+                    if len(imageData.groups()) > 4 and imageData.group(5) != '0':
                         dateAdded = f"01/01/{imageData.group(5)}"
                     # Extract meta data
-                    if len(imageData.groups())>5:
+                    if len(imageData.groups()) > 5:
                         metaData = imageData.group(6)
 
                 # Get the RHS numbers of the image
@@ -599,9 +594,9 @@ class CHPS:
                     # or the number was wrong
                     if rhsNumber == 0:
                         # We didn't manage to extract an RHS number from the file name
-                        val = input(f"    Specify RHS number ('enter' for unknown provenance ; for multiple, split by ','): ")
+                        val = input("    Specify RHS number ('enter' for unknown provenance ; for multiple, split by ','): ")
                         if not val:
-                            print(f"    Put on list of unknown provenance'")
+                            print("    Put on list of unknown provenance'")
                             imageInfo.unknownProvenance = True
                             continue
                         numbers = val.split(',')
@@ -613,7 +608,7 @@ class CHPS:
                     continue
 
             # Ignore images with plants of unknown provenance
-            if imageInfo.unknownProvenance == True:
+            if imageInfo.unknownProvenance is True:
                 continue
 
             # Check if we found any numbers
@@ -628,10 +623,10 @@ class CHPS:
             for index, num in enumerate(rhsNumbers):
                 # A value of '0' is valid, e.g. when there's no entry for
                 # the plant in the RHS data set so no need to look anything up
-                if num==0:
+                if num == 0:
                     imageInfo.rhsNames.append(rhsNames[index])
                     imageInfo.rhsHtml.append(self.createHtmlTag(rhsNames[index]))
-                    rhsNumbersFound += 1 # technically not correct but makes it easier further down the line to pretend we did
+                    rhsNumbersFound += 1  # technically not correct but makes it easier further down the line to pretend we did
                     continue
                 # Find the data in the RHS data set for given RHS number
                 for index in range(2, self.rhsReferenceDB.workbook['Table1'].max_row):
@@ -649,7 +644,7 @@ class CHPS:
                         # know
                         samePlants = 0
                         for index in range(2, self.hpsPlantsDB.workbook['Plants'].max_row):
-                            intnum = self.hpsPlantsDB.getValue('Plants', index, 3) # RHS No
+                            intnum = self.hpsPlantsDB.getValue('Plants', index, 3)  # RHS No
                             if not intnum:
                                 continue
                             try:
@@ -668,7 +663,7 @@ class CHPS:
                             # there's no other in the list yet.
                             if imageInfo.validateSize():
                                 print(f"  ! pending image {imageInfo.filename} is too small ({imageInfo.width}x{imageInfo.height})")
-                                val = input(f"      Make invalid [YES/no] ? ")
+                                val = input("      Make invalid [YES/no] ? ")
                                 if not val or val == 'YES' or val == 'yes':
                                     imageInfo.valid = False
                         break
@@ -709,7 +704,7 @@ class CHPS:
                 print(f"  - Got meta data added as '{metaData}'")
                 imageInfo.metaData = metaData
 
-        if newPlants>0:
+        if newPlants > 0:
             print(f"! Got {newPlants} new plants")
 
         print()
@@ -718,79 +713,79 @@ class CHPS:
     def createAccession(self):
         if self.pendingPlantImages:
             maxRow = self.hpsPlantsDB.workbook['Plants'].max_row
-            accession = int(self.hpsPlantsDB.getValue('Plants', maxRow, 2)[1:]) # Number
+            accession = int(self.hpsPlantsDB.getValue('Plants', maxRow, 2)[1:])  # Number
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.valid==False or imageInfo.unknownProvenance==True:
+                if imageInfo.valid is False or imageInfo.unknownProvenance is True:
                     continue
-                maxRow    += 1
+                maxRow += 1
                 accession += 1
-                imageInfo.xlsxRow   = maxRow
+                imageInfo.xlsxRow = maxRow
                 imageInfo.accession = accession
 
         if self.pendingGardenImages:
             maxRow = self.hpsGardensDB.workbook['Gardens'].max_row
-            accession = int(self.hpsGardensDB.getValue('Gardens', maxRow, 2)[1:]) # Number
+            accession = int(self.hpsGardensDB.getValue('Gardens', maxRow, 2)[1:])  # Number
             for imageInfo in self.pendingGardensImageInfo:
-                if imageInfo.valid==False:
+                if imageInfo.valid is False:
                     continue
-                maxRow    += 1
+                maxRow += 1
                 accession += 1
-                imageInfo.xlsxRow   = maxRow
+                imageInfo.xlsxRow = maxRow
                 imageInfo.accession = accession
 
         return 0
 
-    def writeXlsxResults(self):
-        print("Write xlsx results")
-        print("------------------")
-        now = datetime.datetime.now()
+    def updateSpreadsheets(self):
+        print("Update spreadsheets")
+        print("-------------------")
 
         if self.pendingPlantImages:
+            backupHpsPlantsDB = self.scriptDir+self.hpsPlantsDB.filename+'_'+datetime.datetime.now().strftime("%d%m%y")+self.hpsPlantsDB.extension
+            if not os.path.exists(backupHpsPlantsDB):
+                print(f"* Create backup of '{self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}'")
+                shutil.copyfile(self.hpsPlantsDB.filename+self.hpsPlantsDB.extension, backupHpsPlantsDB)
             print(f"* '{self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}': master image database")
             print("  - Update", end="\r")
             validFiles = 0
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.valid==False or imageInfo.unknownProvenance==True:
+                if imageInfo.valid is False or imageInfo.unknownProvenance is True:
                     continue
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 1, self.convertSpecialChar(imageInfo.getRHSName()))                # plantName
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 2, "P{:05d}".format(imageInfo.accession)) # HPSNo
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 3, imageInfo.getRHSNumber())              # RHSNo
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 8, imageInfo.donor)                       # donor
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 9, imageInfo.dateAdded)                   # dateAdded
-                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow,11, imageInfo.metaData)                    # extra information
+                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 1, self.convertSpecialChar(imageInfo.getRHSName()))  # plantName
+                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 2, "P{:05d}".format(imageInfo.accession))  # HPSNo
+                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 3, imageInfo.getRHSNumber())  # RHSNo
+                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 8, imageInfo.donor)  # donor
+                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 9, imageInfo.dateAdded)  # dateAdded
+                self.hpsPlantsDB.setValue('Plants', imageInfo.xlsxRow, 11, imageInfo.metaData)  # extra information
                 validFiles += 1
             if validFiles == 0:
                 print("  ! No data to write")
             else:
-                newPath = self.uploadDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension
-                print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
-                        self.hpsPlantsDB.save(newPath)
+                        self.hpsPlantsDB.save(self.scriptDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension)
                     except PermissionError:
-                        print(f"! Permission error writing to {newPath}")
+                        print(f"! Permission error writing to {self.scriptDir+self.hpsPlantsDB.filename+self.hpsPlantsDB.extension}")
 
             print(f"* '{self.imagelibDB.filename+self.imagelibDB.extension}': image database used by website")
             print("  - Update", end="\r")
             # Find where the P files (plants) change into X files (gardens)
             padd = 0
             for index in range(2, self.imagelibDB.workbook['active'].max_row):
-                imageID = self.imagelibDB.getValue('active', index, 2) # Image ID
+                imageID = self.imagelibDB.getValue('active', index, 2)  # Image ID
                 if imageID.startswith("X"):
                     padd = index
                     break
             validFiles = 0
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.valid==False or imageInfo.unknownProvenance==True:
+                if imageInfo.valid is False or imageInfo.unknownProvenance is True:
                     continue
                 # Insert plants at end of P files
                 self.imagelibDB.workbook['active'].insert_rows(padd)
                 html = "<span RHS>" + imageInfo.rhsHtml[0] + "</span>"
                 for index in range(1, len(imageInfo.rhsHtml)):
                     html += " && <span RHS>" + imageInfo.rhsHtml[index] + "</span>"
-                #print(f"-  Insert image P{imageInfo.accession:05} in row {padd}")
-                self.imagelibDB.setValue('active', padd, 1,  html) # Caption
-                self.imagelibDB.setValue('active', padd, 2, f"P{imageInfo.accession:05}") # Image ID
+                self.imagelibDB.setValue('active', padd, 1,  html)  # Caption
+                self.imagelibDB.setValue('active', padd, 2, f"P{imageInfo.accession:05}")  # Image ID
                 validFiles += 1
                 padd += 1
             if validFiles == 0:
@@ -809,7 +804,7 @@ class CHPS:
             existingGenus = self.generaDB.getColumn('active', 1)
             genusAdded = False
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.valid==False or imageInfo.unknownProvenance==True:
+                if imageInfo.valid is False or imageInfo.unknownProvenance is True:
                     continue
                 # Add the genus to the spreadsheet if it's not already there
                 if len(imageInfo.rhsGenus) == 0:
@@ -817,13 +812,13 @@ class CHPS:
                 for index in range(len(imageInfo.rhsGenus)):
                     genus = imageInfo.rhsGenus[index].capitalize()
                     if genus in existingGenus:
-                        #print(f"  - genus {genus} already in database")
+                        # genus already in database
                         continue
                     for rhsGenus in existingGenus:
                         # First 7 rows don't contain valid compare data
                         if existingGenus.index(rhsGenus)<8:
                             continue
-                        if genus<rhsGenus:
+                        if genus < rhsGenus:
                             print(f"  - Inserting new genus {genus}, family {imageInfo.rhsFamily[index].capitalize()} in row {existingGenus.index(rhsGenus)}")
                             self.generaDB.workbook['active'].insert_rows(existingGenus.index(rhsGenus)+1)
                             self.generaDB.setValue('active', existingGenus.index(rhsGenus)+1, 1, genus)
@@ -848,13 +843,13 @@ class CHPS:
             print("  - Update", end="\r")
             validFiles = 0
             for imageInfo in self.pendingGardensImageInfo:
-                if imageInfo.valid==False:
+                if imageInfo.valid is False:
                     continue
-                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 1, imageInfo.gardenName)                  # plantName
-                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 2, "X{:05d}".format(imageInfo.accession)) # HPSNo
-                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 3, imageInfo.donor)                       # donor
-                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 4, imageInfo.dateAdded)                   # dateAdded
-                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 6, imageInfo.metaData)                    # extra information
+                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 1, imageInfo.gardenName)  # plantName
+                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 2, "X{:05d}".format(imageInfo.accession))  # HPSNo
+                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 3, imageInfo.donor)  # donor
+                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 4, imageInfo.dateAdded)  # dateAdded
+                self.hpsGardensDB.setValue('Gardens', imageInfo.xlsxRow, 6, imageInfo.metaData)  # extra information
                 validFiles += 1
             if validFiles == 0:
                 print("  ! No data to write")
@@ -871,12 +866,12 @@ class CHPS:
             print("  - Update", end="\r")
             validFiles = 0
             for imageInfo in self.pendingGardensImageInfo:
-                if imageInfo.valid==False:
+                if imageInfo.valid is False:
                     continue
                 # Insert gardens at end of workbook
                 row = self.imagelibDB.workbook['active'].max_row+1
-                self.imagelibDB.setValue('active', row, 1, imageInfo.gardenName) # Caption
-                self.imagelibDB.setValue('active', row, 2, f"X{imageInfo.accession:05}") # Image ID
+                self.imagelibDB.setValue('active', row, 1, imageInfo.gardenName)  # Caption
+                self.imagelibDB.setValue('active', row, 2, f"X{imageInfo.accession:05}")  # Image ID
                 validFiles += 1
             if validFiles == 0:
                 print("! No data to write")
@@ -892,7 +887,7 @@ class CHPS:
         print()
         return 0
 
-    def copyToUpload(self):
+    def copyImagesToUpload(self):
         print("Copy images")
         print("-----------")
 
@@ -900,7 +895,7 @@ class CHPS:
             # Copy plant images into upload directory and remove GPS data
             print(f"* Copy plant images to '{self.uploadPlantsDir}'")
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.valid==False or imageInfo.unknownProvenance==True:
+                if imageInfo.valid is False or imageInfo.unknownProvenance is True:
                     continue
                 startletter = imageInfo.getRHSName()[0]
                 # Copy from pending to dropbox upload directory
@@ -908,7 +903,6 @@ class CHPS:
                     os.makedirs(self.uploadPlantsDir+startletter, exist_ok=True)
                 newFilename = self.uploadPlantsDir+startletter+"\\"+self.convertSpecialChar(imageInfo.getRHSName())+" P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 if not self.args.dryrun:
-                    #print(f"  - copyfile({imageInfo.path}, {newFilename})")
                     try:
                         shutil.copy2(imageInfo.path, newFilename)
                     except OSError as e:
@@ -927,14 +921,13 @@ class CHPS:
             # Copy garden images into upload directory and remove GPS data
             print(f"* Copy garden images to upload directory '{self.uploadGardensDir}'")
             for imageInfo in self.pendingGardensImageInfo:
-                if imageInfo.valid==False:
+                if imageInfo.valid is False:
                     continue
                 # Copy from pending to dropbox upload directory
                 if not self.args.dryrun:
                     os.makedirs(self.uploadGardensDir, exist_ok=True)
                 newFilename = self.uploadGardensDir+"\\"+imageInfo.gardenName+" X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 if not self.args.dryrun:
-                    #print(f"  - copyfile({imageInfo.path}, {newFilename})")
                     try:
                         shutil.copy2(imageInfo.path, newFilename)
                     except OSError as e:
@@ -947,7 +940,7 @@ class CHPS:
                                       "-gpslongitude=",
                                       "-overwrite_original",
                                       newFilename],
-                                      stdout=subprocess.PIPE).communicate()
+                                     stdout=subprocess.PIPE).communicate()
 
         # Create thumbnails: resize, auto orientate, remove exif, add watermark
         print(f"* Create thumbnails in {self.uploadThumbsDir}")
@@ -958,7 +951,7 @@ class CHPS:
             os.makedirs(self.uploadThumbsDir, exist_ok=True)
         if self.pendingPlantImages:
             for imageInfo in self.pendingPlantsImageInfo:
-                if imageInfo.valid==False or imageInfo.unknownProvenance==True:
+                if imageInfo.valid is False or imageInfo.unknownProvenance is True:
                     continue
                 startletter = imageInfo.getRHSName()[0]
                 oldFilename = self.uploadPlantsDir+startletter+"\\"+self.convertSpecialChar(imageInfo.getRHSName())+" P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
@@ -966,8 +959,6 @@ class CHPS:
                 newFilename = self.uploadThumbsDir+"P{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
 
                 # Convert image
-                #print("  - Convert '{}'".format(oldFilename))
-                #print("         to '{}'".format(newFilename))
                 if not self.args.dryrun:
                     out = subprocess.Popen(["magick",
                                             oldFilename,
@@ -980,10 +971,10 @@ class CHPS:
                                             "-draw", watermarkText,
                                             newFilename], stdout=subprocess.PIPE)
                     stdout, stderr = out.communicate()
-                    if (out.returncode!=0):
+                    if out.returncode != 0:
                         print("  ! Error")
                         imageInfo.valid = False
-                        continue;
+                        continue
 
             # Copy plant of unknown provenance into separate directory
             foundUnknownProvenance = False
@@ -994,7 +985,7 @@ class CHPS:
             if foundUnknownProvenance:
                 print(f"* Copy to upload directory for unknown provenance '{self.uploadUnknownProvenancePlantsDir}'")
                 for imageInfo in self.pendingPlantsImageInfo:
-                    if imageInfo.unknownProvenance==False:
+                    if imageInfo.unknownProvenance is False:
                         continue
                     # Copy from pending to unknown provenance upload directory
                     if not self.args.dryrun:
@@ -1009,15 +1000,13 @@ class CHPS:
 
         if self.pendingGardenImages:
             for imageInfo in self.pendingGardensImageInfo:
-                if imageInfo.valid==False:
+                if imageInfo.valid is False:
                     continue
                 oldFilename = self.uploadGardensDir+imageInfo.gardenName+" X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
                 oldFilename = oldFilename.replace(u'/', u'_')
                 newFilename = self.uploadThumbsDir+"X{:05d}".format(imageInfo.accession)+imageInfo.getReformattedExtension()
 
                 # Convert image
-                #print("  - Convert '{}'".format(oldFilename))
-                #print("         to '{}'".format(newFilename))
                 if not self.args.dryrun:
                     out = subprocess.Popen(["magick",
                                             oldFilename,
@@ -1030,38 +1019,17 @@ class CHPS:
                                             "-draw", watermarkText,
                                             newFilename], stdout=subprocess.PIPE)
                     stdout, stderr = out.communicate()
-                    if (out.returncode!=0):
+                    if out.returncode != 0:
                         print("  ! Error")
                         imageInfo.valid = False
-                        continue;
+                        continue
 
         print()
         return 0
 
-    def printFinalResults(self):
-        print("Final results")
-        print("-------------")
-
-        first = True
-        for imageInfo in self.pendingPlantsImageInfo:
-            if imageInfo.valid and imageInfo.unknownProvenance==False:
-                if first:
-                    print("* Images converted:")
-                    first = False
-                print("  - "+imageInfo.filename+imageInfo.extension)
-
-        first = True
-        for imageInfo in self.pendingPlantsImageInfo:
-            if imageInfo.valid==False or imageInfo.unknownProvenance==True:
-                if first:
-                    print("* Images not converted:")
-                    first = False
-                print("  - "+imageInfo.filename+imageInfo.extension)
-
-        print()
-        return
 
 ################################################################################
+
 
 def main():
     # Process the arguments
@@ -1079,7 +1047,7 @@ base directory.
 
 The script will go through a number of steps to classify images:
 * The first step is checking if the tools the script needs have been downloaded
-  ('magick' and 'exiftool'). If it can't find it then it will tell where to 
+  ('magick' and 'exiftool'). If it can't find it then it will tell where to
   download it from.
 * The second step is validating the input: are all the directories it expects
   there, are all the spreadsheets it expects there and are they in the format it
@@ -1134,15 +1102,14 @@ would suggest adding an extra space before/after the RHS number
         return 1
 
     # Copy the pending images to new directory, ready to be uploaded
-    if hps.copyToUpload():
+    if hps.copyImagesToUpload():
         return 1
 
-    if hps.writeXlsxResults():
+    if hps.updateSpreadsheets():
         return 1
-
-    hps.printFinalResults()
 
     return 0
+
 
 if __name__ == "__main__":
     ret = main()

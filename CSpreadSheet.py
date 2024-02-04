@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import csv
 import os
-import shutil
+import sys
 
 # Module openpyxl needs to be imported separately
 try:
@@ -11,13 +11,14 @@ except ModuleNotFoundError:
     print("Couldn't import openpyxl. Install with 'pip install openpyxl'.")
     sys.exit(1)
 
+
 class CSpreadSheet:
     def __init__(self, path):
-        self.path      = path
-        self.dirname   = os.path.dirname(path)
-        self.filename  = os.path.basename(os.path.splitext(path)[0])
+        self.path = path
+        self.dirname = os.path.dirname(path)
+        self.filename = os.path.basename(os.path.splitext(path)[0])
         self.extension = os.path.splitext(path)[1]
-        self.workbook  = None
+        self.workbook = None
 
         # Load the file
         if self.extension == ".xlsx":
@@ -35,27 +36,17 @@ class CSpreadSheet:
                         self.setValue(title, r+1, c+1, value)
         else:
             print(f"! Didn't recognise extension '{self.extension}'")
-        # Gather basic data
-        #for index, sheet in enumerate(self.workbook):
-        #    self.sheet[index] = {}
-        #    self.sheet[index]['title']     = sheet.title
-        #    self.sheet[index]['data']      = sheet
-        #    self.sheet[index]['maxColumn'] = sheet.max_column
-        #    self.sheet[index]['maxRow']    = sheet.max_row
-        #    self.sheet[index]['headers']   = []
-        #    for cell in sheet[1]:
-        #        self.sheet[index]['headers'].append(cell.value)
 
     def validate(self, sheetName, headers):
         # Check if workbook and sheet have been created
-        if not sheetName in self.workbook:
+        if sheetName not in self.workbook:
             print(f"! Couldn't find sheet with name '{sheetName}'.");
             return 1
 
         sheet = self.workbook[sheetName]
 
         # Check if it contains at least a header row and one row of data
-        if sheet.max_row<=2:
+        if sheet.max_row <= 2:
             print(f"! Sheet '{sheetName}' doesn't contain enough rows of data")
             return 1
 
@@ -70,12 +61,12 @@ class CSpreadSheet:
 
         # Check the rows
         lastRowValid = False
-        emptyLines   = 0
+        emptyLines = 0
         # Spreadsheets sometimes have last rows empty after real data. Find out
         # where real data starts
-        while not lastRowValid and sheet.max_row>2:
-            if (    sheet.cell(row=sheet.max_row, column=1).value==None
-                and sheet.cell(row=sheet.max_row, column=2).value==None):
+        while not lastRowValid and sheet.max_row > 2:
+            if (sheet.cell(row=sheet.max_row, column=1).value is None and
+                sheet.cell(row=sheet.max_row, column=2).value is None):
                 sheet.delete_rows(sheet.max_row)
                 emptyLines += 1
                 continue
@@ -121,8 +112,6 @@ class CSpreadSheet:
                 writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE)
                 for row in self.workbook['active'].rows:
                     writer.writerow([cell.value for cell in row])
-            #    for row in self.sheet.rows:
-            #        writer.writerow([cell.value for cell in row])
             return 0
         else:
             print(f"! Didn't recognise extension {'self.extension'}")
