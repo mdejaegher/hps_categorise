@@ -25,14 +25,7 @@ class CHPS:
     RHS_FAMILYNAME = 4
     RHS_GENUSNAME = 5
     RHS_SPECIESNAME = 6
-    RHS_SUBSPECIES = 7
-    RHS_VARIETY = 8
-    RHS_SUBVARIETY = 9
-    RHS_FORMA = 10
-    RHS_TRADESERIES = 11
-    RHS_TRADEDESIGNATION = 12
     RHS_CULTIVAR = 13
-    RHS_DESCRIPTOR = 14
 
     def __init__(self, args):
         self.args = args
@@ -450,62 +443,74 @@ class CHPS:
         return html
 
     def createHtmlName(self, index):
-        # This method wasn't needed in the previous database as that was included in the
-        # NAME_HTML column. This column doesn't exist any longer in the new database so
-        # we're having to make it up. This could potentially be a source of errors and
-        # confusion.
-        #
-        # E.g. you now have
-        # Chrysanthemum [Hekla] ('Yohek') (30)
-        # and
-        # Chrysanthemum [Hekla]
-        # in the CalcTopRankedEntityName and CalcFullName columns. In the previous database,
-        # the name was 'Chrysanthemum [Hekla] = 'Yohek' (30)' and the html was
-        # <i>Chrysanthemum</i> [Hekla] = 'Yohek' (30)
-        # In the new database, the name 'Yohek' is not available in any column which means
-        # the decision was made to use the CalcFullName as the real name from now on.
-        #
-        # There's more... E.g. take
-        # Jasminum × stephanense 'Variegatum'
-        # The 'x' is not available in the SpeciesName column so I can't add it in the html name.
+        # This method wasn't needed in the previous database as the html was included in the
+        # NAME_HTML column. This column doesn't exist any longer in the new database so we're
+        # having to make it up.
+        # I tried at first to reassemble it based on the indiviual component columns (e.g.
+        # subspecies/variety/subvariety/... ) but that didn't work as there were too many
+        # exceptions (e.g. any names with an ' x ' wasn't visible in any columns). I therefore
+        # had to change it to do inline replacement.
+        calcfullname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_CACLFULLNAME)
         genusname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_GENUSNAME)
         speciesname = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SPECIESNAME)
-        subspecies = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SUBSPECIES)
-        variety = self.rhsReferenceDB.getValue('Table1', index, self.RHS_VARIETY)
-        subvariety = self.rhsReferenceDB.getValue('Table1', index, self.RHS_SUBVARIETY)
-        forma = self.rhsReferenceDB.getValue('Table1', index, self.RHS_FORMA)
-        tradeseries = self.rhsReferenceDB.getValue('Table1', index, self.RHS_TRADESERIES)
-        tradedesignation = self.rhsReferenceDB.getValue('Table1', index, self.RHS_TRADEDESIGNATION)
-        cultivar = self.rhsReferenceDB.getValue('Table1', index, self.RHS_CULTIVAR)
-        descriptor = self.rhsReferenceDB.getValue('Table1', index, self.RHS_DESCRIPTOR)
 
-        html = "<i>" + genusname
+        html = calcfullname
+
+        # Search for the 'genusname speciesname' string. There are a few cases where there are
+        # extra words in between which are not supposed to in italic.
+        basicsearch = genusname + r" (\S )?(aff\. )?(.* gx )?"
         if speciesname:
-            html += " " + speciesname
-        html += "</i>"
-        if tradedesignation:
-            html += " [" + tradedesignation + "]"
-        if subspecies:
-            html += " subsp. <i>" + subspecies + "</i>"
-        if variety:
-            html += " var. <i>" + variety + "</i>"
-        if subvariety:
-            html += " subvar. <i>" + subvariety + "</i>"
-        if forma:
-            html += " f. <i>" + forma + "</i>"
-        if cultivar:
-            html + " '" + cultivar + "'"
-        if tradeseries:
-            html += " (" + tradeseries + " Series)"
-        if descriptor:
-            html += " " + descriptor
+            basicsearch += speciesname
+        genspec = re.search(basicsearch, html)
+        if not genspec:
+            print(f"Can break down name '{calcfullname}' due to not conforming to '{basicsearch}'")
+            return calcfullname
 
-        # We've got a bit of an issue at the end of the name. In the previous database, there
-        # was a GROUP_NAME column which was added at the end of the plant name between brackets,
-        # e.g. Ilex decidua 'Warren's Red' (f)
-        # This is no longer available as a separate column in the new RHS database so I can't
-        # easily add it here. The only place where it's still available is in the 
-        # CalcTopRankedEntityName column but we currently still use CalcFullName for the name
+        # Genus name is always in italic
+        src = genusname + " "
+        dst = "<i>" + genusname + "</i> "
+        if genspec.group(1):
+            src += genspec.group(1)
+            dst += genspec.group(1)
+        if genspec.group(2):
+            src += genspec.group(2)
+            dst += genspec.group(2)
+        if genspec.group(3):
+            src += genspec.group(3)
+            dst += genspec.group(3)
+        # Speciesname (if present) is always in italic
+        if speciesname:
+            src += speciesname
+            dst += "<i>" + speciesname + "</i>"
+        # Create the correct html for 'genusname speciesname'
+        html = html.replace(src, dst)
+
+        # Subspecies is in italic
+        subspsearch = r" subsp. (\S*)"
+        subsp = re.search(subspsearch, html)
+        if subsp:
+            html = html.replace(" subsp. "+subsp.group(1), " subsp. <i>"+subsp.group(1)+"</i>")
+
+        # Variety is in italic
+        varsearch = r" var. (\S*)"
+        var = re.search(varsearch, html)
+        if var:
+            html = html.replace(" var. "+var.group(1), " var. <i>"+var.group(1)+"</i>")
+
+        # Subvariety is in italic
+        subvarsearch = r" subvar. (\S*)"
+        subvar = re.search(subvarsearch, html)
+        if subvar:
+            html = html.replace(" subvar. "+subvar.group(1), " subvar. <i>"+subvar.group(1)+"</i>")
+
+        # Forma is in italic
+        formasearch = r" f. (\S*)"
+        forma = re.search(formasearch, html)
+        if forma:
+            html = html.replace(" f. "+forma.group(1), " f. <i>"+forma.group(1)+"</i>")
+
+        # Replace any 'x' with html readable string
+        html = html.replace(u'\N{MULTIPLICATION SIGN}', "&times;")
 
         return html
 
@@ -920,8 +925,13 @@ class CHPS:
                     except PermissionError:
                         print(f"! Permission error writing to {self.scriptDir+self.hpsGardensDB.filename+self.hpsGardensDB.extension}")
 
-            print(f"* '{self.imagelibDB.filename+self.imagelibDB.extension}': image database used by website")
-            print("  - Update", end="\r")
+            backupimagelibDB = self.imagelibDB.filename+' - '+datetime.datetime.now().strftime("%d%m%y")+self.imagelibDB.extension
+            print(f"* Create backup of '{self.imagelibDB.filename+self.imagelibDB.extension}' to {backupimagelibDB}")
+            if os.path.exists(self.scriptDir+backupimagelibDB):
+                print("  - File already exists. Skipping")
+            else:
+                shutil.copyfile(self.scriptDir+self.imagelibDB.filename+self.imagelibDB.extension, self.scriptDir+backupimagelibDB)
+            print(f"* Update '{self.scriptDir+self.imagelibDB.filename+self.imagelibDB.extension}': image database used by website")
             validFiles = 0
             for imageInfo in self.pendingGardensImageInfo:
                 if imageInfo.valid is False:
@@ -934,11 +944,9 @@ class CHPS:
             if validFiles == 0:
                 print("! No data to write")
             else:
-                newPath = self.uploadDir+self.imagelibDB.filename+self.imagelibDB.extension
-                print(f"  - Write to {newPath}")
                 if not self.args.dryrun:
                     try:
-                        self.imagelibDB.save(newPath)
+                        self.imagelibDB.save(self.scriptDir+self.imagelibDB.filename+self.imagelibDB.extension)
                     except PermissionError:
                         print("  ! Permission error writing to {}".format(self.imagelibDB.fileName))
 
