@@ -594,7 +594,7 @@ class CHPS:
                     if len(imageData.groups()) > 3:
                         donor = imageData.group(4)
                     # Specify date added
-                    if len(imageData.groups()) > 4 and imageData.group(5) != '0':
+                    if len(imageData.groups()) > 4 and imageData.group(5) and imageData.group(5) != '0':
                         dateAdded = f"01/01/{imageData.group(5)}"
                     # Extract meta data
                     if len(imageData.groups()) > 5:
