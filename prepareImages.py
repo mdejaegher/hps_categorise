@@ -1093,6 +1093,25 @@ class CHPS:
         print()
         return 0
 
+    def printFinalise(self):
+        print("Finally")
+        print("-------")
+        print(f"Copy plant  images     to {self.plantsDir}")
+        print(f"Copy garden images     to {self.gardensDir}")
+        print(f"Copy all    thumbnails to {self.thumbsDir}")
+        print()
+        print("Upload plant  images     to Dropbox/Family Room/Image Library/Images - plants")
+        print("Upload garden images     to Dropbox/Family Room/Image Library/Images - Gardens")
+        print("Upload plant  thumbnails to Dropbox/Family Room/Image Library/Images - Plants - thumbs")
+        print("Upload garden thumbnails to Dropbox/Family Room/Image Library/Images - Gardens - thumbs")
+        print()
+        print("Upload genera.csv               to Dropbox/Family Room/Image Library")
+        print("       HPS Images - Gardens.xls")
+        print("       HPS Images - Plants.xlsx")
+        print("       imagelib.csv")
+        print()
+        print("Email marketing@hardy-plant.org.uk to let them know you've added new images.")
+
 
 ################################################################################
 
@@ -1173,6 +1192,8 @@ would suggest adding an extra space before/after the RHS number
 
     if hps.updateSpreadsheets():
         return 1
+
+    hps.printFinalise()
 
     return 0
 
