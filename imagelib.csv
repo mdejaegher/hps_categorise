@@ -391,7 +391,7 @@ Caption	Image ID
 <span RHS><i>Penstemon</i> 'Stapleford Gem' AGM</span>	P00419
 <span RHS><i>Penstemon</i> 'Apple Blossom'</span>	P00420
 <span RHS><i>Penstemon digitalis</i> 'Husker Red'</span>	P00421
-<span RHS><i>Penstemon</i> <span class="trade-name">Fujiyama</span> = 'Yayama' <sup>(PBR)</sup></span>	P00422
+"<span RHS><i>Penstemon</i> <span class=""trade-name"">Fujiyama</span> = 'Yayama' <sup>(PBR)</sup></span>"	P00422
 <span RHS><i>Penstemon</i> 'Andenken an Friedrich Hahn' AGM</span>	P00423
 <span RHS><i>Penstemon</i> 'Papal Purple'</span>	P00424
 <span RHS><i>Physostegia virginiana</i> 'Vivid' AGM</span>	P00425
@@ -566,7 +566,7 @@ Caption	Image ID
 <span RHS><i>Rosa</i> 'Dainty Bess' (HT)</span>	P00597
 <span RHS><i>Rosa gallica</i> 'Versicolor' (G) AGM</span>	P00598
 <span RHS><i>Rosa</i> 'Raubritter' ('Macrantha' hybrid)</span>	P00599
-<span RHS><i>Rosa</i> <span class="trade-name">Graham Thomas</span> = 'Ausmas' (S) AGM</span>	P00600
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Graham Thomas</span> = 'Ausmas' (S) AGM</span>"	P00600
 <span RHS><i>Rosa</i> 'Mrs Oakley Fisher' (HT)</span>	P00601
 <span RHS><i>Syringa meyeri</i> 'Palibin' AGM</span>	P00602
 <span RHS><i>Tiarella wherryi</i> AGM</span>	P00603
@@ -583,17 +583,17 @@ Caption	Image ID
 <span RHS><i>Townsendia exscapa</i></span>	P00615
 <span RHS><i>Rosa</i> 'Meg' (ClHT)</span> && <span RHS><i>Rosa</i> 'Maigold' (ClPiH) AGM</span>	P00616
 <span RHS><i>Daphne oleoides</i></span>	P00617
-<span RHS><i>Rosa</i> <span class="trade-name">Golden Celebration</span> = 'Ausgold' <sup>(PBR)</sup> (S) AGM</span>	P00618
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Golden Celebration</span> = 'Ausgold' <sup>(PBR)</sup> (S) AGM</span>"	P00618
 <span RHS><i>Athyrium niponicum</i> var. <i>pictum</i> AGM</span>	P00619
 <span RHS><i>Clematis koreana</i> var. <i>carunculosa</i> 'Lemon Bells' (A)</span>	P00620
-<span RHS><i>Heuchera</i> <span class="trade-name">Crème Brûlée</span> = 'Tnheu041' (Dolce Series)</span>	P00621
+"<span RHS><i>Heuchera</i> <span class=""trade-name"">Crème Brûlée</span> = 'Tnheu041' (Dolce Series)</span>"	P00621
 <span RHS><i>Araucaria araucana</i></span>	P00622
 <span RHS><i>Eucomis</i> 'Joy's Purple'</span>	P00623
 <span RHS><i>Lonicera periclymenum</i> 'Graham Thomas' AGM</span>	P00624
-<span RHS><i>Rosa</i> <span class="trade-name">Graham Thomas</span> = 'Ausmas' (S) AGM</span>	P00625
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Graham Thomas</span> = 'Ausmas' (S) AGM</span>"	P00625
 <span RHS><i>Rosa</i> 'Golden Wings' (S)</span>	P00626
 <span RHS><i>Rosa</i> 'Ellen Willmott' (HT)</span>	P00627
-<span RHS><i>Rosa</i> <span class="trade-name">Warm Wishes</span> = 'Fryxotic' <sup>(PBR)</sup> (HT) AGM</span>	P00628
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Warm Wishes</span> = 'Fryxotic' <sup>(PBR)</sup> (HT) AGM</span>"	P00628
 <span RHS><i>Rosa</i> 'Coupe d'Hébé' (Bb)</span>	P00629
 <span RHS><i>Rosa</i> 'Impératrice Joséphine' (Gn) AGM</span>	P00630
 <span RHS><i>Rosa</i> 'Perle d'Or' (Poly) AGM</span>	P00631
@@ -627,7 +627,7 @@ Caption	Image ID
 <span RHS><i>Camellia</i> &times; <i>williamsii</i> 'Donation' AGM</span>	P00659
 <span RHS><i>Cerinthe major</i> 'Purpurascens'</span>	P00660
 <span RHS><i>Chamaecyparis lawsoniana</i> 'Aurea Densa' AGM</span>	P00661
-<span RHS><i>Choisya ternata</i> <span class="trade-name">Sundance</span> = 'Lich' AGM</span>	P00662
+"<span RHS><i>Choisya ternata</i> <span class=""trade-name"">Sundance</span> = 'Lich' AGM</span>"	P00662
 <span RHS><i>Corylus avellana</i> 'Contorta' AGM</span>	P00663
 <span RHS><i>Cotoneaster lacteus</i> AGM</span>	P00664
 <span RHS><i>Crataegus laevigata</i> 'Paul's Scarlet' (d) AGM</span>	P00665
@@ -646,7 +646,7 @@ Caption	Image ID
 <span RHS><i>Lonicera sempervirens</i></span>	P00678
 <span RHS><i>Ipomoea lobata</i> AGM</span>	P00679
 <span RHS><i>Ipomoea purpurea</i></span>	P00680
-<span RHS><i>Jasminum officinale</i> <span class="trade-name">Fiona Sunrise</span> = 'Frojas' <sup>(PBR)</sup> AGM</span>	P00681
+"<span RHS><i>Jasminum officinale</i> <span class=""trade-name"">Fiona Sunrise</span> = 'Frojas' <sup>(PBR)</sup> AGM</span>"	P00681
 <span RHS><i>Malus</i> 'Evereste' AGM</span>	P00682
 <span RHS><i>Malus</i> 'Evereste' AGM</span>	P00683
 <span RHS><i>Lavandula angustifolia</i> 'Hidcote' AGM</span>	P00684
@@ -741,12 +741,12 @@ Caption	Image ID
 <span RHS><i>Allium thunbergii</i> 'Nanum'</span>	P00773
 <span RHS><i>Allium tuberosum</i></span>	P00774
 <span RHS><i>Alstroemeria ligtu</i> hybrids</span>	P00775
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Princess Charlotte</span> = 'Staprizsa' <sup>(PBR)</sup> (Princess Series)</span>	P00776
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Princess Monica</span> = 'Staprimon' <sup>(PBR)</sup> (Princess Series)</span>	P00777
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Princess Sophia</span> = 'Stajello' (Princess Series)</span>	P00778
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Princess Charlotte</span> = 'Staprizsa' <sup>(PBR)</sup> (Princess Series)</span>"	P00776
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Princess Monica</span> = 'Staprimon' <sup>(PBR)</sup> (Princess Series)</span>"	P00777
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Princess Sophia</span> = 'Stajello' (Princess Series)</span>"	P00778
 <span RHS><i>Alstroemeria</i> 'Victoria'</span>	P00779
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Princess Frederika</span> = 'Stabronza' (Princess Series)</span>	P00780
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Princess Juliana</span> = 'Staterpa' (Princess Series)</span>	P00781
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Princess Frederika</span> = 'Stabronza' (Princess Series)</span>"	P00780
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Princess Juliana</span> = 'Staterpa' (Princess Series)</span>"	P00781
 <span RHS><i>Aurinia saxatilis</i> 'Goldkugel'</span>	P00782
 <i>Amelanchier canadensis</i>	P00783
 <span RHS><i>Amelanchier</i> &times; <i>grandiflora</i> 'Ballerina'</span>	P00784
@@ -818,7 +818,7 @@ Caption	Image ID
 <span RHS><i>Chaerophyllum hirsutum</i> 'Roseum'</span>	P00850
 <span RHS><i>Chamaecyparis lawsoniana</i> 'Lane' den Ouden</span>	P00851
 <span RHS><i>Chamaecyparis obtusa</i> 'Nana Lutea' AGM</span>	P00852
-<span RHS><i>Choisya ternata</i> <span class="trade-name">Sundance</span> = 'Lich' AGM</span>	P00853
+"<span RHS><i>Choisya ternata</i> <span class=""trade-name"">Sundance</span> = 'Lich' AGM</span>"	P00853
 <span RHS><i>Chrysogonum virginianum</i></span>	P00854
 <span RHS><i>Clematis</i> 'Daniel Deronda' (EL) AGM</span>	P00855
 <span RHS><i>Clematis</i> 'H.F. Young' (EL)</span>	P00856
@@ -923,7 +923,7 @@ Caption	Image ID
 <span RHS><i>Euonymus fortunei</i> 'Emerald Gaiety' (v) AGM</span>	P00955
 <span RHS><i>Euonymus japonicus</i> 'Aureus' (v)</span>	P00956
 <span RHS><i>Euonymus japonicus</i> 'Microphyllus Aureovariegatus' (v)</span>	P00957
-<span RHS><i>Euphorbia hypericifolia</i> <span class="trade-name">Diamond Frost</span> = 'Inneuphe' <sup>(PBR)</sup></span>	P00958
+"<span RHS><i>Euphorbia hypericifolia</i> <span class=""trade-name"">Diamond Frost</span> = 'Inneuphe' <sup>(PBR)</sup></span>"	P00958
 <span RHS><i>Euphorbia</i> 'Helena' <sup>(PBR)</sup> (v)</span>	P00959
 <span RHS><i>Euphorbia myrsinites</i> AGM</span>	P00960
 <span RHS><i>Euphorbia epithymoides</i></span>	P00961
@@ -955,9 +955,9 @@ Caption	Image ID
 <span RHS><i>Geranium pratense</i> (Victor Reiter Group) 'Purple-haze'</span>	P00987
 <span RHS><i>Geranium psilostemon</i> AGM</span>	P00988
 <span RHS><i>Geranium renardii</i> AGM</span>	P00989
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P00990
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P00990
 <span RHS><i>Geranium sanguineum</i></span>	P00991
-<span RHS><i>Geranium sanguineum</i> <span class="trade-name">Alan Bloom</span> = 'Bloger' <sup>(PBR)</sup></span>	P00992
+"<span RHS><i>Geranium sanguineum</i> <span class=""trade-name"">Alan Bloom</span> = 'Bloger' <sup>(PBR)</sup></span>"	P00992
 <span RHS><i>Geranium</i> 'Elke'</span>	P00993
 <span RHS><i>Geranium sanguineum</i> var. <i>striatum</i> AGM</span>	P00994
 <span RHS><i>Geranium sylvaticum</i> 'Album' AGM</span>	P00995
@@ -1251,7 +1251,7 @@ Caption	Image ID
 <span RHS><i>Potentilla megalantha</i></span>	P01286
 <span RHS><i>Pratia pedunculata</i></span>	P01287
 <span RHS><i>Pratia pedunculata</i> 'County Park'</span>	P01288
-<span RHS><i>Primula</i> <span class="trade-name">Belarina Cream</span> = 'Kerbelcrem' <sup>(PBR)</sup> (Belarina Series) (Pr/Prim/d)</span>	P01289
+"<span RHS><i>Primula</i> <span class=""trade-name"">Belarina Cream</span> = 'Kerbelcrem' <sup>(PBR)</sup> (Belarina Series) (Pr/Prim/d)</span>"	P01289
 <span RHS><i>Primula</i> polyanthus (Pr/Poly)</span>	P01290
 <span RHS><i>Primula vulgaris</i> (Pr/Prim) AGM</span>	P01291
 <span RHS><i>Prunella grandiflora</i> 'Loveliness'</span>	P01292
@@ -1380,8 +1380,8 @@ Caption	Image ID
 <span RHS><i>Vinca major</i></span>	P01416
 <span RHS><i>Viola cucullata</i> 'Striata Alba' (Vt)</span>	P01417
 <span RHS><i>Waldsteinia ternata</i></span>	P01418
-<span RHS><i>Weigela</i> <span class="trade-name">Carnaval</span> = 'Courtalor' AGM</span>	P01419
-<span RHS><i>Weigela</i> <span class="trade-name">Briant Rubidor</span> = 'Olympiade' (v)</span>	P01420
+"<span RHS><i>Weigela</i> <span class=""trade-name"">Carnaval</span> = 'Courtalor' AGM</span>"	P01419
+"<span RHS><i>Weigela</i> <span class=""trade-name"">Briant Rubidor</span> = 'Olympiade' (v)</span>"	P01420
 <span RHS><i>Zephyranthes candida</i></span>	P01421
 <span RHS><i>Galanthus</i> 'Alison Hilary'</span>	P01422
 <span RHS><i>Galanthus</i> 'Atkinsii' AGM</span>	P01423
@@ -1517,7 +1517,7 @@ Caption	Image ID
 <span RHS><i>Pulmonaria</i> 'Mrs Kittle'</span>	P01555
 <span RHS><i>Pulmonaria</i> 'Oliver Wyatt's White'</span>	P01557
 <span RHS><i>Pulmonaria</i> 'Oliver Wyatt's White'</span>	P01558
-<span RHS><i>Pulmonaria</i> <span class="trade-name">Opal</span> = 'Ocupol' AGM</span>	P01559
+"<span RHS><i>Pulmonaria</i> <span class=""trade-name"">Opal</span> = 'Ocupol' AGM</span>"	P01559
 <span RHS><i>Pulmonaria</i> 'Pink Haze' <sup>(PBR)</sup></span>	P01560
 <span RHS><i>Pulmonaria</i> 'Pink Haze' <sup>(PBR)</sup></span>	P01561
 <i>Pulmonaria</i> 'Red Freckles'	P01562
@@ -1580,7 +1580,7 @@ Caption	Image ID
 <span RHS><i>Anemone nemorosa</i> 'Lady Doneraile'</span>	P01620
 <span RHS><i>Anthemis punctata</i> subsp. <i>cupaniana</i> AGM</span>	P01621
 <span RHS><i>Anthemis punctata</i> subsp. <i>cupaniana</i> AGM</span>	P01622
-<span RHS><i>Anthemis</i> <span class="trade-name">Susanna Mitchell</span> = 'Blomit'</span>	P01623
+"<span RHS><i>Anthemis</i> <span class=""trade-name"">Susanna Mitchell</span> = 'Blomit'</span>"	P01623
 <span RHS><i>Astilbe</i> 'Bumalda' (× <i>arendsii</i>)</span>	P01624
 <span RHS><i>Astilbe</i> 'Fanal' (× <i>arendsii</i>) AGM</span>	P01625
 <span RHS><i>Astilbe</i> &times; <i>rosea</i> 'Peach Blossom'</span>	P01626
@@ -1641,9 +1641,9 @@ Caption	Image ID
 <span RHS><i>Geranium</i> (Cinereum Group) 'Laurence Flatman'</span>	P01682
 <span RHS><i>Geranium</i> (Cinereum Group) 'Laurence Flatman'</span>	P01683
 <span RHS><i>Geranium</i> (Cinereum Group) 'Laurence Flatman'</span>	P01684
-<span RHS><i>Geranium</i> (Cinereum Group) <span class="trade-name">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>	P01685
-<span RHS><i>Geranium</i> (Cinereum Group) <span class="trade-name">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>	P01686
-<span RHS><i>Geranium</i> (Cinereum Group) <span class="trade-name">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>	P01687
+"<span RHS><i>Geranium</i> (Cinereum Group) <span class=""trade-name"">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>"	P01685
+"<span RHS><i>Geranium</i> (Cinereum Group) <span class=""trade-name"">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>"	P01686
+"<span RHS><i>Geranium</i> (Cinereum Group) <span class=""trade-name"">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>"	P01687
 <span RHS><i>Geranium</i> 'Anne Thomson' AGM</span>	P01688
 <span RHS><i>Geranium asphodeloides</i></span>	P01689
 <span RHS><i>Geranium</i> 'Brookside' AGM</span>	P01690
@@ -1692,7 +1692,7 @@ Caption	Image ID
 <span RHS><i>Geranium orientalitibeticum</i></span>	P01733
 <span RHS><i>Geranium</i> 'Orion' AGM</span>	P01734
 <span RHS><i>Geranium</i> 'Orion' AGM</span>	P01735
-<span RHS><i>Geranium</i> <span class="trade-name">Patricia</span> = 'Brempat' AGM</span>	P01736
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Patricia</span> = 'Brempat' AGM</span>"	P01736
 <span RHS><i>Geranium phaeum</i> 'Lily Lovell'</span>	P01737
 <span RHS><i>Geranium phaeum</i> 'Lily Lovell'</span>	P01738
 <span RHS><i>Geranium phaeum</i> 'Margaret Wilson' (v)</span>	P01739
@@ -1714,8 +1714,8 @@ Caption	Image ID
 <span RHS><i>Geranium pratense</i> 'Yorkshire Queen'</span>	P01755
 <i>Geranium</i> (Cinereum Group) 'Rhapsody'	P01756
 <i>Geranium</i> (Cinereum Group) 'Rhapsody'	P01757
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P01758
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P01759
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P01758
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P01759
 <span RHS><i>Geranium</i> 'Salome'</span>	P01760
 <span RHS><i>Geranium</i> 'Salome'</span>	P01761
 <span RHS><i>Geranium</i> 'Salome'</span>	P01762
@@ -1939,9 +1939,9 @@ Caption	Image ID
 <span RHS><i>Astrantia</i> 'Roma' <sup>(PBR)</sup> AGM</span> - at Chelsea 2009	P01985
 <span RHS><i>Athyrium niponicum</i> var. <i>pictum</i> AGM</span> - at Chelsea 2009	P01986
 <span RHS><i>Clematis</i> 'Fond Memories' (EL)</span> - at Chelsea 2009	P01987
-<span RHS><i>Clematis</i> <span class="trade-name">Hyde Hall</span> = 'Evipo009' <sup>(PBR)</sup> (EL)</span> - at Chelsea 2009	P01988
-<span RHS><i>Clematis</i> <span class="trade-name">Parisienne</span> = 'Evipo019' <sup>(PBR)</sup> (Boulevard Series) (EL)</span> - at Chelsea 2009	P01989
-<span RHS><i>Clematis</i> <span class="trade-name">Parisienne</span> = 'Evipo019' <sup>(PBR)</sup> (Boulevard Series) (EL)</span> - at Chelsea 2009	P01990
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Hyde Hall</span> = 'Evipo009' <sup>(PBR)</sup> (EL)</span> - at Chelsea 2009"	P01988
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Parisienne</span> = 'Evipo019' <sup>(PBR)</sup> (Boulevard Series) (EL)</span> - at Chelsea 2009"	P01989
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Parisienne</span> = 'Evipo019' <sup>(PBR)</sup> (Boulevard Series) (EL)</span> - at Chelsea 2009"	P01990
 <span RHS><i>Delphinium</i> 'Spindrift' AGM</span> - at Chelsea 2009	P01991
 <span RHS><i>Epimedium wushanense</i> 'Caramel'</span> - at Chelsea 2009	P01992
 <span RHS><i>Epimedium wushanense</i> 'Caramel'</span> - at Chelsea 2009	P01993
@@ -1971,7 +1971,7 @@ Caption	Image ID
 <span RHS><i>Clematis</i> 'H.F. Young' (EL)</span>	P02017
 <span RHS><i>Dianthus</i> 'Whatfield Cancan' (p) AGM</span>	P02018
 <span RHS><i>Dictamnus albus</i></span>	P02019
-<span RHS><i>Geranium sanguineum</i> <span class="trade-name">Alan Bloom</span> = 'Bloger' <sup>(PBR)</sup></span>	P02020
+"<span RHS><i>Geranium sanguineum</i> <span class=""trade-name"">Alan Bloom</span> = 'Bloger' <sup>(PBR)</sup></span>"	P02020
 <span RHS><i>Geranium</i> 'Sirak' AGM</span>	P02021
 <span RHS><i>Geranium</i> &times; <i>cantabrigiense</i> 'Westray' <sup>(PBR)</sup></span>	P02022
 <span RHS><i>Hosta</i> 'Devon Green' AGM</span>	P02023
@@ -2209,9 +2209,9 @@ Caption	Image ID
 <span RHS><i>Protea subvestita</i></span>	P02256
 <span RHS><i>Pulmonaria</i> 'Blue Ensign' AGM</span>	P02257
 <span RHS><i>Rehmannia elata</i> AGM</span>	P02258
-<span RHS><i>Rosa</i> <span class="trade-name">Bonica</span> = 'Meidomonac' (GC) AGM</span>	P02259
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Bonica</span> = 'Meidomonac' (GC) AGM</span>"	P02259
 <span RHS><i>Rosa</i> 'Fimbriata' (Ru)</span>	P02260
-<span RHS><i>Rosa</i> <span class="trade-name">L'Aimant</span> = 'Harzola' <sup>(PBR)</sup> (F) AGM</span>	P02261
+"<span RHS><i>Rosa</i> <span class=""trade-name"">L'Aimant</span> = 'Harzola' <sup>(PBR)</sup> (F) AGM</span>"	P02261
 <span RHS><i>Salvia blepharophylla</i></span>	P02262
 <span RHS><i>Hesperantha coccinea</i> 'Major' AGM</span>	P02263
 <span RHS><i>Hesperantha coccinea</i> 'Mrs Hegarty'</span>	P02264
@@ -2311,7 +2311,7 @@ Caption	Image ID
 <i>Salvia cardinalis</i> 'Red Dragon'	P02360
 <span RHS><i>Hemerocallis lilioasphodelus</i></span> && <span RHS><i>Persicaria microcephala</i> 'Red Dragon' <sup>(PBR)</sup></span>	P02361
 <span RHS><i>Papaver</i> (Oriental Group) 'Harvest Moon' (d)</span> && <span RHS><i>Geum</i> 'Lady Stratheden' (d) AGM</span>	P02362
-<span RHS><i>Papaver</i> (Oriental Group) 'Patty's Plum'</span> && <span RHS><i>Rosa</i> <span class="trade-name">Geoff Hamilton</span> = 'Ausham' <sup>(PBR)</sup> (S)</span>	P02363
+"<span RHS><i>Papaver</i> (Oriental Group) 'Patty's Plum'</span> && <span RHS><i>Rosa</i> <span class=""trade-name"">Geoff Hamilton</span> = 'Ausham' <sup>(PBR)</sup> (S)</span>"	P02363
 <span RHS><i>Rosa</i> 'Fred Loads' (F) AGM</span> && <span RHS><i>Delphinium</i> 'Sungleam' AGM</span>	P02364
 <span RHS><i>Hylotelephium telephium</i> (Atropurpureum Group) 'Postman's Pride' <sup>(PBR)</sup></span> && <span RHS><i>Ageratina altissima</i> 'Chocolate'</span>	P02365
 <span RHS><i>Hylotelephium telephium</i> (Atropurpureum Group) 'Purple Emperor' AGM</span> && <span RHS><i>Hylotelephium spectabile</i> (Brilliant Group) 'Brilliant' AGM</span>	P02366
@@ -2403,7 +2403,7 @@ Caption	Image ID
 <span RHS><i>Erigeron</i> 'Quakeress'</span>	P02457
 <span RHS><i>Eryngium agavifolium</i></span>	P02458
 <span RHS><i>Eryngium giganteum</i> AGM</span>	P02459
-<span RHS><i>Erysimum</i> <span class="trade-name">Walberton's Fragrant Sunshine</span> = 'Walfrasun'</span>	P02460
+"<span RHS><i>Erysimum</i> <span class=""trade-name"">Walberton's Fragrant Sunshine</span> = 'Walfrasun'</span>"	P02460
 <span RHS><i>Eucomis bicolor</i> AGM</span>	P02461
 <span RHS><i>Eucryphia</i> &times; <i>nymansensis</i> 'Nymansay' AGM</span>	P02462
 <span RHS><i>Eucryphia</i> &times; <i>nymansensis</i> 'Nymansay' AGM</span>	P02463
@@ -2526,15 +2526,15 @@ Caption	Image ID
 <span RHS><i>Rodgersia pinnata</i> 'Superba' AGM</span>	P02582
 <span RHS><i>Rodgersia pinnata</i> 'Superba' AGM</span>	P02583
 <span RHS><i>Rosa banksiae</i> 'Lutea' (Ra/d) AGM</span>	P02584
-<span RHS><i>Rosa</i> <span class="trade-name">Bonica</span> = 'Meidomonac' (GC) AGM</span>	P02585
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Bonica</span> = 'Meidomonac' (GC) AGM</span>"	P02585
 <span RHS><i>Rosa</i> 'Cardinal de Richelieu' (G)</span>	P02586
 <span RHS><i>Rosa</i> 'Charles de Mills' (G) AGM</span>	P02587
-<span RHS><i>Rosa</i> <span class="trade-name">Chaucer</span> = 'Auscer' (S)</span>	P02588
-<span RHS><i>Rosa</i> <span class="trade-name">Chaucer</span> = 'Auscer' (S)</span>	P02589
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Chaucer</span> = 'Auscer' (S)</span>"	P02588
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Chaucer</span> = 'Auscer' (S)</span>"	P02589
 <span RHS><i>Rosa</i> 'Fantin-Latour' (Ce) AGM</span> centifolia hybrid	P02590
 <span RHS><i>Rosa gallica</i> 'Versicolor' (G) AGM</span>	P02591
 <span RHS><i>Rosa</i> 'Geranium' (<i>moyesii</i> hybrid) AGM</span>	P02592
-<span RHS><i>Rosa</i> <span class="trade-name">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>	P02593
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>"	P02593
 <span RHS><i>Rosa</i> 'Gloire de Dijon' (ClT)</span>	P02594
 <span RHS><i>Rosa</i> 'Königin von Dänemark' (A) AGM</span>	P02595
 <span RHS><i>Rosa</i> 'White Pet' (Poly) AGM</span>	P02596
@@ -2643,7 +2643,7 @@ Caption	Image ID
 <span RHS><i>Viola sororia</i> 'Freckles' (Vt)</span>	P02701
 <span RHS><i>Weigela middendorffiana</i></span>	P02702
 <span RHS><i>Symphyotrichum novi-belgii</i> 'Farncombe Lilac'</span>	P02703
-<span RHS><i>Geranium</i> <span class="trade-name">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>	P02704
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>"	P02704
 <span RHS><i>Geranium</i> &times; <i>oxonianum</i> 'Claridge Druce'</span>	P02705
 <span RHS><i>Geranium</i> &times; <i>oxonianum</i> 'Rose Clair'</span>	P02706
 <span RHS><i>Eucomis bicolor</i> AGM</span>	P02707
@@ -2696,7 +2696,7 @@ Caption	Image ID
 <span RHS><i>Potentilla</i> 'White Beauty'</span>	P02755
 <span RHS><i>Skimmia</i> &times; <i>confusa</i> 'Kew Green' (m) AGM</span>	P02756
 <span RHS><i>Sorbus pseudohupehensis</i> 'Pink Pagoda' AGM</span>	P02757
-<span RHS><i>Spiraea japonica</i> <span class="trade-name">Magic Carpet</span> = 'Walbuma' <sup>(PBR)</sup> (v) AGM</span>	P02758
+"<span RHS><i>Spiraea japonica</i> <span class=""trade-name"">Magic Carpet</span> = 'Walbuma' <sup>(PBR)</sup> (v) AGM</span>"	P02758
 <span RHS><i>Syringa vulgaris</i> 'Silver King'</span>	P02759
 <i>Weigela florida</i> Wine and Roses = 'Alexandra'	P02760
 <span RHS><i>Weigela</i> 'Red Prince' AGM</span>	P02761
@@ -2737,7 +2737,7 @@ Caption	Image ID
 <span RHS><i>Dicentra</i> 'King of Hearts'</span>	P02796
 <span RHS><i>Doronicum pardalianches</i></span>	P02797
 <span RHS><i>Dracunculus vulgaris</i></span>	P02798
-<span RHS><i>Euphorbia</i> <span class="trade-name">Blackbird</span> = 'Nothowlee' <sup>(PBR)</sup></span>	P02799
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Blackbird</span> = 'Nothowlee' <sup>(PBR)</sup></span>"	P02799
 <span RHS><i>Euphorbia characias</i> 'Kestrel' (v)</span>	P02800
 <span RHS><i>Euphorbia characias</i> 'Portuguese Velvet'</span>	P02801
 <span RHS><i>Euphorbia corallioides</i></span>	P02802
@@ -2745,9 +2745,9 @@ Caption	Image ID
 <span RHS><i>Euphorbia donii</i> 'Amjillasa'</span>	P02804
 <span RHS><i>Euphorbia griffithii</i> 'Wickstead'</span>	P02806
 <span RHS><i>Euphorbia lathyris</i></span>	P02807
-<span RHS><i>Euphorbia</i> <span class="trade-name">Blackbird</span> = 'Nothowlee' <sup>(PBR)</sup></span>	P02809
-<span RHS><i>Euphorbia</i> <span class="trade-name">Excalibur</span> = 'Froeup' <sup>(PBR)</sup></span>	P02810
-<span RHS><i>Euphorbia</i> <span class="trade-name">Excalibur</span> = 'Froeup' <sup>(PBR)</sup></span>	P02811
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Blackbird</span> = 'Nothowlee' <sup>(PBR)</sup></span>"	P02809
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Excalibur</span> = 'Froeup' <sup>(PBR)</sup></span>"	P02810
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Excalibur</span> = 'Froeup' <sup>(PBR)</sup></span>"	P02811
 <span RHS><i>Euphorbia lathyris</i></span>	P02812
 <span RHS><i>Euphorbia corallioides</i></span>	P02815
 <span RHS><i>Euphorbia</i> 'Blue Haze'</span>	P02816
@@ -2780,7 +2780,7 @@ Caption	Image ID
 <span RHS><i>Euphorbia nereidum</i> AGM</span>	P02844
 <span RHS><i>Euphorbia nicaeensis</i></span>	P02845
 <span RHS><i>Euphorbia pithyusa</i></span>	P02846
-<span RHS><i>Euphorbia</i> <span class="trade-name">Redwing</span> = 'Charam' <sup>(PBR)</sup></span>	P02847
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Redwing</span> = 'Charam' <sup>(PBR)</sup></span>"	P02847
 <span RHS><i>Echinacea purpurea</i> 'Purity' <sup>(PBR)</sup></span>	P02848
 <span RHS><i>Erigeron</i> 'Festivity'</span>	P02849
 <span RHS><i>Erodium</i> 'Stephanie'</span>	P02850
@@ -2833,7 +2833,7 @@ Caption	Image ID
 <span RHS><i>Phlox paniculata</i> 'Mother of Pearl' AGM</span>	P02899
 <span RHS><i>Phlox paniculata</i> 'Uspekh' AGM</span>	P02900
 <span RHS><i>Phlox paniculata</i> 'Peppermint Twist'</span>	P02901
-<span RHS><i>Phygelius</i> <span class="trade-name">New Sensation</span> = 'Blaphy' <sup>(PBR)</sup></span>	P02902
+"<span RHS><i>Phygelius</i> <span class=""trade-name"">New Sensation</span> = 'Blaphy' <sup>(PBR)</sup></span>"	P02902
 <span RHS><i>Platycodon grandiflorus</i> AGM</span>	P02903
 <span RHS><i>Primula</i> 'Don Keefe' (Pr/Poly)</span>	P02904
 <span RHS><i>Primula vulgaris</i> 'Lilacina Plena' (Pr/Prim/d)</span>	P02905
@@ -2896,7 +2896,7 @@ Caption	Image ID
 <span RHS><i>Rosa</i> 'Marguerite Hilling' (S)</span>	P02962
 <span RHS><i>Rosa multiflora</i> (Ra)</span> - on old apple tree	P02963
 <span RHS><i>Rosa</i> 'Phyllis Bide' (Ra) AGM</span>	P02964
-<span RHS><i>Rosa</i> <span class="trade-name">Windrush</span> = 'Ausrush' (S)</span>	P02965
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Windrush</span> = 'Ausrush' (S)</span>"	P02965
 <span RHS><i>Sanguinaria canadensis</i> f. <i>multiplex</i> 'Plena' (d) AGM</span>	P02966
 <span RHS><i>Skimmia japonica</i> subsp. <i>reevesiana</i></span>	P02967
 <span RHS><i>Tropaeolum tuberosum</i> var. <i>lineomaculatum</i> 'Ken Aslet' AGM</span>	P02968
@@ -3005,7 +3005,7 @@ Caption	Image ID
 <span RHS><i>Dahlia merckii</i></span>	P03072
 <span RHS><i>Datisca cannabina</i></span>	P03073
 <span RHS><i>Datisca cannabina</i></span>	P03074
-<span RHS><i>Diascia</i> <span class="trade-name">Coral Belle</span> = 'Hecbel' <sup>(PBR)</sup> AGM</span>	P03075
+"<span RHS><i>Diascia</i> <span class=""trade-name"">Coral Belle</span> = 'Hecbel' <sup>(PBR)</sup> AGM</span>"	P03075
 <span RHS><i>Diascia</i> 'Elizabeth' AGM</span>	P03076
 <span RHS><i>Diascia fetcaniensis</i> 'Daydream'</span>	P03077
 <span RHS><i>Digitalis ferruginea</i> AGM</span>	P03078
@@ -3073,8 +3073,8 @@ Caption	Image ID
 <span RHS><i>Geranium pyrenaicum</i></span>	P03140
 <span RHS><i>Geranium pyrenaicum</i> f. <i>albiflorum</i></span>	P03141
 <span RHS><i>Geranium pyrenaicum</i> f. <i>albiflorum</i></span>	P03142
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P03143
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P03144
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P03143
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P03144
 <span RHS><i>Geranium soboliferum</i></span>	P03145
 <span RHS><i>Geranium wallichianum</i> 'Buxton's Variety'</span>	P03147
 <span RHS><i>Geranium wallichianum</i> 'Buxton's Variety'</span>	P03148
@@ -3131,7 +3131,7 @@ Caption	Image ID
 <span RHS><i>Ocimum basilicum</i></span>	P03199
 <span RHS><i>Delphinium</i></span> mixed hybrids	P03200
 <span RHS><i>Delphinium</i> 'Cranberry Delight'</span>	P03201
-<span RHS><i>Cornus</i> &times; <i>elwinortonii</i> <span class="trade-name">Venus</span> = 'Kn30 8' <sup>(PBR)</sup> (Jersey Star Series)</span>	P03202
+"<span RHS><i>Cornus</i> &times; <i>elwinortonii</i> <span class=""trade-name"">Venus</span> = 'Kn30 8' <sup>(PBR)</sup> (Jersey Star Series)</span>"	P03202
 <span RHS><i>Actaea simplex</i> (Atropurpurea Group) 'James Compton' AGM</span>	P03203
 <span RHS><i>Daphne bholua</i> 'Jacqueline Postill' AGM</span>	P03204
 <span RHS><i>Allium schubertii</i></span>	P03205
@@ -3158,7 +3158,7 @@ Caption	Image ID
 <span RHS><i>Rhodohypoxis milloides</i></span>	P03226
 <span RHS><i>Rosa</i> 'The Fairy' (Poly) AGM</span>	P03227
 <span RHS><i>Rosa</i> 'Zéphirine Drouhin' (Bb)</span>	P03228
-<span RHS><i>Salvia</i> <span class="trade-name">Mystic Spires Blue</span> = 'Balsalmisp' <sup>(PBR)</sup></span>	P03229
+"<span RHS><i>Salvia</i> <span class=""trade-name"">Mystic Spires Blue</span> = 'Balsalmisp' <sup>(PBR)</sup></span>"	P03229
 <span RHS><i>Saxifraga</i> 'Kathleen Pinsent' (8)</span>	P03230
 <span RHS><i>Scabiosa atropurpurea</i> 'Ace of Spades'</span>	P03231
 <span RHS><i>Scabiosa caucasica</i> 'Perfecta Alba' (Perfecta Series)</span>	P03232
@@ -3186,7 +3186,7 @@ Caption	Image ID
 <span RHS><i>Choisya</i> &times; <i>dewitteana</i> 'Aztec Pearl' AGM</span>	P03254
 <span RHS><i>Chrysosplenium davidianum</i></span>	P03255
 <span RHS><i>Clematis</i> 'Arabella' (I) AGM</span>	P03256
-<span RHS><i>Clematis</i> <span class="trade-name">Chantilly</span> = 'Evipo021' <sup>(PBR)</sup> (EL)</span> && <span RHS><i>Clematis</i> 'Vyvyan Pennell' (EL)</span>	P03257
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Chantilly</span> = 'Evipo021' <sup>(PBR)</sup> (EL)</span> && <span RHS><i>Clematis</i> 'Vyvyan Pennell' (EL)</span>"	P03257
 <span RHS><i>Clematis</i> 'Fireworks' (EL)</span>	P03258
 <span RHS><i>Clematis</i> 'Girenas'</span>	P03259
 <span RHS><i>Clematis montana</i> var. <i>rubens</i> 'Tetrarose' (M) AGM</span>	P03260
@@ -3214,7 +3214,7 @@ Caption	Image ID
 <span RHS><i>Helenium</i> 'Pumilum Magnificum'</span>	P03285
 <span RHS><i>Helenium</i> 'Waltraut' AGM</span>	P03286
 <span RHS><i>Helianthemum</i> 'Henfield Brilliant' AGM</span>	P03287
-<span RHS><i>Heliopsis helianthoides</i> <span class="trade-name">Loraine Sunshine</span> = 'Helhan' <sup>(PBR)</sup> (v)</span>	P03288
+"<span RHS><i>Heliopsis helianthoides</i> <span class=""trade-name"">Loraine Sunshine</span> = 'Helhan' <sup>(PBR)</sup> (v)</span>"	P03288
 <span RHS><i>Hemerocallis</i> 'Chicago Cherry'</span>	P03289
 <span RHS><i>Hemerocallis</i> 'Daylight'</span>	P03290
 <span RHS><i>Hemerocallis lilioasphodelus</i></span>	P03291
@@ -3248,7 +3248,7 @@ Caption	Image ID
 <span RHS><i>Rhododendron sulfureum</i></span>	P03320
 <span RHS><i>Rhododendron sulfureum</i></span>	P03321
 <span RHS><i>Rodgersia pinnata</i> 'Rosea'</span>	P03322
-<span RHS><i>Rosa</i> <span class="trade-name">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>	P03323
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>"	P03323
 <span RHS><i>Rosa spinosissima</i></span>	P03324
 <span RHS><i>Roscoea purpurea</i> f. <i>rubra</i> AGM</span>	P03325
 <span RHS><i>Salvia verticillata</i> 'Purple Rain'</span>	P03326
@@ -3326,7 +3326,7 @@ Caption	Image ID
 <span RHS><i>Podophyllum versipelle</i> 'Spotty Dotty' <sup>(PBR)</sup> (v) AGM</span>	P03398
 <span RHS><i>Pteridophyllum racemosum</i></span> - at Woodchippings	P03399
 <span RHS><i>Ranunculus asiaticus</i></span>	P03400
-<span RHS><i>Rosa</i> <span class="trade-name">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>	P03401
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>"	P03401
 <span RHS><i>Roscoea purpurea</i> f. <i>rubra</i> AGM</span>	P03402
 <span RHS><i>Sauromatum venosum</i></span>	P03403
 <span RHS><i>Selinum wallichianum</i> AGM</span>	P03404
@@ -3447,7 +3447,7 @@ Caption	Image ID
 <span RHS><i>Hibiscus sinosyriacus</i> 'Lilac Queen'</span>	P03521
 <span RHS><i>Hydrangea serrata</i> 'Bluebird' (L) AGM</span>	P03522
 <span RHS><i>Hydrangea involucrata</i> 'Yohraku-tama' AGM</span>	P03523
-<span RHS><i>Hydrangea paniculata</i> <span class="trade-name">Vanille Fraise</span> = 'Renhy' <sup>(PBR)</sup></span>	P03524
+"<span RHS><i>Hydrangea paniculata</i> <span class=""trade-name"">Vanille Fraise</span> = 'Renhy' <sup>(PBR)</sup></span>"	P03524
 <span RHS><i>Itea virginica</i> 'Henry's Garnet' AGM</span> - autumn	P03525
 <span RHS><i>Kirengeshoma palmata</i></span>	P03526
 <span RHS><i>Ligularia fischeri</i> var. <i>megalorhiza</i> 'Cheju Charmer'</span>	P03527
@@ -3476,9 +3476,9 @@ Caption	Image ID
 <span RHS><i>Rhododendron luteum</i> (A)</span>	P03550
 <span RHS><i>Rhododendron quinquefolium</i> (A)</span> - autumn	P03551
 <span RHS><i>Ricinus communis</i> 'Carmencita' AGM</span>	P03552
-<span RHS><i>Rosa</i> <span class="trade-name">Graham Thomas</span> = 'Ausmas' (S) AGM</span>	P03553
-<span RHS><i>Rosa</i> <span class="trade-name">Marjorie Fair</span> = 'Harhero' (Poly/S) AGM</span>	P03554
-<span RHS><i>Rosa</i> <span class="trade-name">Sweet Juliet</span> = 'Ausleap' (S)</span>	P03555
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Graham Thomas</span> = 'Ausmas' (S) AGM</span>"	P03553
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Marjorie Fair</span> = 'Harhero' (Poly/S) AGM</span>"	P03554
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Sweet Juliet</span> = 'Ausleap' (S)</span>"	P03555
 <span RHS><i>Rudbeckia fulgida</i> var. <i>deamii</i> AGM</span>	P03556
 <span RHS><i>Rudbeckia fulgida</i> var. <i>sullivantii</i> 'Goldsturm' AGM</span>	P03557
 <span RHS><i>Saxifraga</i> 'Wada' (<i>fortunei</i>) (5)</span>	P03558
@@ -3528,7 +3528,7 @@ Caption	Image ID
 <span RHS><i>Bergenia emeiensis</i></span>	P03604
 <span RHS><i>Bergenia pacumbis</i></span>	P03605
 <span RHS><i>Berkheya purpurea</i></span>	P03606
-<span RHS><i>Clematis</i> <span class="trade-name">Aztek</span> = 'Daihelios' (Ta)</span>	P03607
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Aztek</span> = 'Daihelios' (Ta)</span>"	P03607
 <span RHS><i>Dahlia</i> 'Rip City' (S-c)</span>	P03608
 <span RHS><i>Dahlia</i> 'Sam Hopkins' (D)</span> SD	P03609
 <span RHS><i>Geranium clarkei</i> 'Kashmir White'</span>	P03611
@@ -3648,7 +3648,7 @@ Caption	Image ID
 <span RHS><i>Scilla luciliae</i> 'Alba'</span>	P03730
 <span RHS><i>Astilbe</i> 'Spinell' (× <i>arendsii</i>)</span>	P03731
 <span RHS><i>Berberis thunbergii</i> f. <i>atropurpurea</i> 'Golden Ring' (v) AGM</span>	P03732
-<span RHS><i>Buddleja davidii</i> <span class="trade-name">Florence</span> = 'Watflor'</span>	P03733
+"<span RHS><i>Buddleja davidii</i> <span class=""trade-name"">Florence</span> = 'Watflor'</span>"	P03733
 <span RHS><i>Camellia japonica</i> 'Elegans'</span>	P03734
 <span RHS><i>Camellia</i> &times; <i>williamsii</i> 'Debbie' AGM</span>	P03735
 <span RHS><i>Camellia</i> &times; <i>williamsii</i> 'Debbie' AGM</span>	P03736
@@ -3667,7 +3667,7 @@ Caption	Image ID
 <span RHS><i>Chrysanthemum</i> 'Suffolk Pink'</span>	P03749
 <span RHS><i>Citrus</i> &times; <i>aurantium</i> (Sweet Orange Group) 'Valencia Late' (F)</span>	P03750
 <span RHS><i>Citrus</i> &times; <i>aurantium</i> (Sweet Orange Group) 'Valencia Late' (F)</span>	P03751
-<span RHS><i>Clematis</i> <span class="trade-name">Bonanza</span> = 'Evipo031' <sup>(PBR)</sup> (Vt)</span>	P03752
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Bonanza</span> = 'Evipo031' <sup>(PBR)</sup> (Vt)</span>"	P03752
 <span RHS><i>Clematis</i> 'Étoile Violette' (Vt) AGM</span>	P03753
 <span RHS><i>Clematis</i> 'Mayleen' (M) AGM</span>	P03754
 <span RHS><i>Clematis</i> 'Mayleen' (M) AGM</span>	P03755
@@ -3714,7 +3714,7 @@ Caption	Image ID
 <span RHS><i>Galanthus nivalis</i> 'Viridapice' AGM</span>	P03796
 <span RHS><i>Geranium libani</i></span>	P03797
 <span RHS><i>Geranium pyrenaicum</i> 'Bill Wallis'</span>	P03798
-<span RHS><i>Geranium</i> <span class="trade-name">Sabani Blue</span> = 'Bremigo' <sup>(PBR)</sup></span>	P03799
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Sabani Blue</span> = 'Bremigo' <sup>(PBR)</sup></span>"	P03799
 <span RHS><i>Geranium sanguineum</i> 'Jubilee Pink'</span>	P03800
 <span RHS><i>Geranium sylvaticum</i></span>	P03801
 <span RHS><i>Geranium</i> &times; <i>antipodeum</i> 'Stanhoe'</span>	P03802
@@ -3729,7 +3729,7 @@ Caption	Image ID
 <span RHS><i>Heuchera</i> 'Rave On' <sup>(PBR)</sup></span>	P03811
 <span RHS><i>Hosta</i> 'Catherine'</span>	P03812
 <span RHS><i>Hosta</i> 'Remember Me' <sup>(PBR)</sup> AGM</span>	P03813
-<span RHS><i>Hydrangea paniculata</i> <span class="trade-name">Sundae Fraise</span> = 'Rensun' <sup>(PBR)</sup></span>	P03814
+"<span RHS><i>Hydrangea paniculata</i> <span class=""trade-name"">Sundae Fraise</span> = 'Rensun' <sup>(PBR)</sup></span>"	P03814
 <span RHS><i>Iris</i> 'Harmony' (Reticulata)</span>	P03815
 <span RHS><i>Iris</i> &times; <i>robusta</i> 'Gerald Darby'</span>	P03816
 <span RHS><i>Kalimeris incisa</i> 'Charlotte'</span>	P03817
@@ -3773,23 +3773,23 @@ Caption	Image ID
 <span RHS><i>Primula</i> 'Wanda' (Pr/Prim) AGM</span> pale form	P03856
 <span RHS><i>Prunus</i> 'Kanzan' (d) AGM</span>	P03857
 <span RHS><i>Prunus</i> 'Kanzan' (d) AGM</span>	P03858
-<span RHS><i>Pulmonaria</i> <span class="trade-name">Opal</span> = 'Ocupol' AGM</span>	P03859
+"<span RHS><i>Pulmonaria</i> <span class=""trade-name"">Opal</span> = 'Ocupol' AGM</span>"	P03859
 <span RHS><i>Puschkinia scilloides</i> var. <i>libanotica</i> AGM</span>	P03860
 <span RHS><i>Ribes laurifolium</i> (m)</span>	P03861
-<span RHS><i>Rosa</i> <span class="trade-name">Armada</span> = 'Haruseful' (S)</span>	P03862
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Armada</span> = 'Haruseful' (S)</span>"	P03862
 <span RHS><i>Rosa</i> 'Blairii Number Two' (ClBb)</span>	P03863
 <span RHS><i>Rosa</i> 'Buff Beauty' (HM) AGM</span>	P03864
 <span RHS><i>Rosa</i> 'Captain Scarlet' (ClMin)</span>	P03865
 <span RHS><i>Rosa</i> 'Cornelia' (HM) AGM</span>	P03866
-<span RHS><i>Rosa</i> <span class="trade-name">Crocus Rose</span> = 'Ausquest' <sup>(PBR)</sup> (S) AGM</span>	P03867
-<span RHS><i>Rosa</i> <span class="trade-name">Dublin Bay</span> = 'Macdub' (ClF) AGM</span>	P03868
-<span RHS><i>Rosa</i> <span class="trade-name">Gentle Hermione</span> = 'Ausrumba' <sup>(PBR)</sup> (S)</span>	P03869
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Crocus Rose</span> = 'Ausquest' <sup>(PBR)</sup> (S) AGM</span>"	P03867
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Dublin Bay</span> = 'Macdub' (ClF) AGM</span>"	P03868
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Gentle Hermione</span> = 'Ausrumba' <sup>(PBR)</sup> (S)</span>"	P03869
 <span RHS><i>Rosa</i> 'Marlena' (F/Patio)</span>	P03870
-<span RHS><i>Rosa</i> <span class="trade-name">Open Arms</span> = 'Chewpixcel' <sup>(PBR)</sup> (ClMin) AGM</span>	P03871
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Open Arms</span> = 'Chewpixcel' <sup>(PBR)</sup> (ClMin) AGM</span>"	P03871
 <span RHS><i>Rosa</i> 'Penelope' (HM) AGM</span>	P03872
 <span RHS><i>Rosa</i> 'Rambling Rector' (Ra) AGM</span>	P03873
-<span RHS><i>Rosa</i> <span class="trade-name">Saint Cecilia</span> = 'Ausmit' (S)</span>	P03874
-<span RHS><i>Rosa</i> <span class="trade-name">Sharifa Asma</span> = 'Ausreef' (S)</span>	P03875
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Saint Cecilia</span> = 'Ausmit' (S)</span>"	P03874
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Sharifa Asma</span> = 'Ausreef' (S)</span>"	P03875
 <span RHS><i>Salvia buchananii</i> AGM</span>	P03876
 <span RHS><i>Salvia microphylla</i></span>	P03877
 <span RHS><i>Salvia nemorosa</i> 'Caradonna' AGM</span>	P03878
@@ -3863,7 +3863,7 @@ Caption	Image ID
 <span RHS><i>Narcissus</i> 'Thalia' (5)</span>	P03947
 <span RHS><i>Narcissus</i> 'Tommy White' (2)</span>	P03948
 <span RHS><i>Nerine bowdenii</i> AGM</span>	P03949
-<span RHS><i>Primula</i> <span class="trade-name">Belarina Pink Ice</span> = 'Kerbelpice' <sup>(PBR)</sup> (Belarina Series) (Pr/Prim/d)</span>	P03950
+"<span RHS><i>Primula</i> <span class=""trade-name"">Belarina Pink Ice</span> = 'Kerbelpice' <sup>(PBR)</sup> (Belarina Series) (Pr/Prim/d)</span>"	P03950
 <span RHS><i>Primula vulgaris</i> (Pr/Prim) AGM</span>	P03951
 <span RHS><i>Roscoea auriculata</i> 'Floriade'</span>	P03952
 <span RHS><i>Sternbergia sicula</i></span>	P03953
@@ -3899,7 +3899,7 @@ Caption	Image ID
 <span RHS><i>Symphyotrichum</i> 'Anja's Choice'</span>	P03984
 <span RHS><i>Symphyotrichum novae-angliae</i> 'Violetta'</span>	P03985
 <span RHS><i>Calamagrostis brachytricha</i> AGM</span>	P03986
-<span RHS><i>Clematis</i> <span class="trade-name">Crystal Fountain</span> = 'Evipo038' <sup>(PBR)</sup> (EL)</span>	P03987
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Crystal Fountain</span> = 'Evipo038' <sup>(PBR)</sup> (EL)</span>"	P03987
 <span RHS><i>Corydalis solida</i> 'Fire Bird'</span>	P03988
 <span RHS><i>Echinacea</i> 'Summer Cloud'</span>	P03989
 <span RHS><i>Epimedium</i> 'The Giant'</span>	P03990
@@ -3929,7 +3929,7 @@ Caption	Image ID
 <span RHS><i>Sanguisorba</i> 'Cangshan Cranberry'</span>	P04014
 <span RHS><i>Sanguisorba stipulata</i> var. <i>riishirensis</i></span>	P04015
 <span RHS><i>Sanguisorba stipulata</i> var. <i>riishirensis</i></span>	P04016
-<span RHS><i>Saxifraga</i> <span class="trade-name">Cheap Confections</span> (<i>fortunei</i>) (5)</span>	P04017
+"<span RHS><i>Saxifraga</i> <span class=""trade-name"">Cheap Confections</span> (<i>fortunei</i>) (5)</span>"	P04017
 <span RHS><i>Sporobolus heterolepis</i></span>	P04018
 <span RHS><i>Tricyrtis ishiiana</i></span>	P04019
 <span RHS><i>Tricyrtis ishiiana</i></span>	P04020
@@ -4024,8 +4024,8 @@ Caption	Image ID
 <span RHS><i>Nigella damascena</i> 'Miss Jekyll' AGM</span>	P04111
 <span RHS><i>Nigella damascena</i> 'Miss Jekyll' AGM</span>	P04112
 <span RHS><i>Nigella damascena</i> 'Miss Jekyll' AGM</span>	P04113
-<span RHS><i>Phlox</i> <span class="trade-name">Lilac Flame</span> = 'Barten' <sup>(PBR)</sup></span>	P04114
-<span RHS><i>Primula</i> <span class="trade-name">Belarina Rosette Nectarine</span> = 'Kerbelnec' <sup>(PBR)</sup> (Belarina Series) (Pr/Prim/d)</span>	P04115
+"<span RHS><i>Phlox</i> <span class=""trade-name"">Lilac Flame</span> = 'Barten' <sup>(PBR)</sup></span>"	P04114
+"<span RHS><i>Primula</i> <span class=""trade-name"">Belarina Rosette Nectarine</span> = 'Kerbelnec' <sup>(PBR)</sup> (Belarina Series) (Pr/Prim/d)</span>"	P04115
 <span RHS><i>Ranunculus montanus</i> 'Molten Gold' AGM</span>	P04116
 <span RHS><i>Rudbeckia laciniata</i> 'Herbstsonne' AGM</span>	P04117
 <span RHS><i>Salvia microphylla</i> var. <i>microphylla</i> 'Newby Hall'</span>	P04118
@@ -4075,7 +4075,7 @@ Caption	Image ID
 <span RHS><i>Chamaecyparis lawsoniana</i> 'Ellwood's Gold' AGM</span>	P04163
 <span RHS><i>Clematis</i> 'Fireworks' (EL)</span>	P04164
 <span RHS><i>Clematis florida</i> var. <i>florida</i> 'Sieboldiana' (d)</span>	P04165
-<span RHS><i>Clematis</i> <span class="trade-name">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>	P04166
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>"	P04166
 <span RHS><i>Clematis</i> 'Purpurea Plena Elegans' (Vt/d) AGM</span> Vtd	P04167
 <span RHS><i>Cotoneaster frigidus</i></span>	P04168
 <span RHS><i>Cotoneaster frigidus</i></span>	P04169
@@ -4122,11 +4122,11 @@ Caption	Image ID
 <span RHS><i>Primula auricula</i> 'MacWatt's Blue' (Au/B)</span>	P04210
 <span RHS><i>Rosa</i> 'Anne Dakin' (ClHT)</span>	P04211
 <span RHS><i>Rosa</i> 'Ferdinand Pichard' (Bb) AGM</span>	P04212
-<span RHS><i>Rosa</i> <span class="trade-name">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>	P04213
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Gertrude Jekyll</span> = 'Ausbord' <sup>(PBR)</sup> (S) AGM</span>"	P04213
 <span RHS><i>Viburnum tinus</i></span>	P04214
 <span RHS><i>Rosa</i> 'Rambling Rector' (Ra) AGM</span>	P04215
-<span RHS><i>Rosa</i> <span class="trade-name">Tequila Sunrise</span> = 'Dicobey' (HT) AGM</span>	P04216
-<span RHS><i>Rudbeckia hirta</i> <span class="trade-name">Autumn Colors</span> (mixed)</span>	P04217
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Tequila Sunrise</span> = 'Dicobey' (HT) AGM</span>"	P04216
+"<span RHS><i>Rudbeckia hirta</i> <span class=""trade-name"">Autumn Colors</span> (mixed)</span>"	P04217
 <i>Rudbeckia hirta</i> 'Autumn Forest'	P04218
 <span RHS><i>Rudbeckia hirta</i> 'Cherry Brandy'</span>	P04219
 <span RHS><i>Rudbeckia hirta</i> 'Prairie Sun'</span>	P04220
@@ -4165,7 +4165,7 @@ Caption	Image ID
 <span RHS><i>Aster alpinus</i> AGM</span>	P04253
 <span RHS><i>Aster amellus</i> 'King George' AGM</span>	P04254
 <span RHS><i>Aster amellus</i> 'Brilliant'</span>	P04255
-<span RHS><i>Symphyotrichum dumosum</i> <span class="trade-name">Sapphire</span> = 'Kiesapphire' <sup>(PBR)</sup> (Autumn Jewels Series)</span>	P04256
+"<span RHS><i>Symphyotrichum dumosum</i> <span class=""trade-name"">Sapphire</span> = 'Kiesapphire' <sup>(PBR)</sup> (Autumn Jewels Series)</span>"	P04256
 <span RHS><i>Symphyotrichum</i> 'Little Carlow' (<i>cordifolium</i> hybrid) AGM</span>	P04257
 <span RHS><i>Symphyotrichum novae-angliae</i> 'Lye End Beauty'</span>	P04258
 <span RHS><i>Symphyotrichum novae-angliae</i> 'Lye End Beauty'</span>	P04259
@@ -4200,7 +4200,7 @@ Caption	Image ID
 <span RHS><i>Euphorbia palustris</i> AGM</span>	P04289
 <span RHS><i>Francoa appendiculata</i></span>	P04290
 <span RHS><i>Geranium palmatum</i> AGM</span>	P04291
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P04292
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P04292
 <span RHS><i>Gladiolus tristis</i></span>	P04293
 <span RHS><i>Helenium</i> 'Gartensonne' AGM</span>	P04294
 <span RHS><i>Helenium</i> 'Gartensonne' AGM</span>	P04295
@@ -4257,7 +4257,7 @@ Caption	Image ID
 <span RHS><i>Waldsteinia ternata</i></span>	P04347
 <span RHS><i>Ampelopsis brevipedunculata</i> 'Elegans' (v)</span>	P04348
 <span RHS><i>Bergenia purpurascens</i> 'Irish Crimson' AGM</span>	P04349
-<span RHS><i>Helleborus</i> <span class="trade-name">Walberton's Rosemary</span> = 'Walhero' <sup>(PBR)</sup> AGM</span>	P04350
+"<span RHS><i>Helleborus</i> <span class=""trade-name"">Walberton's Rosemary</span> = 'Walhero' <sup>(PBR)</sup> AGM</span>"	P04350
 <span RHS><i>Chrysanthemum</i> 'Picasso'</span>	P04351
 <span RHS><i>Hebe</i> 'Nantyderry'</span>	P04353
 <span RHS><i>Hesperantha coccinea</i> 'Cindy Towe'</span>	P04354
@@ -4362,7 +4362,7 @@ Caption	Image ID
 <span RHS><i>Abutilon</i> 'Kentish Belle' AGM</span>	P04460
 <span RHS><i>Aethionema</i> 'Warley Rose' AGM</span>	P04461
 <span RHS><i>Bletilla striata</i> AGM</span>	P04462
-<span RHS><i>Hibiscus syriacus</i> <span class="trade-name">Lavender Chiffon</span> = 'Notwoodone' <sup>(PBR)</sup> (d) AGM</span>	P04463
+"<span RHS><i>Hibiscus syriacus</i> <span class=""trade-name"">Lavender Chiffon</span> = 'Notwoodone' <sup>(PBR)</sup> (d) AGM</span>"	P04463
 <span RHS><i>Clematis</i> 'Princess Diana' (T) AGM</span>	P04464
 <span RHS><i>Crocosmia</i> 'Zambesi'</span>	P04465
 <span RHS><i>Dactylorhiza foliosa</i> AGM</span>	P04466
@@ -4380,11 +4380,11 @@ Caption	Image ID
 <span RHS><i>Roscoea humeana</i></span>	P04479
 <i>Crepis rosea</i>	P04480
 <span RHS><i>Aeonium</i> 'Zwartkop' AGM</span>	P04481
-<span RHS><i>Sophora</i> <span class="trade-name">Sun King</span> = 'Hilsop' <sup>(PBR)</sup> AGM</span>	P04482
+"<span RHS><i>Sophora</i> <span class=""trade-name"">Sun King</span> = 'Hilsop' <sup>(PBR)</sup> AGM</span>"	P04482
 <span RHS><i>Sambucus nigra</i> f. <i>porphyrophylla</i> 'Eva' <sup>(PBR)</sup> AGM</span>	P04483
 <span RHS><i>Clematis</i> 'Gravetye Beauty' (T)</span>	P04484
 <span RHS><i>Arum italicum</i> 'Green Marble'</span>	P04485
-<span RHS><i>Hypericum</i> <span class="trade-name">Magical Red Flame</span> = 'Kolmaref' <sup>(PBR)</sup></span>	P04486
+"<span RHS><i>Hypericum</i> <span class=""trade-name"">Magical Red Flame</span> = 'Kolmaref' <sup>(PBR)</sup></span>"	P04486
 <span RHS><i>Tropaeolum speciosum</i> AGM</span>	P04487
 <span RHS><i>Hosta</i> 'Thunderbolt' <sup>(PBR)</sup> (<i>sieboldiana</i>)</span>	P04488
 <span RHS><i>Echinops bannaticus</i></span>	P04489
@@ -4421,7 +4421,7 @@ Caption	Image ID
 <span RHS><i>Tricyrtis formosana</i> Stolonifera Group</span>	P04520
 <span RHS><i>Hosta</i> 'Guacamole' (v) AGM</span>	P04521
 <span RHS><i>Eupatorium purpureum</i></span>	P04522
-<span RHS><i>Echinacea</i> <span class="trade-name">Sombrero Hot Coral</span> = 'Balsomcor' <sup>(PBR)</sup> (Sombrero Series)</span>	P04523
+"<span RHS><i>Echinacea</i> <span class=""trade-name"">Sombrero Hot Coral</span> = 'Balsomcor' <sup>(PBR)</sup> (Sombrero Series)</span>"	P04523
 <span RHS><i>Helenium</i> 'Biedermeier'</span>	P04524
 <span RHS><i>Morina longifolia</i></span>	P04525
 <span RHS><i>Clematis alpina</i></span>	P04526
@@ -4652,7 +4652,7 @@ Vegetable Courgette 'Golden Courgette'  (<i>Cucurbita pepo</i> 'Golden Courgette
 <span RHS><i>Geranium macrostylum</i></span>	P04760
 <span RHS><i>Geranium malviflorum</i></span>	P04761
 <span RHS><i>Geranium</i> 'Nicola'</span>	P04762
-<span RHS><i>Geranium</i> <span class="trade-name">Patricia</span> = 'Brempat' AGM</span>	P04763
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Patricia</span> = 'Brempat' AGM</span>"	P04763
 <span RHS><i>Geranium phaeum</i> var. <i>phaeum</i> 'Samobor'</span>	P04764
 <span RHS><i>Geranium pyrenaicum</i> 'Bill Wallis'</span>	P04765
 <span RHS><i>Geranium renardii</i> AGM</span>	P04766
@@ -5124,7 +5124,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Aconitum carmichaelii</i> Wilsonii Group</span>	P05245
 <span RHS><i>Aronia melanocarpa</i></span>	P05246
 <span RHS><i>Aronia melanocarpa</i></span>	P05247
-<span RHS><i>Caryopteris</i> &times; <i>clandonensis</i> <span class="trade-name">Sterling Silver</span> = 'Lissilv' <sup>(PBR)</sup> AGM</span>	P05248
+"<span RHS><i>Caryopteris</i> &times; <i>clandonensis</i> <span class=""trade-name"">Sterling Silver</span> = 'Lissilv' <sup>(PBR)</sup> AGM</span>"	P05248
 <span RHS><i>Chimonanthus praecox</i></span>	P05249
 <span RHS><i>Clematis tubulosa</i></span>	P05250
 <span RHS><i>Clematis patens</i> 'Manshuu Ki' (EL)</span>	P05251
@@ -5204,7 +5204,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Crocosmia paniculata</i> 'Cally Sword'</span>	P05325
 <span RHS><i>Crocus ligusticus</i> AGM</span>	P05326
 <span RHS><i>Cyclamen graecum</i></span>	P05327
-<span RHS><i>Digitalis</i> &times; <i>valinii</i> <span class="trade-name">Illumination Pink</span> = 'Tmdgfp001' <sup>(PBR)</sup> (Illumination Series)</span>	P05328
+"<span RHS><i>Digitalis</i> &times; <i>valinii</i> <span class=""trade-name"">Illumination Pink</span> = 'Tmdgfp001' <sup>(PBR)</sup> (Illumination Series)</span>"	P05328
 <span RHS><i>Dimorphotheca pluvialis</i></span>	P05329
 <span RHS><i>Dryas octopetala</i> 'Minor' AGM</span>	P05330
 <span RHS><i>Ebenus cretica</i></span>	P05331
@@ -5709,7 +5709,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Leucanthemella serotina</i> AGM</span>	P05843
 <span RHS><i>Leucanthemum</i> &times; <i>superbum</i> 'Aglaia' (d)</span>	P05844
 <span RHS><i>Leucanthemum</i> &times; <i>superbum</i> 'Beauté Nivelloise'</span>	P05845
-<span RHS><i>Leucanthemum</i> &times; <i>superbum</i> <span class="trade-name">Broadway Lights</span> = 'Leumayel' <sup>(PBR)</sup></span>	P05846
+"<span RHS><i>Leucanthemum</i> &times; <i>superbum</i> <span class=""trade-name"">Broadway Lights</span> = 'Leumayel' <sup>(PBR)</sup></span>"	P05846
 <span RHS><i>Leucanthemum</i> &times; <i>superbum</i> 'Lacrosse'</span>	P05847
 <span RHS><i>Leucanthemum</i> &times; <i>superbum</i> 'Marion Bilsland'</span>	P05848
 <span RHS><i>Libertia chilensis</i> Formosa Group</span>	P05849
@@ -5732,7 +5732,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Luzula sylvatica</i> 'Marginata' (v) AGM</span>	P05866
 <span RHS><i>Lychnis chalcedonica</i> 'Rosea'</span>	P05867
 <span RHS><i>Lychnis coronaria</i> 'Alba' AGM</span>	P05868
-<span RHS><i>Lychnis coronaria</i> <span class="trade-name">Gardeners' World</span> = 'Blych' (d)</span>	P05869
+"<span RHS><i>Lychnis coronaria</i> <span class=""trade-name"">Gardeners' World</span> = 'Blych' (d)</span>"	P05869
 <span RHS><i>Lychnis flos-jovis</i> AGM</span>	P05870
 <span RHS><i>Lychnis</i> 'Molten Lava'</span>	P05871
 <span RHS><i>Lychnis viscaria</i></span>	P05872
@@ -5805,7 +5805,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Persicaria amplexicaulis</i> 'Alba'</span>	P05939
 <span RHS><i>Persicaria amplexicaulis</i> 'Clent Charm'</span>	P05940
 <span RHS><i>Persicaria amplexicaulis</i> 'Rosea'</span>	P05941
-<span RHS><i>Persicaria amplexicaulis</i> <span class="trade-name">Taurus</span> = 'Blotau'</span>	P05942
+"<span RHS><i>Persicaria amplexicaulis</i> <span class=""trade-name"">Taurus</span> = 'Blotau'</span>"	P05942
 <span RHS><i>Persicaria bistorta</i> 'Superba' AGM</span>	P05943
 <span RHS><i>Persicaria campanulata</i> 'Rosenrot'</span>	P05944
 <span RHS><i>Persicaria runcinata</i> 'Purple Fantasy'</span>	P05945
@@ -5971,7 +5971,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Eryngium</i> &times; <i>zabelii</i> 'Forncett Ultra'</span>	P06108
 <span RHS><i>Eryngium</i> &times; <i>zabelii</i> 'Violetta'</span>	P06109
 <span RHS><i>Euphorbia amygdaloides</i> var. <i>robbiae</i> AGM</span>	P06110
-<span RHS><i>Euphorbia</i> <span class="trade-name">Blackbird</span> = 'Nothowlee' <sup>(PBR)</sup></span>	P06111
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Blackbird</span> = 'Nothowlee' <sup>(PBR)</sup></span>"	P06111
 <span RHS><i>Euphorbia characias</i></span>	P06112
 <span RHS><i>Euphorbia characias</i></span>	P06113
 <span RHS><i>Euphorbia cornigera</i> 'Goldener Turm'</span>	P06114
@@ -5979,7 +5979,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Euphorbia deflexa</i></span>	P06116
 <span RHS><i>Euphorbia donii</i></span>	P06117
 <span RHS><i>Euphorbia dulcis</i> 'Chameleon'</span>	P06118
-<span RHS><i>Euphorbia</i> <span class="trade-name">Excalibur</span> = 'Froeup' <sup>(PBR)</sup></span>	P06119
+"<span RHS><i>Euphorbia</i> <span class=""trade-name"">Excalibur</span> = 'Froeup' <sup>(PBR)</sup></span>"	P06119
 <span RHS><i>Euphorbia griffithii</i> 'Dixter'</span>	P06120
 <span RHS><i>Euphorbia pithyusa</i></span>	P06121
 <span RHS><i>Euphorbia epithymoides</i> 'Candy'</span>	P06122
@@ -6028,7 +6028,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Geranium nodosum</i></span>	P06165
 <span RHS><i>Geranium orientalitibeticum</i></span>	P06166
 <span RHS><i>Geranium</i> 'Orion' AGM</span>	P06167
-<span RHS><i>Geranium</i> <span class="trade-name">Patricia</span> = 'Brempat' AGM</span>	P06168
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Patricia</span> = 'Brempat' AGM</span>"	P06168
 <span RHS><i>Geranium phaeum</i> 'Album'</span>	P06169
 <span RHS><i>Geranium phaeum</i> 'Springtime' <sup>(PBR)</sup></span>	P06170
 <span RHS><i>Geranium phaeum</i> 'Stillingfleet Ghost'</span>	P06171
@@ -6051,7 +6051,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Geranium phaeum</i></span>	P06188
 <i>Geranium</i> 'Splish Splash'	P06189
 <span RHS><i>Geranium</i> 'Sue Crûg'</span>	P06190
-<span RHS><i>Geranium</i> <span class="trade-name">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>	P06191
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>"	P06191
 <span RHS><i>Geranium sylvaticum</i> 'Amy Doncaster'</span>	P06192
 <span RHS><i>Geranium sylvaticum</i> 'Birch Lilac'</span>	P06193
 <span RHS><i>Geranium tuberosum</i></span>	P06194
@@ -6107,7 +6107,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Sanguisorba tenuifolia</i> var. <i>alba</i> 'Korean Snow'</span>	P06244
 <span RHS><i>Saponaria officinalis</i> 'Rubra Plena' (d)</span>	P06245
 <span RHS><i>Saruma henryi</i></span>	P06246
-<span RHS><i>Saxifraga</i> <span class="trade-name">Black Ruby</span> (<i>fortunei</i>) (5)</span>	P06247
+"<span RHS><i>Saxifraga</i> <span class=""trade-name"">Black Ruby</span> (<i>fortunei</i>) (5)</span>"	P06247
 <span RHS><i>Saxifraga</i> 'Wada' (<i>fortunei</i>) (5)</span>	P06248
 <span RHS><i>Scabiosa drakensbergensis</i></span>	P06249
 <span RHS><i>Scutellaria altissima</i></span>	P06250
@@ -6232,7 +6232,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Vincetoxicum hirundinaria</i></span>	P06369
 <span RHS><i>Vincetoxicum nigrum</i></span>	P06370
 <span RHS><i>Viola elatior</i></span>	P06371
-<span RHS><i>Vitis</i> <span class="trade-name">Claret Cloak</span> = 'Frovit' <sup>(PBR)</sup> AGM</span>	P06372
+"<span RHS><i>Vitis</i> <span class=""trade-name"">Claret Cloak</span> = 'Frovit' <sup>(PBR)</sup> AGM</span>"	P06372
 <span RHS><i>Vitis vinifera</i> 'Purpurea' (O/B) AGM</span>	P06373
 <span RHS><i>Yucca flaccida</i> 'Golden Sword' (v) AGM</span>	P06374
 <span RHS><i>Zauschneria californica</i></span>	P06375
@@ -6350,7 +6350,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Geranium soboliferum</i> Cally strain</span>	P06491
 <span RHS><i>Geranium maculatum</i> 'Beth Chatto'</span>	P06492
 <span RHS><i>Geranium</i> (Cinereum Group) 'Carol'</span>	P06493
-<span RHS><i>Geranium</i> (Cinereum Group) <span class="trade-name">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>	P06494
+"<span RHS><i>Geranium</i> (Cinereum Group) <span class=""trade-name"">Rothbury Gem</span> = 'Gerfos' <sup>(PBR)</sup> AGM</span>"	P06494
 <span RHS><i>Geranium cinereum</i> 'Sateene' <sup>(PBR)</sup></span>	P06495
 <span RHS><i>Geranium subcaulescens</i> AGM</span>	P06496
 <span RHS><i>Geranium</i> (Cinereum Group) 'Laurence Flatman'</span>	P06497
@@ -6524,7 +6524,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Potentilla</i> 'William Rollisson' AGM</span>	P06671
 <span RHS><i>Salvia</i> 'Amistad' <sup>(PBR)</sup> AGM</span>	P06672
 <span RHS><i>Salvia</i> &times; <i>jamensis</i> 'Melen' <sup>(PBR)</sup></span>	P06673
-<span RHS><i>Salvia nemorosa</i> <span class="trade-name">Sensation Rose</span> (Sensation Series)</span>	P06674
+"<span RHS><i>Salvia nemorosa</i> <span class=""trade-name"">Sensation Rose</span> (Sensation Series)</span>"	P06674
 <span RHS><i>Scabiosa caucasica</i> 'Clive Greaves' AGM</span>	P06675
 <i>Weigela</i> 'White Poppet'	P06676
 <span RHS><i>Eremurus stenophyllus</i> AGM</span>	P06677
@@ -6582,11 +6582,11 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Hydrangea macrophylla</i> 'Tokyo Delight' (L) AGM</span>	P06731
 <span RHS><i>Hydrangea paniculata</i> 'Silver Dollar' AGM</span>	P06732
 <span RHS><i>Hydrangea paniculata</i> 'Tender Rose'</span>	P06733
-<span RHS><i>Hydrangea paniculata</i> <span class="trade-name">Vanille Fraise</span> = 'Renhy' <sup>(PBR)</sup></span>	P06734
+"<span RHS><i>Hydrangea paniculata</i> <span class=""trade-name"">Vanille Fraise</span> = 'Renhy' <sup>(PBR)</sup></span>"	P06734
 <span RHS><i>Hydrangea paniculata</i> 'Unique'</span>	P06735
 <span RHS><i>Hydrangea paniculata</i> 'Brussels Lace'</span>	P06736
 <span RHS><i>Hydrangea macrophylla</i> 'Brestenburg' (H)</span>	P06737
-<span RHS><i>Hydrangea paniculata</i> <span class="trade-name">Pinky-Winky</span> = 'Dvppinky' <sup>(PBR)</sup> AGM</span>	P06738
+"<span RHS><i>Hydrangea paniculata</i> <span class=""trade-name"">Pinky-Winky</span> = 'Dvppinky' <sup>(PBR)</sup> AGM</span>"	P06738
 <span RHS><i>Hydrangea macrophylla</i> 'R.F. Felton' (H)</span>	P06739
 <span RHS><i>Hydrangea macrophylla</i> 'Brilliant' (H)</span>	P06740
 <i>Hydrangea macrophylla</i> 'Harlech'	P06741
@@ -6633,7 +6633,7 @@ Vegetable Pea 'Purple Podded'  (<i>Pisum sativum</i> 'Purple Podded')	P04895
 <span RHS><i>Hydrangea aspera</i> subsp. <i>strigosa</i></span>	P06783
 <span RHS><i>Hydrangea paniculata</i> 'Brussels Lace'</span>	P06784
 <span RHS><i>Hydrangea paniculata</i> 'Phantom' AGM</span>	P06785
-<span RHS><i>Hydrangea paniculata</i> <span class="trade-name">Vanille Fraise</span> = 'Renhy' <sup>(PBR)</sup></span>	P06786
+"<span RHS><i>Hydrangea paniculata</i> <span class=""trade-name"">Vanille Fraise</span> = 'Renhy' <sup>(PBR)</sup></span>"	P06786
 <span RHS><i>Hydrangea paniculata</i> 'White Moth'</span>	P06787
 <span RHS><i>Hydrangea paniculata</i> 'Wim's Red' <sup>(PBR)</sup></span> - September	P06788
 <span RHS><i>Hydrangea serrata</i> 'Diadem' (L) AGM</span>	P06789
@@ -6790,7 +6790,7 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Polygonatum verticillatum</i></span>	P06983
 <span RHS><i>Ranunculus aconitifolius</i></span>	P06984
 <span RHS><i>Rosa nutkana</i> (S)</span>	P06985
-<span RHS><i>Salvia</i> <span class="trade-name">Ember's Wish</span> = 'Sal 0101' <sup>(PBR)</sup></span>	P06986
+"<span RHS><i>Salvia</i> <span class=""trade-name"">Ember's Wish</span> = 'Sal 0101' <sup>(PBR)</sup></span>"	P06986
 <i>Salvia virgata</i>	P06987
 <span RHS><i>Scutellaria suffrutescens</i> 'Texas Rose'</span>	P06988
 <span RHS><i>Sorbus</i> 'Chinese Lace'</span>	P06989
@@ -6839,7 +6839,7 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Fothergilla major</i> Monticola Group</span>	P07032
 <span RHS><i>Hydrangea macrophylla</i> 'Hanabi' (L/d) AGM</span>	P07033
 <span RHS><i>Hydrangea macrophylla</i> 'Setsuka-yae' (L/d)</span>	P07034
-<span RHS><i>Hydrangea quercifolia</i> <span class="trade-name">Snowflake</span> = 'Brido' (d) AGM</span>	P07035
+"<span RHS><i>Hydrangea quercifolia</i> <span class=""trade-name"">Snowflake</span> = 'Brido' (d) AGM</span>"	P07035
 <span RHS><i>Hydrangea serrata</i> 'Bluebird' (L) AGM</span>	P07036
 <span RHS><i>Schefflera taiwaniana</i> AGM</span>	P07037
 <span RHS><i>Tulipa sprengeri</i> (15) AGM</span>	P07038
@@ -6856,7 +6856,7 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Hemerocallis</i> 'Bela Lugosi'</span>	P07049
 <i>Hemerocallis</i> 'Chicago Picotee'	P07050
 <span RHS><i>Heuchera villosa</i> 'Autumn Bride'</span>	P07051
-<span RHS><i>Hydrangea paniculata</i> <span class="trade-name">Diamant Rouge</span> = 'Rendia' <sup>(PBR)</sup></span>	P07052
+"<span RHS><i>Hydrangea paniculata</i> <span class=""trade-name"">Diamant Rouge</span> = 'Rendia' <sup>(PBR)</sup></span>"	P07052
 <span RHS><i>Hydrangea paniculata</i> 'Limelight' <sup>(PBR)</sup> AGM</span>	P07053
 <span RHS><i>Monarda</i> 'Squaw' AGM</span>	P07054
 <span RHS><i>Paeonia mlokosewitschii</i> AGM</span> - seed head	P07055
@@ -6878,13 +6878,13 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Astrantia major</i> Gill Richardson Group</span>	P07072
 <span RHS><i>Clematis</i> 'Arabella' (I) AGM</span>	P07073
 <span RHS><i>Clematis</i> 'Asao' (EL)</span>	P07074
-<span RHS><i>Clematis</i> <span class="trade-name">Crystal Fountain</span> = 'Evipo038' <sup>(PBR)</sup> (EL)</span>	P07075
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Crystal Fountain</span> = 'Evipo038' <sup>(PBR)</sup> (EL)</span>"	P07075
 <span RHS><i>Clematis integrifolia</i></span>	P07076
 <span RHS><i>Codonopsis clematidea</i></span>	P07077
 <span RHS><i>Erodium</i> 'Las Meninas'</span>	P07078
 <span RHS><i>Eryngium</i> &times; <i>zabelii</i> 'Neptune's Gold' <sup>(PBR)</sup></span> && <span RHS><i>Hylotelephium telephium</i> (Atropurpureum Group) 'Xenox' <sup>(PBR)</sup> AGM</span>	P07079
 <span RHS><i>Geranium</i> (Cinereum Group) 'Ballerina' AGM</span>	P07080
-<span RHS><i>Geranium</i> <span class="trade-name">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>	P07081
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>"	P07081
 <span RHS><i>Geranium subcaulescens</i> AGM</span>	P07082
 <span RHS><i>Incarvillea mairei</i></span>	P07083
 <span RHS><i>Parahebe perfoliata</i></span>	P07084
@@ -6979,7 +6979,7 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Androsace studiosorum</i> 'Chumbyi'</span>	P07173
 <span RHS><i>Anemone coronaria</i> (De Caen Group) 'Mister Fokker'</span>	P07174
 <span RHS><i>Anemone trullifolia</i> 'Alba'</span>	P07175
-<span RHS><i>Aquilegia</i> <span class="trade-name">Spring Magic Pink and White</span> (Spring Magic Series)</span>	P07176
+"<span RHS><i>Aquilegia</i> <span class=""trade-name"">Spring Magic Pink and White</span> (Spring Magic Series)</span>"	P07176
 <span RHS><i>Aquilegia</i> 'Alaska' (State Series) AGM</span>	P07177
 <i>Aquilegia</i> (Swan Series) 'Swan White'	P07178
 <span RHS><i>Aquilegia vulgaris</i> 'Clementine Red' (Clementine Series) (d)</span>	P07179
@@ -7066,7 +7066,7 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <i>Rhododendron</i> 'St Breward'	P07262
 <span RHS><i>Rhododendron</i> 'Turaço'</span>	P07263
 <span RHS><i>Rhododendron wightii</i></span>	P07264
-<span RHS><i>Ribes sanguineum</i> <span class="trade-name">White Icicle</span> = 'Ubric' AGM</span>	P07265
+"<span RHS><i>Ribes sanguineum</i> <span class=""trade-name"">White Icicle</span> = 'Ubric' AGM</span>"	P07265
 <span RHS><i>Ribes speciosum</i> AGM</span>	P07266
 <span RHS><i>Sarcococca ruscifolia</i> var. <i>chinensis</i> 'Dragon Gate' AGM</span>	P07267
 <span RHS><i>Scabiosa</i> 'Pink Mist'</span>	P07268
@@ -7219,7 +7219,7 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Plantago major</i> 'Rubrifolia'</span>	P07415
 <span RHS><i>Poa labillardierei</i></span>	P07416
 <span RHS><i>Polemonium boreale</i> 'Heavenly Habit'</span>	P07417
-<span RHS><i>Polemonium yezoense</i> var. <i>hidakanum</i> <span class="trade-name">Bressingham Purple</span> = 'Polbress'</span>	P07418
+"<span RHS><i>Polemonium yezoense</i> var. <i>hidakanum</i> <span class=""trade-name"">Bressingham Purple</span> = 'Polbress'</span>"	P07418
 <span RHS><i>Potentilla atrosanguinea</i> var. <i>argyrophylla</i></span> CC7185	P07419
 <span RHS><i>Potentilla</i> 'Etna'</span>	P07420
 <span RHS><i>Potentilla nepalensis</i> 'Helen Jane'</span>	P07421
@@ -7423,17 +7423,17 @@ Vegetable Swiss Chard 'Bright Lights'  (<i>Beta vulgaris</i> subsp. <i>cicla</i>
 <span RHS><i>Aster trifoliatus</i> subsp. <i>ageratoides</i> 'Starshine' <sup>(PBR)</sup></span>	P07619
 <span RHS><i>Astilbe chinensis</i> 'Veronika Klose'</span>	P07620
 <span RHS><i>Carex dipsacea</i> 'Dark Horse'</span>	P07621
-<span RHS><i>Caryopteris</i> &times; <i>clandonensis</i> <span class="trade-name">Hint of Gold</span> = 'Lisaura' <sup>(PBR)</sup> AGM</span>	P07622
+"<span RHS><i>Caryopteris</i> &times; <i>clandonensis</i> <span class=""trade-name"">Hint of Gold</span> = 'Lisaura' <sup>(PBR)</sup> AGM</span>"	P07622
 <span RHS><i>Cephalanthus occidentalis</i></span>	P07623
 <span RHS><i>Chelone lyonii</i> 'Hot Lips'</span>	P07624
 <span RHS><i>Cornus amomum</i> 'Blue Cloud'</span>	P07625
 <span RHS><i>Crataegus persimilis</i> 'Prunifolia Splendens'</span>	P07626
 <span RHS><i>Crocosmia aurea</i> 'Golden Ballerina' <sup>(PBR)</sup></span>	P07627
-<span RHS><i>Crocosmia</i> <span class="trade-name">Orange Pekoe</span> = 'Pek Or' <sup>(PBR)</sup></span>	P07628
+"<span RHS><i>Crocosmia</i> <span class=""trade-name"">Orange Pekoe</span> = 'Pek Or' <sup>(PBR)</sup></span>"	P07628
 <span RHS><i>Dahlia</i> 'Woodbridge' (Sin)</span>	P07629
 <span RHS><i>Deinanthe caerulea</i></span>	P07630
 <span RHS><i>Dierama adelphicum</i></span>	P07631
-<i>Echinacea purpurea</i> <span class="trade-name">PowWow White</span> = 'Pas709018' (PowWow Series)	P07632
+"<i>Echinacea purpurea</i> <span class=""trade-name"">PowWow White</span> = 'Pas709018' (PowWow Series)"	P07632
 <span RHS><i>Echinacea purpurea</i> 'Pica Bella'</span>	P07633
 <span RHS><i>Echinacea purpurea</i> 'Virgin' <sup>(PBR)</sup></span>	P07634
 <span RHS><i>Eupatorium maculatum</i> (Atropurpureum Group) 'Riesenschirm' AGM</span>	P07635
@@ -7557,7 +7557,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Astrantia major</i> 'Star of Beauty' <sup>(PBR)</sup> (Sparkling Stars Series)</span>	P07753
 <span RHS><i>Betula</i> 'Fetisowii'</span>	P07754
 <span RHS><i>Borago pygmaea</i></span>	P07755
-<span RHS><i>Campanula glomerata</i> <span class="trade-name">Genti White</span> = 'Allgentiw' <sup>(PBR)</sup> (Genti Series)</span>	P07756
+"<span RHS><i>Campanula glomerata</i> <span class=""trade-name"">Genti White</span> = 'Allgentiw' <sup>(PBR)</sup> (Genti Series)</span>"	P07756
 <span RHS><i>Campanula glomerata</i> 'Freya' <sup>(PBR)</sup> AGM</span>	P07757
 <span RHS><i>Campanula</i> 'Purple Sensation' <sup>(PBR)</sup></span>	P07758
 <span RHS><i>Campanula raineri</i></span>	P07759
@@ -7566,10 +7566,10 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Cistus crispus</i> L.</span>	P07762
 <span RHS><i>Cistus</i> 'Snow Fire' AGM</span>	P07763
 <span RHS><i>Cistus</i> &times; <i>laxus</i> 'Snow White' AGM</span>	P07764
-<span RHS><i>Clematis</i> <span class="trade-name">Gazelle</span> = 'Evipo014' <sup>(PBR)</sup> (I)</span>	P07766
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Gazelle</span> = 'Evipo014' <sup>(PBR)</sup> (I)</span>"	P07766
 <span RHS><i>Cosmos sulphureus</i></span>	P07767
 <span RHS><i>Delphinium</i> (Belladonna Group) 'Piccolo'</span>	P07768
-<span RHS><i>Delphinium</i> <span class="trade-name">Blue River</span></span>	P07769
+"<span RHS><i>Delphinium</i> <span class=""trade-name"">Blue River</span></span>"	P07769
 <span RHS><i>Delphinium</i> 'Cassius'</span>	P07770
 <span RHS><i>Delphinium</i> Dusky Maidens Group</span>	P07771
 <span RHS><i>Delphinium</i> 'Langdon's Royal Flush'</span>	P07772
@@ -7591,7 +7591,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Galega</i> &times; <i>hartlandii</i></span>	P07788
 <span RHS><i>Genista lydia</i> AGM</span>	P07789
 <span RHS><i>Geranium</i> 'Little Gem'</span>	P07790
-<span RHS><i>Geranium</i> <span class="trade-name">Dragon Heart</span> = 'Bremdra' <sup>(PBR)</sup></span>	P07791
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Dragon Heart</span> = 'Bremdra' <sup>(PBR)</sup></span>"	P07791
 <span RHS><i>Geranium</i> 'Foundling'</span>	P07792
 <span RHS><i>Geranium</i> 'Lilac Ice'</span>	P07793
 <span RHS><i>Geranium</i> 'Red Admiral'</span>	P07794
@@ -7760,7 +7760,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Delphinium</i> Galahad Group</span>	P07957
 <span RHS><i>Dianthus arenarius</i></span>	P07958
 <span RHS><i>Dianthus barbatus albus</i></span>	P07959
-<span RHS><i>Dianthus barbatus</i> <span class="trade-name">Auricula Eyed Mixed</span> (p,a)</span>	P07960
+"<span RHS><i>Dianthus barbatus</i> <span class=""trade-name"">Auricula Eyed Mixed</span> (p,a)</span>"	P07960
 <span RHS><i>Dianthus barbatus</i></span> crimson form	P07961
 <span RHS><i>Erigeron glaucus</i></span>	P07962
 <span RHS><i>Geranium cinereum</i></span>	P07963
@@ -7905,8 +7905,8 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Aster amellus</i> 'Gründer'</span>	P08103
 <span RHS><i>Symphyotrichum novae-angliae</i> 'Lye End Beauty'</span>	P08104
 <span RHS><i>Hesperantha coccinea</i> 'Cindy Towe'</span>	P08105
-<span RHS><i>Clematis</i> <span class="trade-name">Corinne</span> = 'Evipo063' <sup>(PBR)</sup> (EL)</span>	P08106
-<span RHS><i>Clematis</i> <span class="trade-name">Corinne</span> = 'Evipo063' <sup>(PBR)</sup> (EL)</span>	P08107
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Corinne</span> = 'Evipo063' <sup>(PBR)</sup> (EL)</span>"	P08106
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Corinne</span> = 'Evipo063' <sup>(PBR)</sup> (EL)</span>"	P08107
 <span RHS><i>Adiantum pedatum</i> L.</span>	P08108
 <span RHS><i>Anemone rivularis</i></span>	P08109
 <span RHS><i>Athyrium niponicum</i> var. <i>pictum</i> 'Red Beauty'</span>	P08110
@@ -7917,7 +7917,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Meconopsis</i> (George Sherriff Group) 'Huntfield'</span>	P08115
 <span RHS><i>Meconopsis</i> 'Keillour' AGM</span>	P08116
 <span RHS><i>Meconopsis</i> (Fertile Blue Group) 'Lingholm'</span>	P08117
-<span RHS><i>Polemonium yezoense</i> var. <i>hidakanum</i> <span class="trade-name">Bressingham Purple</span> = 'Polbress'</span>	P08118
+"<span RHS><i>Polemonium yezoense</i> var. <i>hidakanum</i> <span class=""trade-name"">Bressingham Purple</span> = 'Polbress'</span>"	P08118
 <span RHS><i>Primula japonica</i> 'Apple Blossom' (Pf)</span>	P08119
 <span RHS><i>Rheum alexandrae</i></span>	P08120
 <span RHS><i>Saruma henryi</i></span>	P08121
@@ -8163,8 +8163,8 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Alstroemeria</i> 'Eleanor' (Little Miss Series)</span>	P08363
 <span RHS><i>Alstroemeria</i> 'Rosanna' (Little Miss Series)</span>	P08364
 <i>Alstroemeria</i> 'Pershore Flambeau'	P08365
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Queen Elizabeth The Queen Mother</span> = 'Stamoli'</span>	P08366
-<span RHS><i>Alstroemeria</i> <span class="trade-name">Queen Elizabeth The Queen Mother</span> = 'Stamoli'</span>	P08367
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Queen Elizabeth The Queen Mother</span> = 'Stamoli'</span>"	P08366
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">Queen Elizabeth The Queen Mother</span> = 'Stamoli'</span>"	P08367
 <span RHS><i>Alstroemeria</i> 'Red Elf' AGM</span>	P08368
 <span RHS><i>Alstroemeria</i> 'Tessa' AGM</span>	P08369
 <span RHS><i>Anemone blanda</i> AGM</span>	P08370
@@ -8176,7 +8176,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Anemone nemorosa</i> 'Bracteata Pleniflora' (d)</span>	P08376
 <span RHS><i>Anemone nemorosa</i> 'Robinsoniana' AGM</span>	P08377
 <span RHS><i>Anemone nemorosa</i> 'Vestal' (d) AGM</span>	P08378
-<span RHS><i>Anemone</i> <span class="trade-name">Wild Swan</span> = 'Macane001' <sup>(PBR)</sup></span>	P08379
+"<span RHS><i>Anemone</i> <span class=""trade-name"">Wild Swan</span> = 'Macane001' <sup>(PBR)</sup></span>"	P08379
 <span RHS><i>Anemone</i> &times; <i>hybrida</i> 'Honorine Jobert' AGM</span>	P08380
 <span RHS><i>Anthemis tinctoria</i> 'Sauce Hollandaise'</span> && <span RHS><i>Heuchera</i> 'Caramel' <sup>(PBR)</sup></span>	P08381
 <span RHS><i>Anthemis tinctoria</i> 'Sauce Hollandaise'</span>	P08382
@@ -8288,10 +8288,10 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Choisya ternata</i> AGM</span>	P08490
 <span RHS><i>Choisya</i> &times; <i>dewitteana</i> 'Aztec Pearl' AGM</span>	P08491
 <span RHS><i>Choisya</i> &times; <i>dewitteana</i> 'Aztec Pearl' AGM</span>	P08492
-<span RHS><i>Choisya</i> &times; <i>dewitteana</i> <span class="trade-name">Goldfingers</span> = 'Limo' <sup>(PBR)</sup></span>	P08493
+"<span RHS><i>Choisya</i> &times; <i>dewitteana</i> <span class=""trade-name"">Goldfingers</span> = 'Limo' <sup>(PBR)</sup></span>"	P08493
 <span RHS><i>Chrysosplenium davidianum</i></span>	P08494
-<span RHS><i>Cistus</i> &times; <i>argenteus</i> <span class="trade-name">Golden Treasure</span> = 'Nepond' (v)</span>	P08495
-<span RHS><i>Clematis</i> <span class="trade-name">Arctic Queen</span> = 'Evitwo' <sup>(PBR)</sup> (EL) AGM</span>	P08496
+"<span RHS><i>Cistus</i> &times; <i>argenteus</i> <span class=""trade-name"">Golden Treasure</span> = 'Nepond' (v)</span>"	P08495
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Arctic Queen</span> = 'Evitwo' <sup>(PBR)</sup> (EL) AGM</span>"	P08496
 <span RHS><i>Clematis</i> 'Betty Corning' (Vt)</span>	P08497
 <span RHS><i>Clematis</i> 'Comtesse de Bouchaud' (LL) AGM</span>	P08498
 <span RHS><i>Clematis</i> 'Comtesse de Bouchaud' (LL) AGM</span>	P08499
@@ -8299,10 +8299,10 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Clematis</i> 'Frances Rivis' (A) AGM</span>	P08501
 <span RHS><i>Clematis</i> 'Frances Rivis' (A) AGM</span>	P08502
 <span RHS><i>Clematis</i> 'Freda' (M) AGM</span>	P08503
-<span RHS><i>Clematis</i> <span class="trade-name">Golden Tiara</span> = 'Kugotia' <sup>(PBR)</sup> (Ta) AGM</span>	P08504
-<span RHS><i>Clematis</i> <span class="trade-name">Golden Tiara</span> = 'Kugotia' <sup>(PBR)</sup> (Ta) AGM</span>	P08505
-<span RHS><i>Clematis</i> <span class="trade-name">Ice Blue</span> = 'Evipo003' <sup>(PBR)</sup> (Prairie Series) (EL)</span> Prairie Series	P08506
-<span RHS><i>Clematis</i> <span class="trade-name">Inspiration</span> = 'Zoin' <sup>(PBR)</sup> (I)</span>	P08507
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Golden Tiara</span> = 'Kugotia' <sup>(PBR)</sup> (Ta) AGM</span>"	P08504
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Golden Tiara</span> = 'Kugotia' <sup>(PBR)</sup> (Ta) AGM</span>"	P08505
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Ice Blue</span> = 'Evipo003' <sup>(PBR)</sup> (Prairie Series) (EL)</span> Prairie Series"	P08506
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Inspiration</span> = 'Zoin' <sup>(PBR)</sup> (I)</span>"	P08507
 <span RHS><i>Clematis</i> 'Kermesina' (Vt) AGM</span>	P08508
 <span RHS><i>Clematis</i> 'Maria Basescu'</span>	P08509
 <span RHS><i>Clematis</i> 'Maria Basescu'</span>	P08510
@@ -8362,7 +8362,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Corydalis solida</i> subsp. <i>solida</i></span>	P08565
 <span RHS><i>Corydalis solida</i> subsp. <i>solida</i> 'George Baker' AGM</span>	P08566
 <span RHS><i>Cosmos atrosanguineus</i></span>	P08567
-<span RHS><i>Cotinus coggygria</i> <span class="trade-name">Golden Spirit</span> = 'Ancot' <sup>(PBR)</sup> AGM</span>	P08568
+"<span RHS><i>Cotinus coggygria</i> <span class=""trade-name"">Golden Spirit</span> = 'Ancot' <sup>(PBR)</sup> AGM</span>"	P08568
 <span RHS><i>Cotinus coggygria</i> Rubrifolius Group</span>	P08569
 <span RHS><i>Cotinus</i> 'Flame' AGM</span>	P08570
 <span RHS><i>Cotoneaster horizontalis</i></span>	P08571
@@ -8373,7 +8373,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Crocosmia</i> 'Miss Scarlet'</span>	P08576
 <span RHS><i>Crocosmia</i> 'Severn Sunrise' AGM</span>	P08577
 <span RHS><i>Crocosmia</i> 'Spitfire'</span>	P08578
-<span RHS><i>Crocosmia</i> <span class="trade-name">Walberton Yellow</span> = 'Walcroy' <sup>(PBR)</sup></span>	P08579
+"<span RHS><i>Crocosmia</i> <span class=""trade-name"">Walberton Yellow</span> = 'Walcroy' <sup>(PBR)</sup></span>"	P08579
 <span RHS><i>Crocosmia</i> &times; <i>crocosmiiflora</i> 'Carmin Brillant' AGM</span>	P08580
 <span RHS><i>Crocosmia</i> &times; <i>crocosmiiflora</i> 'Emily McKenzie'</span>	P08581
 <span RHS><i>Crocosmia</i> &times; <i>crocosmiiflora</i> 'Honey Angels'</span>	P08582
@@ -8470,7 +8470,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Eucalyptus pauciflora</i> subsp. <i>niphophila</i> AGM</span>	P08673
 <span RHS><i>Eucalyptus pauciflora</i> subsp. <i>niphophila</i> AGM</span>	P08674
 <span RHS><i>Euonymus fortunei</i> 'Emerald 'n' Gold' (v) AGM</span>	P08675
-<span RHS><i>Euphorbia characias</i> <span class="trade-name">Silver Swan</span> = 'Wilcott' <sup>(PBR)</sup> (v)</span>	P08676
+"<span RHS><i>Euphorbia characias</i> <span class=""trade-name"">Silver Swan</span> = 'Wilcott' <sup>(PBR)</sup> (v)</span>"	P08676
 <span RHS><i>Euphorbia characias</i> subsp. <i>characias</i> 'Humpty Dumpty'</span>	P08677
 <span RHS><i>Euphorbia characias</i> subsp. <i>wulfenii</i> 'Emmer Green' (v)</span>	P08678
 <span RHS><i>Euphorbia characias</i> subsp. <i>wulfenii</i> 'Emmer Green' (v)</span>	P08679
@@ -8491,12 +8491,12 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Forsythia</i> 'Beatrix Farrand' ambig.</span> && <span RHS><i>Ribes sanguineum</i> 'King Edward VII'</span>	P08694
 <span RHS><i>Forsythia</i> 'Beatrix Farrand' ambig.</span> && <span RHS><i>Ribes sanguineum</i> 'King Edward VII'</span> && <span RHS><i>Forsythia</i> 'Golden Times' (v)</span>	P08695
 <span RHS><i>Forsythia</i> 'Fiesta' (v)</span> && <span RHS><i>Geranium</i> 'Ann Folkard' AGM</span>	P08696
-<span RHS><i>Forsythia</i> &times; <i>intermedia</i> <span class="trade-name">Week End</span> = 'Courtalyn' AGM</span>	P08697
+"<span RHS><i>Forsythia</i> &times; <i>intermedia</i> <span class=""trade-name"">Week End</span> = 'Courtalyn' AGM</span>"	P08697
 <span RHS><i>Forsythia</i> 'Golden Times' (v)</span> && <span RHS><i>Ribes sanguineum</i> 'King Edward VII'</span>	P08698
 <span RHS><i>Fothergilla major</i> AGM</span>	P08699
 <span RHS><i>Fothergilla major</i> AGM</span>	P08700
 <span RHS><i>Fothergilla major</i> AGM</span> - autumn colour	P08701
-<span RHS><i>Fragaria</i> &times; <i>ananassa</i> <span class="trade-name">Pink Panda</span> = 'Frel' (F)</span>	P08702
+"<span RHS><i>Fragaria</i> &times; <i>ananassa</i> <span class=""trade-name"">Pink Panda</span> = 'Frel' (F)</span>"	P08702
 <span RHS><i>Fragaria</i> &times; <i>ananassa</i> 'Samba' <sup>(PBR)</sup> (F)</span>	P08703
 <span RHS><i>Fritillaria meleagris</i> var. <i>unicolor</i> subvar. <i>alba</i> AGM</span> && <span RHS><i>Fritillaria meleagris</i> AGM</span> && <span RHS><i>Euphorbia griffithii</i></span>	P08704
 <span RHS><i>Fritillaria michailovskyi</i></span>	P08705
@@ -8518,7 +8518,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Gentiana verna</i> 'Angulosa' AGM</span>	P08721
 <span RHS><i>Gentiana verna</i> 'Angulosa' AGM</span>	P08722
 <span RHS><i>Geranium</i> 'Ann Folkard' AGM</span> - foliage	P08723
-<span RHS><i>Geranium</i> <span class="trade-name">Blue Sunrise</span> = 'Blogold' <sup>(PBR)</sup> AGM</span>	P08724
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Blue Sunrise</span> = 'Blogold' <sup>(PBR)</sup> AGM</span>"	P08724
 <span RHS><i>Geranium</i> 'Bob's Blunder'</span>	P08725
 <span RHS><i>Geranium</i> (Cinereum Group) 'Laurence Flatman'</span> && <span RHS><i>Oxalis adenophylla</i> AGM</span>	P08726
 <span RHS><i>Geranium clarkei</i> 'Kashmir White'</span>	P08727
@@ -8532,12 +8532,12 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Geranium maculatum</i></span> && <span RHS><i>Celmisia semicordata</i></span>	P08735
 <span RHS><i>Geranium malviflorum</i></span>	P08736
 <span RHS><i>Geranium orientalitibeticum</i></span>	P08737
-<span RHS><i>Geranium</i> 'Orion' AGM</span> && <span RHS><i>Geranium</i> <span class="trade-name">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>	P08738
-<span RHS><i>Geranium</i> 'Orion' AGM</span> && <span RHS><i>Geranium</i> <span class="trade-name">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>	P08739
+"<span RHS><i>Geranium</i> 'Orion' AGM</span> && <span RHS><i>Geranium</i> <span class=""trade-name"">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>"	P08738
+"<span RHS><i>Geranium</i> 'Orion' AGM</span> && <span RHS><i>Geranium</i> <span class=""trade-name"">Summer Skies</span> = 'Gernic' <sup>(PBR)</sup> (d)</span>"	P08739
 <span RHS><i>Geranium</i> 'Orion' AGM</span> && <span RHS><i>Geranium</i> 'Sirak' AGM</span> && <span RHS><i>Geranium</i> &times; <i>magnificum</i> 'Blue Blood'</span>	P08740
 <span RHS><i>Geranium</i> 'Orion' AGM</span>	P08741
-<span RHS><i>Geranium</i> <span class="trade-name">Patricia</span> = 'Brempat' AGM</span>	P08742
-<span RHS><i>Geranium</i> <span class="trade-name">Patricia</span> = 'Brempat' AGM</span>	P08743
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Patricia</span> = 'Brempat' AGM</span>"	P08742
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Patricia</span> = 'Brempat' AGM</span>"	P08743
 <span RHS><i>Geranium phaeum</i> 'Conny Broe' (v)</span> - foliage	P08744
 <span RHS><i>Geranium phaeum</i> 'Raven'</span>	P08745
 <span RHS><i>Geranium pratense</i> 'Ilja'</span>	P08746
@@ -8546,7 +8546,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Geranium pratense</i> 'Mrs Kendall Clark' AGM</span>	P08749
 <span RHS><i>Geranium pratense</i> (Victor Reiter Group) 'Victor Reiter'</span> - foliage	P08750
 <span RHS><i>Geranium pratense</i> (Victor Reiter Group) 'Victor Reiter'</span> && <span RHS><i>Heuchera</i> 'Fireworks' <sup>(PBR)</sup> AGM</span> && <span RHS><i>Syringa meyeri</i> 'Palibin' AGM</span>	P08751
-<span RHS><i>Geranium pratense</i> (Victor Reiter Group) 'Victor Reiter'</span> && <span RHS><i>Heuchera</i> <span class="trade-name">Ebony and Ivory</span> = 'E and I' <sup>(PBR)</sup></span>	P08752
+"<span RHS><i>Geranium pratense</i> (Victor Reiter Group) 'Victor Reiter'</span> && <span RHS><i>Heuchera</i> <span class=""trade-name"">Ebony and Ivory</span> = 'E and I' <sup>(PBR)</sup></span>"	P08752
 <span RHS><i>Geranium psilostemon</i> AGM</span>	P08753
 <span RHS><i>Geranium pyrenaicum</i> 'Bill Wallis'</span> && <span RHS><i>Saxifraga granulata</i> (15)</span>	P08754
 <span RHS><i>Geranium</i> 'Red Admiral'</span>	P08755
@@ -8554,8 +8554,8 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Geranium</i> &times; <i>magnificum</i> AGM</span>	P08757
 <span RHS><i>Geranium</i> &times; <i>magnificum</i> AGM</span>	P08758
 <span RHS><i>Geranium</i> &times; <i>magnificum</i> AGM</span>	P08759
-<span RHS><i>Geranium</i> <span class="trade-name">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>	P08760
-<span RHS><i>Geranium sanguineum</i> <span class="trade-name">Alan Bloom</span> = 'Bloger' <sup>(PBR)</sup></span>	P08761
+"<span RHS><i>Geranium</i> <span class=""trade-name"">Rozanne</span> = 'Gerwat' <sup>(PBR)</sup> AGM</span>"	P08760
+"<span RHS><i>Geranium sanguineum</i> <span class=""trade-name"">Alan Bloom</span> = 'Bloger' <sup>(PBR)</sup></span>"	P08761
 <span RHS><i>Geranium sanguineum</i> 'Ankum's Pride' AGM</span> - November foliage	P08762
 <span RHS><i>Geranium sanguineum</i> 'Belle of Herterton'</span>	P08763
 <span RHS><i>Geranium sanguineum</i> 'Max Frei'</span> && <span RHS><i>Sedum kamtschaticum</i> var. <i>floriferum</i> 'Weihenstephaner Gold'</span>	P08764
@@ -8621,8 +8621,8 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> 'Bob's Best'</span>	P08825
 <span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> 'Bob's Best'</span>	P08826
 <span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> 'Bob's Best'</span>	P08827
-<span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> <span class="trade-name">HGC Shooting Star</span> = 'Coseh 790' <sup>(PBR)</sup></span>	P08828
-<span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> <span class="trade-name">HGC Shooting Star</span> = 'Coseh 790' <sup>(PBR)</sup></span>	P08829
+"<span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> <span class=""trade-name"">HGC Shooting Star</span> = 'Coseh 790' <sup>(PBR)</sup></span>"	P08828
+"<span RHS><i>Helleborus</i> &times; <i>ericsmithii</i> <span class=""trade-name"">HGC Shooting Star</span> = 'Coseh 790' <sup>(PBR)</sup></span>"	P08829
 <span RHS><i>Helleborus</i> &times; <i>hybridus</i> black-flowered</span>	P08830
 <span RHS><i>Helleborus</i> &times; <i>hybridus</i> black-flowered</span>	P08831
 <span RHS><i>Helleborus</i> &times; <i>hybridus</i> black-flowered</span>	P08832
@@ -8652,7 +8652,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Hemerocallis fulva</i> 'Green Kwanso' (d)</span>	P08856
 <span RHS><i>Hemerocallis fulva</i> 'Variegated Kwanso' (d/v)</span>	P08857
 <span RHS><i>Hemerocallis fulva</i> 'Variegated Kwanso' (d/v)</span>	P08858
-<span RHS><i>Hemerocallis</i> <span class="trade-name">Golden Zebra</span> = 'Malja' <sup>(PBR)</sup> (v)</span>	P08859
+"<span RHS><i>Hemerocallis</i> <span class=""trade-name"">Golden Zebra</span> = 'Malja' <sup>(PBR)</sup> (v)</span>"	P08859
 <span RHS><i>Hemerocallis</i> 'Happy Returns'</span>	P08860
 <span RHS><i>Hemerocallis lilioasphodelus</i></span> && <span RHS><i>Aquilegia vulgaris</i> var. <i>stellata</i> 'Ruby Port' (d)</span>	P08861
 <span RHS><i>Hemerocallis lilioasphodelus</i></span>	P08862
@@ -8713,8 +8713,8 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Hydrangea macrophylla</i> 'Merveille Sanguine' (H)</span>	P08917
 <span RHS><i>Hydrangea macrophylla</i> 'Merveille Sanguine' (H)</span>	P08918
 <span RHS><i>Hydrangea macrophylla</i> 'Veitchii' (L) AGM</span>	P08919
-<span RHS><i>Hypericum</i> <span class="trade-name">Golden Beacon</span> = 'Wilhyp' <sup>(PBR)</sup> AGM</span>	P08920
-<span RHS><i>Hypericum</i> &times; <i>inodorum</i> <span class="trade-name">Magical Pumpkin</span> = 'Kolmapuki' <sup>(PBR)</sup></span>	P08921
+"<span RHS><i>Hypericum</i> <span class=""trade-name"">Golden Beacon</span> = 'Wilhyp' <sup>(PBR)</sup> AGM</span>"	P08920
+"<span RHS><i>Hypericum</i> &times; <i>inodorum</i> <span class=""trade-name"">Magical Pumpkin</span> = 'Kolmapuki' <sup>(PBR)</sup></span>"	P08921
 <span RHS><i>Hebe ochracea</i> 'James Stirling' AGM</span>	P08922
 <span RHS><i>Hyacinthoides non-scripta</i> 'Alba'</span>	P08923
 <span RHS><i>Iberis sempervirens</i> 'Golden Candy'</span>	P08924
@@ -8813,7 +8813,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Laburnum</i> &times; <i>watereri</i> 'Vossii' AGM</span>	P09018
 <span RHS><i>Laburnum</i> &times; <i>watereri</i> 'Vossii' AGM</span>	P09019
 <span RHS><i>Lamium galeobdolon</i> 'Hermann's Pride'</span>	P09020
-<span RHS><i>Lamium maculatum</i> <span class="trade-name">Golden Anniversary</span> = 'Dellam' <sup>(PBR)</sup> (v)</span>	P09021
+"<span RHS><i>Lamium maculatum</i> <span class=""trade-name"">Golden Anniversary</span> = 'Dellam' <sup>(PBR)</sup> (v)</span>"	P09021
 <span RHS><i>Lamium maculatum</i> 'Wootton Pink'</span>	P09022
 <span RHS><i>Lamium maculatum</i> 'Wootton Pink'</span>	P09023
 <span RHS><i>Lamprocapnos spectabilis</i> 'Alba' AGM</span>	P09024
@@ -8822,7 +8822,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Lathyrus vernus</i> 'Cyaneus'</span>	P09027
 <span RHS><i>Leontodon rigens</i></span>	P09028
 <span RHS><i>Leucanthemum vulgare</i></span>	P09029
-<span RHS><i>Leucanthemum</i> &times; <i>superbum</i> <span class="trade-name">Broadway Lights</span> = 'Leumayel' <sup>(PBR)</sup></span> && <span RHS><i>Veronica spicata</i> 'Glory' <sup>(PBR)</sup></span>	P09030
+"<span RHS><i>Leucanthemum</i> &times; <i>superbum</i> <span class=""trade-name"">Broadway Lights</span> = 'Leumayel' <sup>(PBR)</sup></span> && <span RHS><i>Veronica spicata</i> 'Glory' <sup>(PBR)</sup></span>"	P09030
 <i>Libertia grandiflora</i>	P09031
 <i>Libertia grandiflora</i>	P09032
 <span RHS><i>Libertia ixioides</i> 'Goldfinger' (v)</span>	P09033
@@ -8933,7 +8933,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Nepeta</i> 'Six Hills Giant'</span>	P09138
 <span RHS><i>Nerine bowdenii</i> AGM</span>	P09139
 <span RHS><i>Nymphaea</i> 'Gladstoniana' (H) AGM</span>	P09140
-<span RHS><i>Oenothera speciosa</i> <span class="trade-name">Twilight</span> = 'Turner01' <sup>(PBR)</sup> (v)</span>	P09141
+"<span RHS><i>Oenothera speciosa</i> <span class=""trade-name"">Twilight</span> = 'Turner01' <sup>(PBR)</sup> (v)</span>"	P09141
 <span RHS><i>Olearia macrodonta</i> AGM</span>	P09142
 <i>Olearia</i> species	P09143
 <i>Olearia</i> species	P09144
@@ -9007,8 +9007,8 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Phyllostachys bambusoides</i> 'Holochrysa' AGM</span>	P09212
 <span RHS><i>Phyllostachys bambusoides</i> 'Holochrysa' AGM</span>	P09213
 <span RHS><i>Physocarpus opulifolius</i> 'Diabolo' <sup>(PBR)</sup> AGM</span> && <span RHS><i>Physocarpus opulifolius</i> 'Dart's Gold' AGM</span> && <span RHS><i>Hemerocallis minor</i></span>	P09214
-<span RHS><i>Physocarpus opulifolius</i> <span class="trade-name">Diable D'Or</span> = 'Mindia' <sup>(PBR)</sup></span>	P09215
-<span RHS><i>Physocarpus opulifolius</i> <span class="trade-name">Lady in Red</span> = 'Tuilad' <sup>(PBR)</sup> AGM</span>	P09216
+"<span RHS><i>Physocarpus opulifolius</i> <span class=""trade-name"">Diable D'Or</span> = 'Mindia' <sup>(PBR)</sup></span>"	P09215
+"<span RHS><i>Physocarpus opulifolius</i> <span class=""trade-name"">Lady in Red</span> = 'Tuilad' <sup>(PBR)</sup> AGM</span>"	P09216
 <span RHS><i>Picea pungens</i> (Glauca Group) 'Glauca Prostrata'</span>	P09217
 <span RHS><i>Pieris</i> 'Firecrest' AGM</span>	P09218
 <span RHS><i>Pieris</i> 'Forest Flame' AGM</span>	P09219
@@ -9114,12 +9114,12 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Rosa banksiae</i> 'Lutea' (Ra/d) AGM</span>	P09321
 <span RHS><i>Rosa</i> 'Bobbie James' (Ra) AGM</span>	P09322
 <span RHS><i>Rosa</i> 'Bobbie James' (Ra) AGM</span>	P09323
-<span RHS><i>Rosa</i> <span class="trade-name">Bonica</span> = 'Meidomonac' (GC) AGM</span>	P09324
-<span RHS><i>Rosa</i> <span class="trade-name">Bonica</span> = 'Meidomonac' (GC) AGM</span>	P09325
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Bonica</span> = 'Meidomonac' (GC) AGM</span>"	P09324
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Bonica</span> = 'Meidomonac' (GC) AGM</span>"	P09325
 <span RHS><i>Rosa</i> 'Buff Beauty' (HM) AGM</span>	P09326
-<span RHS><i>Rosa</i> <span class="trade-name">Buttercup</span> = 'Ausband' <sup>(PBR)</sup> (S)</span>	P09327
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Buttercup</span> = 'Ausband' <sup>(PBR)</sup> (S)</span>"	P09327
 <span RHS><i>Rosa</i> 'Cantabrigiensis' (S) AGM</span>	P09328
-<span RHS><i>Rosa</i> <span class="trade-name">Charlotte</span> = 'Auspoly' <sup>(PBR)</sup> (S) AGM</span>	P09329
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Charlotte</span> = 'Auspoly' <sup>(PBR)</sup> (S) AGM</span>"	P09329
 <span RHS><i>Rosa</i> 'Climbing Iceberg' (ClF) AGM</span>	P09330
 <span RHS><i>Rosa</i> 'Complicata' (G)</span>	P09331
 <span RHS><i>Rosa</i> 'Complicata' (G)</span>	P09332
@@ -9139,28 +9139,28 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Rosa</i> 'Geranium' (<i>moyesii</i> hybrid) AGM</span>	P09346
 <span RHS><i>Rosa glauca</i> Pourr. (S) AGM</span>	P09347
 <span RHS><i>Rosa</i> 'Goldfinch' (Ra)</span>	P09348
-<span RHS><i>Rosa</i> <span class="trade-name">Grace</span> = 'Auskeppy' <sup>(PBR)</sup> (S) AGM</span>	P09349
-<span RHS><i>Rosa</i> <span class="trade-name">Graham Thomas</span> = 'Ausmas' (S) AGM</span>	P09350
-<span RHS><i>Rosa</i> <span class="trade-name">Iceberg</span> = 'Korbin' (F) AGM</span>	P09351
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Grace</span> = 'Auskeppy' <sup>(PBR)</sup> (S) AGM</span>"	P09349
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Graham Thomas</span> = 'Ausmas' (S) AGM</span>"	P09350
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Iceberg</span> = 'Korbin' (F) AGM</span>"	P09351
 <span RHS><i>Rosa</i> 'Impératrice Joséphine' (Gn) AGM</span>	P09352
-<span RHS><i>Rosa</i> <span class="trade-name">Kew Gardens</span> = 'Ausfence' <sup>(PBR)</sup> (S) AGM</span>	P09353
-<span RHS><i>Rosa</i> <span class="trade-name">Lady Emma Hamilton</span> = 'Ausbrother' <sup>(PBR)</sup> (S) AGM</span>	P09354
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Kew Gardens</span> = 'Ausfence' <sup>(PBR)</sup> (S) AGM</span>"	P09353
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Lady Emma Hamilton</span> = 'Ausbrother' <sup>(PBR)</sup> (S) AGM</span>"	P09354
 <span RHS><i>Rosa</i> 'Maigold' (ClPiH) AGM</span>	P09355
 <span RHS><i>Rosa</i> 'Maigold' (ClPiH) AGM</span>	P09356
 <span RHS><i>Rosa</i> 'Maigold' (ClPiH) AGM</span>	P09357
 <span RHS><i>Rosa</i> 'Nevada' (S)</span>	P09358
 <span RHS><i>Rosa</i> 'Nevada' (S)</span>	P09359
-<span RHS><i>Rosa</i> <span class="trade-name">Olivia Rose Austin</span> = 'Ausmixture' <sup>(PBR)</sup> (S)</span>	P09360
-<span RHS><i>Rosa</i> <span class="trade-name">Open Arms</span> = 'Chewpixcel' <sup>(PBR)</sup> (ClMin) AGM</span>	P09361
-<span RHS><i>Rosa</i> <span class="trade-name">Pat Austin</span> = 'Ausmum' <sup>(PBR)</sup> (S)</span>	P09362
-<span RHS><i>Rosa</i> <span class="trade-name">Pat Austin</span> = 'Ausmum' <sup>(PBR)</sup> (S)</span>	P09363
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Olivia Rose Austin</span> = 'Ausmixture' <sup>(PBR)</sup> (S)</span>"	P09360
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Open Arms</span> = 'Chewpixcel' <sup>(PBR)</sup> (ClMin) AGM</span>"	P09361
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Pat Austin</span> = 'Ausmum' <sup>(PBR)</sup> (S)</span>"	P09362
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Pat Austin</span> = 'Ausmum' <sup>(PBR)</sup> (S)</span>"	P09363
 <span RHS><i>Rosa</i> 'Paul's Scarlet Climber' (Cl/Ra)</span>	P09364
 <span RHS><i>Rosa</i> 'Penelope' (HM) AGM</span>	P09365
 <span RHS><i>Rosa</i> 'Perle d'Or' (Poly) AGM</span>	P09366
-<span RHS><i>Rosa</i> <span class="trade-name">Queen of Sweden</span> = 'Austiger' <sup>(PBR)</sup> (S)</span>	P09367
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Queen of Sweden</span> = 'Austiger' <sup>(PBR)</sup> (S)</span>"	P09367
 <span RHS><i>Rosa</i> 'Raubritter' ('Macrantha' hybrid)</span>	P09368
 <span RHS><i>Rosa</i> 'Raubritter' ('Macrantha' hybrid)</span>	P09369
-<span RHS><i>Rosa</i> <span class="trade-name">Rosy Cushion</span> = 'Interall' (S/GC)</span>	P09370
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Rosy Cushion</span> = 'Interall' (S/GC)</span>"	P09370
 <span RHS><i>Rosa rugosa</i> (Ru)</span>	P09371
 <span RHS><i>Rosa rugosa</i> (Ru)</span>	P09372
 <span RHS><i>Rosa rugosa</i> 'Alba' (Ru)</span>	P09373
@@ -9232,11 +9232,11 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Sternbergia lutea</i> AGM</span>	P09439
 <span RHS><i>Stipa gigantea</i> AGM</span>	P09440
 <span RHS><i>Stipa gigantea</i> AGM</span>	P09441
-<span RHS><i>Symphyotrichum dumosum</i> <span class="trade-name">Sapphire</span> = 'Kiesapphire' <sup>(PBR)</sup> (Autumn Jewels Series)</span>	P09442
+"<span RHS><i>Symphyotrichum dumosum</i> <span class=""trade-name"">Sapphire</span> = 'Kiesapphire' <sup>(PBR)</sup> (Autumn Jewels Series)</span>"	P09442
 <span RHS><i>Symphyotrichum</i> 'Little Carlow' (<i>cordifolium</i> hybrid) AGM</span>	P09443
 <span RHS><i>Symphyotrichum novi-belgii</i> 'Chatterbox'</span>	P09444
 <span RHS><i>Symphyotrichum novi-belgii</i> 'Lassie'</span>	P09445
-<span RHS><i>Symphyotrichum novi-belgii</i> <span class="trade-name">Tonga</span> = 'Dasfour' (Island Series)</span>	P09446
+"<span RHS><i>Symphyotrichum novi-belgii</i> <span class=""trade-name"">Tonga</span> = 'Dasfour' (Island Series)</span>"	P09446
 <span RHS><i>Symphytum</i> 'Goldsmith' (v)</span>	P09447
 <span RHS><i>Syringa meyeri</i> 'Palibin' AGM</span>	P09448
 <span RHS><i>Syringa meyeri</i> 'Palibin' AGM</span>	P09449
@@ -9286,10 +9286,10 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Viola cornuta</i> Lilacina Group (C)</span>	P09493
 <span RHS><i>Viola cornuta</i> 'Spider' (C)</span>	P09494
 <span RHS><i>Viola</i> 'Devon Cream' (Va)</span>	P09495
-<span RHS><i>Weigela</i> <span class="trade-name">Briant Rubidor</span> = 'Olympiade' (v)</span>	P09496
-<span RHS><i>Weigela</i> <span class="trade-name">Briant Rubidor</span> = 'Olympiade' (v)</span> and aquilegias	P09497
+"<span RHS><i>Weigela</i> <span class=""trade-name"">Briant Rubidor</span> = 'Olympiade' (v)</span>"	P09496
+"<span RHS><i>Weigela</i> <span class=""trade-name"">Briant Rubidor</span> = 'Olympiade' (v)</span> and aquilegias"	P09497
 <span RHS><i>Weigela</i> 'Candida'</span>	P09498
-<span RHS><i>Weigela florida</i> <span class="trade-name">Monet</span> = 'Verweig' <sup>(PBR)</sup> (v)</span>	P09499
+"<span RHS><i>Weigela florida</i> <span class=""trade-name"">Monet</span> = 'Verweig' <sup>(PBR)</sup> (v)</span>"	P09499
 <span RHS><i>Weigela</i> 'Jean's Gold'</span>	P09500
 <span RHS><i>Weigela</i> 'Jean's Gold'</span>	P09501
 <span RHS><i>Weigela</i> 'Jean's Gold'</span> && <span RHS><i>Geranium</i> &times; <i>magnificum</i> AGM</span>	P09502
@@ -9298,7 +9298,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Weigela middendorffiana</i></span>	P09505
 <span RHS><i>Wisteria brachybotrys</i> 'Okayama' AGM</span>	P09506
 <span RHS><i>Zephyranthes candida</i></span>	P09507
-<span RHS><i>Rosa</i> <span class="trade-name">Rosy Cushion</span> = 'Interall' (S/GC)</span>	P09508
+"<span RHS><i>Rosa</i> <span class=""trade-name"">Rosy Cushion</span> = 'Interall' (S/GC)</span>"	P09508
 <span RHS><i>Baptisia</i> 'Dutch Chocolate' (Decadence Series)</span>	P09509
 <span RHS><i>Iris</i> 'Papillon' (Sib)</span>	P09510
 <span RHS><i>Sanguisorba</i> 'Chocolate Tip'</span>	P09511
@@ -9334,10 +9334,10 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Catalpa bignonioides</i> 'Aurea' AGM</span>	P09541
 <span RHS><i>Cercis canadensis</i> 'Forest Pansy' AGM</span>	P09542
 <span RHS><i>Cercis canadensis</i> 'Forest Pansy' AGM</span>	P09543
-<span RHS><i>Clematis</i> <span class="trade-name">Arctic Queen</span> = 'Evitwo' <sup>(PBR)</sup> (EL) AGM</span> && <span RHS><i>Clematis</i> <span class="trade-name">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>	P09544
-<span RHS><i>Clematis</i> <span class="trade-name">Arctic Queen</span> = 'Evitwo' <sup>(PBR)</sup> (EL) AGM</span>	P09545
-<span RHS><i>Clematis</i> <span class="trade-name">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>	P09546
-<span RHS><i>Clematis</i> <span class="trade-name">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>	P09547
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Arctic Queen</span> = 'Evitwo' <sup>(PBR)</sup> (EL) AGM</span> && <span RHS><i>Clematis</i> <span class=""trade-name"">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>"	P09544
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Arctic Queen</span> = 'Evitwo' <sup>(PBR)</sup> (EL) AGM</span>"	P09545
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>"	P09546
+"<span RHS><i>Clematis</i> <span class=""trade-name"">Rebecca</span> = 'Evipo016' <sup>(PBR)</sup> (EL)</span>"	P09547
 <span RHS><i>Clematis</i> 'Ruby Wedding NLP2' (EL)</span>	P09548
 <span RHS><i>Clematis</i> 'Ruby Wedding NLP2' (EL)</span>	P09549
 <span RHS><i>Colchicum</i> 'Antares'</span>	P09550
@@ -9371,14 +9371,14 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Colchicum tenorei</i> AGM</span>	P09578
 <span RHS><i>Colchicum</i> 'The Giant'</span>	P09579
 <span RHS><i>Colchicum</i> 'The Giant'</span>	P09580
-<span RHS><i>Cotinus coggygria</i> <span class="trade-name">Golden Spirit</span> = 'Ancot' <sup>(PBR)</sup> AGM</span> (PBR)	P09581
+"<span RHS><i>Cotinus coggygria</i> <span class=""trade-name"">Golden Spirit</span> = 'Ancot' <sup>(PBR)</sup> AGM</span> (PBR)"	P09581
 <span RHS><i>Crocosmia</i> 'Emberglow'</span>	P09582
 <span RHS><i>Crocosmia masoniorum</i> AGM</span>	P09583
 <span RHS><i>Crocosmia</i> 'Paul's Best Yellow' AGM</span>	P09584
 <span RHS><i>Crocosmia</i> 'Paul's Best Yellow' AGM</span>	P09585
 <span RHS><i>Dianthus</i> 'Gold Dust' (p)</span>	P09586
-<span RHS><i>Diervilla sessilifolia</i> <span class="trade-name">Cool Splash</span> = 'Lpdc Podaras' <sup>(PBR)</sup> (v)</span>	P09587
-<span RHS><i>Diervilla sessilifolia</i> <span class="trade-name">Cool Splash</span> = 'Lpdc Podaras' <sup>(PBR)</sup> (v)</span>	P09588
+"<span RHS><i>Diervilla sessilifolia</i> <span class=""trade-name"">Cool Splash</span> = 'Lpdc Podaras' <sup>(PBR)</sup> (v)</span>"	P09587
+"<span RHS><i>Diervilla sessilifolia</i> <span class=""trade-name"">Cool Splash</span> = 'Lpdc Podaras' <sup>(PBR)</sup> (v)</span>"	P09588
 <span RHS><i>Euonymus fortunei</i> 'Silver Queen' (v)</span> && <span RHS><i>Rosa</i> 'Perle d'Or' (Poly) AGM</span>	P09589
 <span RHS><i>Eurybia divaricata</i></span>	P09590
 <span RHS><i>Eurybia divaricata</i></span>	P09591
@@ -9398,7 +9398,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Hydrangea paniculata</i> 'Unique'</span>	P09605
 <span RHS><i>Hylotelephium</i> 'Matrona' AGM</span>	P09606
 <span RHS><i>Hylotelephium</i> 'Matrona' AGM</span>	P09607
-<span RHS><i>Iris</i> 'Butter and Sugar' (Sib) AGM</span> && <span RHS><i>Polemonium yezoense</i> var. <i>hidakanum</i> <span class="trade-name">Bressingham Purple</span> = 'Polbress'</span>	P09608
+"<span RHS><i>Iris</i> 'Butter and Sugar' (Sib) AGM</span> && <span RHS><i>Polemonium yezoense</i> var. <i>hidakanum</i> <span class=""trade-name"">Bressingham Purple</span> = 'Polbress'</span>"	P09608
 <span RHS><i>Iris</i> 'Oban' (Sib)</span> && <span RHS><i>Primula japonica</i> 'Apple Blossom' (Pf)</span>	P09609
 <span RHS><i>Iris</i> 'Oban' (Sib)</span>	P09610
 <span RHS><i>Kirengeshoma palmata</i></span>	P09611
@@ -9503,7 +9503,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Symphyotrichum pilosum</i> var. <i>pringlei</i> 'Monte Cassino'</span>	P09710
 <span RHS><i>Astrantia major</i> subsp. <i>involucrata</i> 'Canneman'</span>	P09711
 <span RHS><i>Aconitum</i> 'Blue Sceptre'</span>	P09712
-<span RHS><i>Alstroemeria</i> <span class="trade-name">H.R.H. Princess Alexandra</span> = 'Zelblanca'</span>	P09713
+"<span RHS><i>Alstroemeria</i> <span class=""trade-name"">H.R.H. Princess Alexandra</span> = 'Zelblanca'</span>"	P09713
 <span RHS><i>Artemisia lactiflora</i> AGM</span>	P09714
 <span RHS><i>Artemisia ludoviciana</i></span>	P09715
 <span RHS><i>Anemone nemorosa</i> 'Hilda'</span>	P09716
@@ -9601,7 +9601,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Tigridia pavonia</i></span>	P09809
 <span RHS><i>Aquilegia vulgaris</i> var. <i>flore-pleno</i> 'Strawberry Ice Cream' (d)</span>	P09810
 <span RHS><i>Aconitum lycoctonum</i> 'Darkeyes'</span>	P09811
-<span RHS><i>Achillea</i> <span class="trade-name">Anthea</span> = 'Anblo'</span>	P09812
+"<span RHS><i>Achillea</i> <span class=""trade-name"">Anthea</span> = 'Anblo'</span>"	P09812
 <span RHS><i>Aquilegia</i> 'Debutante'</span>	P09813
 <span RHS><i>Aquilegia vulgaris</i> var. <i>flore-pleno</i> (d)</span>	P09814
 <span RHS><i>Anemone nemorosa</i> 'Virescens' AGM</span>	P09815
@@ -9614,7 +9614,7 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Symphyotrichum</i> 'Ochtendgloren' (<i>pilosum</i> var <i>pringlei</i> hybrid) AGM</span>	P09822
 <span RHS><i>Lonicera periclymenum</i> 'Serotina' AGM</span>	P09823
 <span RHS><i>Actaea matsumurae</i> 'Elstead Variety' AGM</span>	P09824
-<span RHS><i>Artemisia</i> <span class="trade-name">Oriental Limelight</span> = 'Janlim' (v)</span>	P09825
+"<span RHS><i>Artemisia</i> <span class=""trade-name"">Oriental Limelight</span> = 'Janlim' (v)</span>"	P09825
 <span RHS><i>Actaea rubra</i> f. <i>neglecta</i></span>	P09826
 <span RHS><i>Anemone</i> &times; <i>hybrida</i> 'Lady Gilmour' Wolley-Dod</span>	P09827
 <span RHS><i>Arisaema thunbergii</i> subsp. <i>urashima</i></span>	P09828
@@ -12672,6 +12672,17 @@ Vegetable Pumpkin 'Crown Prince'  (<i>Cucurbita maxima</i> 'Crown Prince')	P0768
 <span RHS><i>Rosa chinensis</i> 'Mutabilis'</span>	P12881
 <span RHS><i>Jasminum</i> &times; <i>stephanense</i></span>	P12882
 <span RHS><i>Jasminum</i> &times; <i>stephanense</i></span>	P12883
+<span RHS><i>Rotheca</i> <i>myricoides</i> 'Ugandense'</span>	P12884
+<span RHS><i>Plectranthus</i> <i>parviflorus</i> [Blue Spires]</span>	P12885
+<span RHS><i>Viburnum</i> <i>tinus</i> 'Eve Price'</span>	P12886
+<span RHS><i>Heuchera</i> <i>villosa</i> 'Autumn Bride'</span>	P12887
+<span RHS><i>Tulipa</i> 'Peer Gynt'</span>	P12888
+<span RHS><i>Rosa</i> <i>chinensis</i> 'Mutabilis'</span>	P12889
+<span RHS><i>Zauschneria</i> <i>californica</i> 'Albiflora'</span>	P12890
+<span RHS><i>Wahlenbergia</i> 'Tasmanian Skies'</span>	P12891
+<span RHS><i>Viola</i> 'Buttermilk'</span>	P12892
+<span RHS><i>Tilia</i> 'Petiolaris'</span>	P12893
+<span RHS><i>Sorbus</i> <i>hupehensis</i> 'Pink Pagoda'</span>	P12894
 Burren House border	X00001
 Old Vicarage East Ruston fountain	X00002
 Old Vicarage East Ruston fountain	X00003
