@@ -137,7 +137,6 @@ class CHPS:
         return 0
 
     def createImagelibDB(self):
-        # imagelib.csv can be found in docsftp@hardy-plant.org.uk:/plants
         fileName = self.scriptDir+"imagelib.csv"
         print(f"  - {fileName}: importing ", end="\r")
         if not os.path.isfile(fileName):
@@ -149,7 +148,6 @@ class CHPS:
         return 0
 
     def createGeneraDB(self):
-        # genera.csv can be found in docsftp@hardy-plant.org.uk:/plants
         fileName = self.scriptDir+"genera.csv"
         print(f"  - {fileName}: importing ", end="\r")
         if not os.path.isfile(fileName):
