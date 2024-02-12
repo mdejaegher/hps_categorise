@@ -107,11 +107,8 @@ class CSpreadSheet:
                 print(f"! Couldn't write to '{newPath}'. Still open?")
                 return 1
         elif self.extension == ".csv":
-            with open(newPath, 'w', newline='') as f:
-                # This has stopped working since csv version 3.11 which means that all double quotes will
-                # now be escaped by a backslash. csv is a builtin package so you can't change the version
-                # writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='', quotechar='')
-                writer = csv.writer(f, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='\\', quotechar='"')
+            with open(newPath, 'w', newline='') as file:
+                writer = csv.writer(file, delimiter='\t')
                 for row in self.workbook['active'].rows:
                     writer.writerow([cell.value for cell in row])
             return 0
